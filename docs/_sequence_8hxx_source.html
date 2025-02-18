@@ -1,0 +1,268 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Doxygen Awesome" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Doxygen Awesome" />
+<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<!-- END twitter metadata -->
+<title>Sturm: include/Sturm/Sequence.hxx Source File</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.png"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="custom-alternative.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/StoccoDavide/Sturm" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sturm
+   &#160;<span id="projectnumber">0.0.0</span>
+   </div>
+   <div id="projectbrief">Computing Sturm sequences in C++</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search',true);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('_sequence_8hxx_source.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Sequence.hxx</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_sequence_8hxx.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *\</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * Copyright (c) 2025, Davide Stocco, Mattia Piazza and Enrico Bertolazzi.                       *</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> *                                                                                               *</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> * The Sturm project is distributed under the BSD 2-Clause License.                              *</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> *                                                                                               *</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> * Davide Stocco                          Mattia Piazza                        Enrico Bertolazzi *</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> * University of Trento               University of Trento                  University of Trento *</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> * davide.stocco@unitn.it            mattia.piazza@unitn.it           enrico.bertolazzi@unitn.it *</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment">\* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#ifndef INCLUDE_STURM_SEQUENCE_HXX</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="_sequence_8hxx.html#a1545e8145b863c788cc67c6dcb6c45f7">   14</a></span><span class="preprocessor">#define INCLUDE_STURM_SEQUENCE_HXX</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_sturm.html">Sturm</a></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>{</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="foldopen" id="foldopen00020" data-start="{" data-end="};">
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="class_sturm_1_1_sequence.html">   20</a></span>  <span class="keyword">class </span><a class="code hl_function" href="class_sturm_1_1_sequence.html#ad2f387cc313b57f86a21e0eabd82efeb">Sequence</a> {</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>  <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="foldopen" id="foldopen00023" data-start="{" data-end="};">
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="class_sturm_1_1_sequence.html#a21cfe2fdffea5c5daa1817f1da6e66b8">   23</a></span>    <span class="keyword">using </span><a class="code hl_typedef" href="class_sturm_1_1_sequence.html#a21cfe2fdffea5c5daa1817f1da6e66b8">Interval</a> = <span class="keyword">struct </span><a class="code hl_typedef" href="class_sturm_1_1_sequence.html#a21cfe2fdffea5c5daa1817f1da6e66b8">Interval</a> {</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>      <a class="code hl_typedef" href="namespace_sturm.html#aaa1b5226335eadcf7d426f26f2c1641d">Real</a>    <a class="code hl_function" href="class_sturm_1_1_sequence.html#a89ea31a2447d1741f9f98c775fe179af">a</a>;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>      <a class="code hl_typedef" href="namespace_sturm.html#aaa1b5226335eadcf7d426f26f2c1641d">Real</a>    <a class="code hl_function" href="class_sturm_1_1_sequence.html#a24bafd1d415f152c3496d63851570358">b</a>;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>      <a class="code hl_typedef" href="namespace_sturm.html#aad1114e76ee0064c465261eb130fb4ab">Integer</a> va;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>      <a class="code hl_typedef" href="namespace_sturm.html#aad1114e76ee0064c465261eb130fb4ab">Integer</a> vb;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>      <span class="keywordtype">bool</span>    a_on_root;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>      <span class="keywordtype">bool</span>    b_on_root;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    }; </div>
+</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="comment">// FIXMEclass Algo748_fun : public Algo748_base_fun&lt;Real&gt; {</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="comment">// FIXME  Poly&lt;Real&gt; const * P = nullptr;</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="comment">// FIXMEpublic:</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="comment">// FIXME  void setup( Poly&lt;Real&gt; const * Pin ) { P = Pin;}</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="comment">// FIXME  Real eval( Real x ) const override {return P-&gt;eval(x);}</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="comment">// FIXME};</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>  <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="comment">//FIXME: Algo748&lt;Real&gt;    m_solver;</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="comment">//FIXME: Algo748_fun      m_fun;</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="class_sturm_1_1_sequence.html#a785c18bff876fa6b4102b6479f3be3ac">   44</a></span>    std::vector&lt;Poly&gt;     <a class="code hl_variable" href="class_sturm_1_1_sequence.html#a785c18bff876fa6b4102b6479f3be3ac">m_sequence</a>;  </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="class_sturm_1_1_sequence.html#a1f83eee4a01ec530dc5f50fb89625a0e">   45</a></span>    std::vector&lt;Interval&gt; <a class="code hl_variable" href="class_sturm_1_1_sequence.html#a1f83eee4a01ec530dc5f50fb89625a0e">m_intervals</a>; </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="class_sturm_1_1_sequence.html#ae372a1f4154b787eaddd06de79a30cb9">   46</a></span>    <a class="code hl_typedef" href="namespace_sturm.html#aa456480f0107f1ae6f3e69101575e372">Vector</a>                <a class="code hl_variable" href="class_sturm_1_1_sequence.html#ae372a1f4154b787eaddd06de79a30cb9">m_roots</a>;     </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="class_sturm_1_1_sequence.html#acaa6429117cc260b142fd164027e083a">   47</a></span>    <a class="code hl_typedef" href="namespace_sturm.html#aaa1b5226335eadcf7d426f26f2c1641d">Real</a>                  <a class="code hl_variable" href="class_sturm_1_1_sequence.html#acaa6429117cc260b142fd164027e083a">m_a</a>{0.0};    </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="class_sturm_1_1_sequence.html#aa3927e67533ecc938e9cac9daa2bdc16">   48</a></span>    <a class="code hl_typedef" href="namespace_sturm.html#aaa1b5226335eadcf7d426f26f2c1641d">Real</a>                  <a class="code hl_variable" href="class_sturm_1_1_sequence.html#aa3927e67533ecc938e9cac9daa2bdc16">m_b</a>{0.0};    </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>  <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="class_sturm_1_1_sequence.html#ad2f387cc313b57f86a21e0eabd82efeb">   54</a></span>    <a class="code hl_function" href="class_sturm_1_1_sequence.html#ad2f387cc313b57f86a21e0eabd82efeb">Sequence</a>() {}</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="class_sturm_1_1_sequence.html#a89ea31a2447d1741f9f98c775fe179af">   60</a></span>    <a class="code hl_typedef" href="namespace_sturm.html#aaa1b5226335eadcf7d426f26f2c1641d">Real</a> <a class="code hl_function" href="class_sturm_1_1_sequence.html#a89ea31a2447d1741f9f98c775fe179af">a</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> this-&gt;<a class="code hl_variable" href="class_sturm_1_1_sequence.html#acaa6429117cc260b142fd164027e083a">m_a</a>;}</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="class_sturm_1_1_sequence.html#a24bafd1d415f152c3496d63851570358">   66</a></span>    <a class="code hl_typedef" href="namespace_sturm.html#aaa1b5226335eadcf7d426f26f2c1641d">Real</a> <a class="code hl_function" href="class_sturm_1_1_sequence.html#a24bafd1d415f152c3496d63851570358">b</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> this-&gt;<a class="code hl_variable" href="class_sturm_1_1_sequence.html#aa3927e67533ecc938e9cac9daa2bdc16">m_b</a>;}</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="class_sturm_1_1_sequence.html#a00e62eb83ec60c78fbfb46417f912205">   71</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_sturm_1_1_sequence.html#a00e62eb83ec60c78fbfb46417f912205">build</a>(<a class="code hl_class" href="class_sturm_1_1_poly.html">Poly</a> <span class="keyword">const</span> &amp; p);</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span></div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="class_sturm_1_1_sequence.html#a0c891476501c4dd77ebfdd84d7ebabd4">   77</a></span>    <a class="code hl_typedef" href="namespace_sturm.html#aad1114e76ee0064c465261eb130fb4ab">Integer</a> <a class="code hl_function" href="class_sturm_1_1_sequence.html#a0c891476501c4dd77ebfdd84d7ebabd4">length</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><a class="code hl_typedef" href="namespace_sturm.html#aad1114e76ee0064c465261eb130fb4ab">Integer</a><span class="keyword">&gt;</span>(this-&gt;m_sequence.size());}</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span></div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno"><a class="line" href="class_sturm_1_1_sequence.html#a997037bd66034b244c90c4b5d38a6c18">   83</a></span>    <a class="code hl_class" href="class_sturm_1_1_poly.html">Poly</a> <span class="keyword">const</span> &amp; <a class="code hl_function" href="class_sturm_1_1_sequence.html#a997037bd66034b244c90c4b5d38a6c18">get</a>(<a class="code hl_typedef" href="namespace_sturm.html#aad1114e76ee0064c465261eb130fb4ab">Integer</a> i)<span class="keyword"> const </span>{<span class="keywordflow">return</span> this-&gt;m_sequence[i];}</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span></div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno"><a class="line" href="class_sturm_1_1_sequence.html#a19db48c8376bddfb64334cf95501b987">   89</a></span>    <a class="code hl_typedef" href="namespace_sturm.html#aad1114e76ee0064c465261eb130fb4ab">Integer</a> <a class="code hl_function" href="class_sturm_1_1_sequence.html#a19db48c8376bddfb64334cf95501b987">sign_variations</a>(<a class="code hl_typedef" href="namespace_sturm.html#aaa1b5226335eadcf7d426f26f2c1641d">Real</a> x, <span class="keywordtype">bool</span> &amp; on_root) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span></div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno"><a class="line" href="class_sturm_1_1_sequence.html#a61756d05e14d2ccafbb1260c6dac1816">   95</a></span>    <a class="code hl_typedef" href="namespace_sturm.html#aad1114e76ee0064c465261eb130fb4ab">Integer</a> <a class="code hl_function" href="class_sturm_1_1_sequence.html#a61756d05e14d2ccafbb1260c6dac1816">separate_roots</a>(<a class="code hl_typedef" href="namespace_sturm.html#aaa1b5226335eadcf7d426f26f2c1641d">Real</a> <a class="code hl_function" href="class_sturm_1_1_sequence.html#a89ea31a2447d1741f9f98c775fe179af">a</a>, <a class="code hl_typedef" href="namespace_sturm.html#aaa1b5226335eadcf7d426f26f2c1641d">Real</a> <a class="code hl_function" href="class_sturm_1_1_sequence.html#a24bafd1d415f152c3496d63851570358">b</a>);</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span></div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno"><a class="line" href="class_sturm_1_1_sequence.html#a9889914fcc3d84d252a2e9e3b3dfe2f0">  102</a></span>    <a class="code hl_typedef" href="namespace_sturm.html#aad1114e76ee0064c465261eb130fb4ab">Integer</a> <a class="code hl_function" href="class_sturm_1_1_sequence.html#a9889914fcc3d84d252a2e9e3b3dfe2f0">separate_roots</a>();</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span></div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno"><a class="line" href="class_sturm_1_1_sequence.html#af033cb9b3b247dcb29d9980bc34610fd">  108</a></span>    <a class="code hl_typedef" href="namespace_sturm.html#aad1114e76ee0064c465261eb130fb4ab">Integer</a> <a class="code hl_function" href="class_sturm_1_1_sequence.html#af033cb9b3b247dcb29d9980bc34610fd">roots_number</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><a class="code hl_typedef" href="namespace_sturm.html#aad1114e76ee0064c465261eb130fb4ab">Integer</a><span class="keyword">&gt;</span>(this-&gt;m_intervals.size());}</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span></div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno"><a class="line" href="class_sturm_1_1_sequence.html#a172b116b56be7b2a5e90dcb85b3ca6a9">  114</a></span>    <a class="code hl_typedef" href="class_sturm_1_1_sequence.html#a21cfe2fdffea5c5daa1817f1da6e66b8">Interval</a> <span class="keyword">const</span> &amp; <a class="code hl_function" href="class_sturm_1_1_sequence.html#a172b116b56be7b2a5e90dcb85b3ca6a9">interval</a>(<a class="code hl_typedef" href="namespace_sturm.html#aad1114e76ee0064c465261eb130fb4ab">Integer</a> i)<span class="keyword"> const </span>{<span class="keywordflow">return</span> this-&gt;m_intervals[i];}</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span></div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno"><a class="line" href="class_sturm_1_1_sequence.html#a684529734e5d062e49f033937578569a">  119</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_sturm_1_1_sequence.html#a684529734e5d062e49f033937578569a">refine_roots</a>();</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span></div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno"><a class="line" href="class_sturm_1_1_sequence.html#a3ed9498bd78a1e34028d7abddc4406ac">  125</a></span>    <a class="code hl_typedef" href="namespace_sturm.html#aa456480f0107f1ae6f3e69101575e372">Vector</a> <span class="keyword">const</span> &amp; <a class="code hl_function" href="class_sturm_1_1_sequence.html#a3ed9498bd78a1e34028d7abddc4406ac">roots</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> this-&gt;m_roots;}</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span> </div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>  };</div>
+</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span></div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno"><a class="line" href="namespace_sturm.html#acd328487393b9d1cc6a5e94cb401db9e">  135</a></span>  std::ostream &amp; <a class="code hl_function" href="namespace_sturm.html#a5a3792c0fa79f172a25f87f4990eb06d">operator&lt;&lt; </a>(std::ostream &amp; os, <a class="code hl_class" href="class_sturm_1_1_sequence.html">Sequence</a> <span class="keyword">const</span> &amp; s);</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span> </div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>} <span class="comment">// namespace Sturm</span></div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span> </div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span><span class="preprocessor">#endif </span><span class="comment">// INCLUDE_STURM_SEQUENCE_HXX</span></div>
+<div class="ttc" id="aclass_sturm_1_1_poly_html"><div class="ttname"><a href="class_sturm_1_1_poly.html">Sturm::Poly</a></div><div class="ttdoc">Polynomial class.</div><div class="ttdef"><b>Definition</b> Poly.hxx:24</div></div>
+<div class="ttc" id="aclass_sturm_1_1_sequence_html"><div class="ttname"><a href="class_sturm_1_1_sequence.html">Sturm::Sequence</a></div><div class="ttdef"><b>Definition</b> Sequence.hxx:20</div></div>
+<div class="ttc" id="aclass_sturm_1_1_sequence_html_a00e62eb83ec60c78fbfb46417f912205"><div class="ttname"><a href="class_sturm_1_1_sequence.html#a00e62eb83ec60c78fbfb46417f912205">Sturm::Sequence::build</a></div><div class="ttdeci">void build(Poly const &amp;p)</div></div>
+<div class="ttc" id="aclass_sturm_1_1_sequence_html_a0c891476501c4dd77ebfdd84d7ebabd4"><div class="ttname"><a href="class_sturm_1_1_sequence.html#a0c891476501c4dd77ebfdd84d7ebabd4">Sturm::Sequence::length</a></div><div class="ttdeci">Integer length() const</div><div class="ttdef"><b>Definition</b> Sequence.hxx:77</div></div>
+<div class="ttc" id="aclass_sturm_1_1_sequence_html_a172b116b56be7b2a5e90dcb85b3ca6a9"><div class="ttname"><a href="class_sturm_1_1_sequence.html#a172b116b56be7b2a5e90dcb85b3ca6a9">Sturm::Sequence::interval</a></div><div class="ttdeci">Interval const &amp; interval(Integer i) const</div><div class="ttdef"><b>Definition</b> Sequence.hxx:114</div></div>
+<div class="ttc" id="aclass_sturm_1_1_sequence_html_a19db48c8376bddfb64334cf95501b987"><div class="ttname"><a href="class_sturm_1_1_sequence.html#a19db48c8376bddfb64334cf95501b987">Sturm::Sequence::sign_variations</a></div><div class="ttdeci">Integer sign_variations(Real x, bool &amp;on_root) const</div></div>
+<div class="ttc" id="aclass_sturm_1_1_sequence_html_a1f83eee4a01ec530dc5f50fb89625a0e"><div class="ttname"><a href="class_sturm_1_1_sequence.html#a1f83eee4a01ec530dc5f50fb89625a0e">Sturm::Sequence::m_intervals</a></div><div class="ttdeci">std::vector&lt; Interval &gt; m_intervals</div><div class="ttdef"><b>Definition</b> Sequence.hxx:45</div></div>
+<div class="ttc" id="aclass_sturm_1_1_sequence_html_a21cfe2fdffea5c5daa1817f1da6e66b8"><div class="ttname"><a href="class_sturm_1_1_sequence.html#a21cfe2fdffea5c5daa1817f1da6e66b8">Sturm::Sequence::Interval</a></div><div class="ttdeci">struct Interval { Real a; Real b; Integer va; Integer vb; bool a_on_root; bool b_on_root; } Interval</div><div class="ttdef"><b>Definition</b> Sequence.hxx:23</div></div>
+<div class="ttc" id="aclass_sturm_1_1_sequence_html_a24bafd1d415f152c3496d63851570358"><div class="ttname"><a href="class_sturm_1_1_sequence.html#a24bafd1d415f152c3496d63851570358">Sturm::Sequence::b</a></div><div class="ttdeci">Real b() const</div><div class="ttdef"><b>Definition</b> Sequence.hxx:66</div></div>
+<div class="ttc" id="aclass_sturm_1_1_sequence_html_a3ed9498bd78a1e34028d7abddc4406ac"><div class="ttname"><a href="class_sturm_1_1_sequence.html#a3ed9498bd78a1e34028d7abddc4406ac">Sturm::Sequence::roots</a></div><div class="ttdeci">Vector const &amp; roots() const</div><div class="ttdef"><b>Definition</b> Sequence.hxx:125</div></div>
+<div class="ttc" id="aclass_sturm_1_1_sequence_html_a61756d05e14d2ccafbb1260c6dac1816"><div class="ttname"><a href="class_sturm_1_1_sequence.html#a61756d05e14d2ccafbb1260c6dac1816">Sturm::Sequence::separate_roots</a></div><div class="ttdeci">Integer separate_roots(Real a, Real b)</div></div>
+<div class="ttc" id="aclass_sturm_1_1_sequence_html_a684529734e5d062e49f033937578569a"><div class="ttname"><a href="class_sturm_1_1_sequence.html#a684529734e5d062e49f033937578569a">Sturm::Sequence::refine_roots</a></div><div class="ttdeci">void refine_roots()</div></div>
+<div class="ttc" id="aclass_sturm_1_1_sequence_html_a785c18bff876fa6b4102b6479f3be3ac"><div class="ttname"><a href="class_sturm_1_1_sequence.html#a785c18bff876fa6b4102b6479f3be3ac">Sturm::Sequence::m_sequence</a></div><div class="ttdeci">std::vector&lt; Poly &gt; m_sequence</div><div class="ttdef"><b>Definition</b> Sequence.hxx:44</div></div>
+<div class="ttc" id="aclass_sturm_1_1_sequence_html_a89ea31a2447d1741f9f98c775fe179af"><div class="ttname"><a href="class_sturm_1_1_sequence.html#a89ea31a2447d1741f9f98c775fe179af">Sturm::Sequence::a</a></div><div class="ttdeci">Real a() const</div><div class="ttdef"><b>Definition</b> Sequence.hxx:60</div></div>
+<div class="ttc" id="aclass_sturm_1_1_sequence_html_a9889914fcc3d84d252a2e9e3b3dfe2f0"><div class="ttname"><a href="class_sturm_1_1_sequence.html#a9889914fcc3d84d252a2e9e3b3dfe2f0">Sturm::Sequence::separate_roots</a></div><div class="ttdeci">Integer separate_roots()</div></div>
+<div class="ttc" id="aclass_sturm_1_1_sequence_html_a997037bd66034b244c90c4b5d38a6c18"><div class="ttname"><a href="class_sturm_1_1_sequence.html#a997037bd66034b244c90c4b5d38a6c18">Sturm::Sequence::get</a></div><div class="ttdeci">Poly const &amp; get(Integer i) const</div><div class="ttdef"><b>Definition</b> Sequence.hxx:83</div></div>
+<div class="ttc" id="aclass_sturm_1_1_sequence_html_aa3927e67533ecc938e9cac9daa2bdc16"><div class="ttname"><a href="class_sturm_1_1_sequence.html#aa3927e67533ecc938e9cac9daa2bdc16">Sturm::Sequence::m_b</a></div><div class="ttdeci">Real m_b</div><div class="ttdef"><b>Definition</b> Sequence.hxx:48</div></div>
+<div class="ttc" id="aclass_sturm_1_1_sequence_html_acaa6429117cc260b142fd164027e083a"><div class="ttname"><a href="class_sturm_1_1_sequence.html#acaa6429117cc260b142fd164027e083a">Sturm::Sequence::m_a</a></div><div class="ttdeci">Real m_a</div><div class="ttdef"><b>Definition</b> Sequence.hxx:47</div></div>
+<div class="ttc" id="aclass_sturm_1_1_sequence_html_ad2f387cc313b57f86a21e0eabd82efeb"><div class="ttname"><a href="class_sturm_1_1_sequence.html#ad2f387cc313b57f86a21e0eabd82efeb">Sturm::Sequence::Sequence</a></div><div class="ttdeci">Sequence()</div><div class="ttdef"><b>Definition</b> Sequence.hxx:54</div></div>
+<div class="ttc" id="aclass_sturm_1_1_sequence_html_ae372a1f4154b787eaddd06de79a30cb9"><div class="ttname"><a href="class_sturm_1_1_sequence.html#ae372a1f4154b787eaddd06de79a30cb9">Sturm::Sequence::m_roots</a></div><div class="ttdeci">Vector m_roots</div><div class="ttdef"><b>Definition</b> Sequence.hxx:46</div></div>
+<div class="ttc" id="aclass_sturm_1_1_sequence_html_af033cb9b3b247dcb29d9980bc34610fd"><div class="ttname"><a href="class_sturm_1_1_sequence.html#af033cb9b3b247dcb29d9980bc34610fd">Sturm::Sequence::roots_number</a></div><div class="ttdeci">Integer roots_number() const</div><div class="ttdef"><b>Definition</b> Sequence.hxx:108</div></div>
+<div class="ttc" id="anamespace_sturm_html"><div class="ttname"><a href="namespace_sturm.html">Sturm</a></div><div class="ttdoc">Namespace for the Sturm library.</div><div class="ttdef"><b>Definition</b> Sturm.hh:66</div></div>
+<div class="ttc" id="anamespace_sturm_html_a5a3792c0fa79f172a25f87f4990eb06d"><div class="ttname"><a href="namespace_sturm.html#a5a3792c0fa79f172a25f87f4990eb06d">Sturm::operator&lt;&lt;</a></div><div class="ttdeci">std::ostream &amp; operator&lt;&lt;(std::ostream &amp;os, Poly const &amp;p)</div></div>
+<div class="ttc" id="anamespace_sturm_html_aa456480f0107f1ae6f3e69101575e372"><div class="ttname"><a href="namespace_sturm.html#aa456480f0107f1ae6f3e69101575e372">Sturm::Vector</a></div><div class="ttdeci">Eigen::Vector&lt; Real, Eigen::Dynamic &gt; Vector</div><div class="ttdef"><b>Definition</b> Sturm.hh:70</div></div>
+<div class="ttc" id="anamespace_sturm_html_aaa1b5226335eadcf7d426f26f2c1641d"><div class="ttname"><a href="namespace_sturm.html#aaa1b5226335eadcf7d426f26f2c1641d">Sturm::Real</a></div><div class="ttdeci">double Real</div><div class="ttdef"><b>Definition</b> Sturm.hh:68</div></div>
+<div class="ttc" id="anamespace_sturm_html_aad1114e76ee0064c465261eb130fb4ab"><div class="ttname"><a href="namespace_sturm.html#aad1114e76ee0064c465261eb130fb4ab">Sturm::Integer</a></div><div class="ttdeci">int Integer</div><div class="ttdef"><b>Definition</b> Sturm.hh:69</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_8e4532eef9a41c1396714f425c4477b9.html">Sturm</a></li><li class="navelem"><a class="el" href="_sequence_8hxx.html">Sequence.hxx</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+  </ul>
+</div>
+</body>
+</html>

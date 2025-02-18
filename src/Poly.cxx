@@ -127,8 +127,9 @@ namespace Sturm
 
   void Poly::derivative(Poly & res) const {
     res.resize(this->m_order - 1);
-    for(Integer i{1}; i < this->m_order; ++i)
-      res.coeffRef(i-1) = i * this->coeff(i);
+    for (Integer i{1}; i < this->m_order; ++i) {
+      res.coeffRef(i - 1) = i * this->coeff(i);
+    }
     res.m_order = this->m_order - 1;
   }
 
@@ -137,8 +138,10 @@ namespace Sturm
   void Poly::integral(Poly & res) const {
     res.resize(this->m_order + 1);
     res.coeffRef(0) = 0;
-    for (Integer i{1}; i <= this->m_order; ++i)
-      res.coeffRef(i) = this->coeff(i-1)/i;
+    for (Integer i{1}; i <= this->m_order; ++i) {
+      res.coeffRef(i) = this->coeff(i - 1)/i;
+    }
+    res.m_order = this->m_order + 1;
   }
 
   // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -191,11 +194,24 @@ namespace Sturm
 
   // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+  void Poly::make_monic() {
+    this->to_eigen() /= this->coeff(this->m_order - 1);
+    this->coeffRef(this->m_order - 1) = 1;
+  }
+
+  // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
   Poly & Poly::operator= (Poly const & b) {
     this->resize(b.m_order);
     this->to_eigen().noalias() = b.to_eigen();
     this->m_order = b.m_order;
     return *this;
+  }
+
+  // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+  Poly Poly::operator- () {
+    return Poly(-this->to_eigen());
   }
 
   // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -444,6 +460,13 @@ namespace Sturm
       g = a;
     }
     g.normalize();
+  }
+
+  // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+  std::ostream & operator<< (std::ostream & os, Poly const & p) {
+    os << p.to_string();
+    return os;
   }
 
   // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -

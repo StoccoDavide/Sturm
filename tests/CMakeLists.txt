@@ -12,7 +12,7 @@ include(SturmCatch2)
 
 file(GLOB_RECURSE TEST_POLY "${CMAKE_CURRENT_SOURCE_DIR}/Poly/test_poly.cc")
 add_executable(test_poly ${TEST_POLY})
-target_link_libraries(test_poly PRIVATE Sturm)
+target_link_libraries(test_poly PRIVATE Sturm Catch2::Catch2WithMain)
 
 file(GLOB_RECURSE TEST_STURM "${CMAKE_CURRENT_SOURCE_DIR}/Sturm/test_sturm.cc")
 add_executable(test_sturm ${TEST_STURM})

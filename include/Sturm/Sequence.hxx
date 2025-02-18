@@ -27,13 +27,13 @@ namespace Sturm
       Integer vb;
       bool    a_on_root;
       bool    b_on_root;
-    };
+    }; /**< Interval structure. */
 
     // FIXMEclass Algo748_fun : public Algo748_base_fun<Real> {
     // FIXME  Poly<Real> const * P = nullptr;
     // FIXMEpublic:
-    // FIXME  void setup( Poly<Real> const * Pin ) { P = Pin; }
-    // FIXME  Real eval( Real x ) const override { return P->eval(x); }
+    // FIXME  void setup( Poly<Real> const * Pin ) { P = Pin;}
+    // FIXME  Real eval( Real x ) const override {return P->eval(x);}
     // FIXME};
 
   private:
@@ -41,89 +41,98 @@ namespace Sturm
     //FIXME: Algo748<Real>    m_solver;
     //FIXME: Algo748_fun      m_fun;
 
-    std::vector<Poly>   m_sturm;
-    std::vector<Interval> m_intervals;
-    Vector           m_roots;
-    Real             m_a{0};
-    Real             m_b{0};
+    std::vector<Poly>     m_sequence;  /**< Sturm sequence. */
+    std::vector<Interval> m_intervals; /**< Computed intervals. */
+    Vector                m_roots;     /**< Computed roots. */
+    Real                  m_a{0.0};    /**< Lower bound of the interval containing the roots. */
+    Real                  m_b{0.0};    /**< Upper bound of the interval containing the roots. */
 
   public:
+    /**
+    * Class constructor for the Sturm sequence.
+    */
+    Sequence() {}
 
-  Sequence() {}
+    /**
+    * Get the lower bound of the interval containing the roots.
+    * \return The lower bound of the interval containing the roots.
+    */
+    Real a() const {return this->m_a;}
 
-    //!
-    //! Given the polynomial \f$ p(x) \f$ build its Sturm sequence
-    //!
-    void build( Poly const & p );
+    /**
+    * Get the upper bound of the interval containing the roots.
+    * \return The upper bound of the interval containing the roots.
+    */
+    Real b() const {return this->m_b;}
 
-    //!
-    //! Return the length of the stored Sturm sequence.
-    //!
-    Integer length() const { return Integer(m_sturm.size()); }
+    /**
+    * Given the polynomial \f$ p(x) \f$ build its Sturm sequence
+    */
+    void build(Poly const & p);
 
-    //!
-    //! Return the i-th polynomial of the stored Sturm sequence.
-    //!
-    Poly const & get( Integer i ) const { return m_sturm[i]; }
+    /**
+    * Get the length of the stored Sturm sequence.
+    * \return Length of the stored Sturm sequence.
+    */
+    Integer length() const {return static_cast<Integer>(this->m_sequence.size());}
 
-    //!
-    //! Conpute the sign variations of the stored Sturm sequence at \f$ x \f$.
-    //!
-    Integer sign_variations( Real x, bool & on_root ) const;
+    /**
+    * Get the \f$ i \f$-th polynomial of the stored Sturm sequence.
+    * \return The \f$ i \f$-th polynomial of the stored Sturm sequence.
+    */
+    Poly const & get(Integer i) const {return this->m_sequence[i];}
 
-    //!
-    //! Given an interval \f$ [a,b] \f$
-    //! compute the subintervals containing a single root.
-    //! Return the numbers of intervals (roots) found.
-    //!
-    Integer separate_roots( Real a, Real b );
+    /**
+    * Compute the sign variations of the stored Sturm sequence at \f$ x \f$.
+    * \return The number of sign variations.
+    */
+    Integer sign_variations(Real x, bool & on_root) const;
 
-    //!
-    //! Compute an interval \f$ [a,b] \f$ that contains all
-    //! the real roots and compute the subintervals containing a single root.
-    //! Return the numbers of intervals (roots) found.
-    //!
+    /**
+    * Given an interval \f$ [a, b] \f$ compute the subintervals containing a single root.
+    * \return The numbers of intervals (roots) found.
+    */
+    Integer separate_roots(Real a, Real b);
+
+    /**
+    * Compute an interval \f$ [a, b] \f$ that contains all the real roots and compute the subintervals
+    * containing a single root.
+    * \return The numbers of intervals (roots) found.
+    */
     Integer separate_roots();
 
-    Integer n_roots() const { return Integer(m_intervals.size()); }
-    Real a() const { return m_a; }
-    Real b() const { return m_b; }
-    Interval const & get_interval( Integer i ) const { return m_intervals[i]; }
+    /**
+    * Get the number of roots found.
+    * \return The number of roots found.
+    */
+    Integer roots_number() const {return static_cast<Integer>(this->m_intervals.size());}
 
-    //!
-    //! compute the roots in the intervals after the separation.
-    //!
+    /**
+    * Get the \f$ i \f$-th interval containing a single root.
+    * \return The \f$ i \f$-th interval containing a single root.
+    */
+    Interval const & interval(Integer i) const {return this->m_intervals[i];}
+
+    /**
+    * Compute the roots in the intervals after the separation.
+    */
     void refine_roots();
 
-    //!
-    //! return a vector with the computed roots
-    //!
-    Vector const & roots() const { return m_roots; }
+    /**
+    * Get a vector with the computed roots.
+    * \return A vector with the computed roots.
+    */
+    Vector const & roots() const {return this->m_roots;}
 
   };
 
-  /*
-  // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  /**
+  * Print the Sturm sequence on an output stream.
+  * \param[in] os Output stream.
+  * \param[in] s Sturm sequence.
+  * \return The output stream.
   */
-  template <typename Char>
-  inline
-  std::basic_ostream<Char> &
-  operator << ( std::basic_ostream<Char> & output, Sequence const & S ) {
-    output << "Sturm sequence\n";
-    for ( Integer i = 0; i < S.length(); ++i )
-      output << "P_" << i << "(x) = " << S.get(i) << '\n';
-
-    Integer n = S.n_roots();
-    if ( n > 0 ) {
-      //FIXMEfmt::print( output, "roots separation for interval [{},{}]\n", S.a(), S.b() );
-      for ( Integer i = 0; i < n; ++i ) {
-        //FIXMEtypename Sequence::Interval const & I = S.get_interval( i );
-        //FIXMEfmt::print( output, "I = [{}, {}], V = [{}, {}]\n", I.a, I.b, I.va, I.vb );
-      }
-    }
-    return output;
-  }
-
+  std::ostream & operator<< (std::ostream & os, Sequence const & s);
 
 } // namespace Sturm
 

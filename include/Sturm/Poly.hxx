@@ -159,15 +159,15 @@ namespace Sturm
 
     /**
     * Compute the derivative of the polynomial.
-    * \param[out] result Polynomial representing the derivative.
+    * \param[out] res Polynomial representing the derivative.
     */
-    void derivative(Poly & result) const;
+    void derivative(Poly & res) const;
 
     /**
     * Compute the integral of the polynomial.
-    * \param[out] result Polynomial representing the integral.
+    * \param[out] res Polynomial representing the integral.
     */
-    void integral(Poly & result) const;
+    void integral(Poly & res) const;
 
     /**
     * Normalize the polynomial such that the maximum absolute coefficient is 1.
@@ -195,11 +195,7 @@ namespace Sturm
     /**
     * Change the polynomial in such a way \f$ p(x) = x^n + \sum_{i=0}^{n-1} a_i x^i \f$.
     */
-    inline void
-      make_monic() {
-        this->to_eigen() /= this->coeff(this->m_order-1);
-        this->coeffRef(this->m_order-1) = 1;
-      }
+    void make_monic();
 
     /**
     * Define the assignment with another polynomial.
@@ -355,15 +351,12 @@ namespace Sturm
   void GCD(Poly const & a, Poly const & b, Poly & g, Real epsi = EPSILON);
 
   /**
-  * Print the polynomial.
+  * Print the polynomial on an output stream.
   * \param[in] os Output stream.
   * \param[in] p Polynomial.
   * \return The output stream.
   */
-  inline std::ostream & operator<< (std::ostream &os, Poly const & p) {
-    os << p.to_string();
-    return os;
-  }
+  std::ostream & operator<< (std::ostream & os, Poly const & p);
 
 } // namespace Sturm
 

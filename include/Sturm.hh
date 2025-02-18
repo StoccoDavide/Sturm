@@ -94,7 +94,7 @@ namespace Sturm
   * Print Sturm library information on a stream.
   * \param[in] os Output stream.
   */
-  inline void Info(std::ostream &os) {os << Info();}
+  inline void Info(std::ostream & os) {os << Info();}
 
 } // namespace Sturm
 

@@ -1,0 +1,1088 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Doxygen Awesome" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Doxygen Awesome" />
+<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<!-- END twitter metadata -->
+<title>Sturm: Sturm::Poly Class Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.png"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="custom-alternative.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/StoccoDavide/Sturm" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sturm
+   &#160;<span id="projectnumber">0.0.0</span>
+   </div>
+   <div id="projectbrief">Computing Sturm sequences in C++</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search',true);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('class_sturm_1_1_poly.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
+<a href="class_sturm_1_1_poly-members.html">List of all members</a>  </div>
+  <div class="headertitle"><div class="title">Sturm::Poly Class Reference</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Polynomial class.  
+ <a href="#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_poly_8hxx_source.html">Poly.hxx</a>&gt;</code></p>
+
+<p>Inherits Eigen::Vector&lt; Real, Eigen::Dynamic &gt;.</p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a09b21e72c0bf497ab6f922e047498585" id="r_a09b21e72c0bf497ab6f922e047498585"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a09b21e72c0bf497ab6f922e047498585">Poly</a> ()</td></tr>
+<tr class="separator:a09b21e72c0bf497ab6f922e047498585"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58b14e9892c6088b3d5ee68018c831a3" id="r_a58b14e9892c6088b3d5ee68018c831a3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a58b14e9892c6088b3d5ee68018c831a3">Poly</a> (<a class="el" href="namespace_sturm.html#aad1114e76ee0064c465261eb130fb4ab">Integer</a> <a class="el" href="#af88299ebfde607b225b84c09147f9b09">order</a>)</td></tr>
+<tr class="separator:a58b14e9892c6088b3d5ee68018c831a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b41f738776115ea56769aa8072edebb" id="r_a4b41f738776115ea56769aa8072edebb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4b41f738776115ea56769aa8072edebb">Poly</a> (<a class="el" href="class_sturm_1_1_poly.html">Poly</a> const &amp;c)</td></tr>
+<tr class="separator:a4b41f738776115ea56769aa8072edebb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3695c3d3104e3ac48500ea4900c7a61" id="r_ae3695c3d3104e3ac48500ea4900c7a61"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae3695c3d3104e3ac48500ea4900c7a61">Poly</a> (<a class="el" href="namespace_sturm.html#aa456480f0107f1ae6f3e69101575e372">Vector</a> const &amp;c)</td></tr>
+<tr class="separator:ae3695c3d3104e3ac48500ea4900c7a61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75e4a270b2d804b35bd65343353899b9" id="r_a75e4a270b2d804b35bd65343353899b9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_sturm.html#aa456480f0107f1ae6f3e69101575e372">Vector</a> const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a75e4a270b2d804b35bd65343353899b9">to_eigen</a> () const</td></tr>
+<tr class="separator:a75e4a270b2d804b35bd65343353899b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2fd39af893d760a19f2f9e6ac304446d" id="r_a2fd39af893d760a19f2f9e6ac304446d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2fd39af893d760a19f2f9e6ac304446d">set_order</a> (<a class="el" href="namespace_sturm.html#aad1114e76ee0064c465261eb130fb4ab">Integer</a> <a class="el" href="#af88299ebfde607b225b84c09147f9b09">order</a>)</td></tr>
+<tr class="separator:a2fd39af893d760a19f2f9e6ac304446d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0efb81f810d2dc4f075c36fb18612a4b" id="r_a0efb81f810d2dc4f075c36fb18612a4b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0efb81f810d2dc4f075c36fb18612a4b">set_degree</a> (<a class="el" href="namespace_sturm.html#aad1114e76ee0064c465261eb130fb4ab">Integer</a> <a class="el" href="#a8dc727dc94df89a6f4b59e9f458e9318">degree</a>)</td></tr>
+<tr class="separator:a0efb81f810d2dc4f075c36fb18612a4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3264d1f833828084b2b3d2b9841de12e" id="r_a3264d1f833828084b2b3d2b9841de12e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_sturm_1_1_poly.html">Poly</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3264d1f833828084b2b3d2b9841de12e">set_scalar</a> (<a class="el" href="namespace_sturm.html#aaa1b5226335eadcf7d426f26f2c1641d">Real</a> a)</td></tr>
+<tr class="separator:a3264d1f833828084b2b3d2b9841de12e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a95703834300337c1f12dc388cc9faa" id="r_a5a95703834300337c1f12dc388cc9faa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_sturm_1_1_poly.html">Poly</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5a95703834300337c1f12dc388cc9faa">set_monomial</a> (<a class="el" href="namespace_sturm.html#aaa1b5226335eadcf7d426f26f2c1641d">Real</a> a)</td></tr>
+<tr class="separator:a5a95703834300337c1f12dc388cc9faa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a753047fc85b1477bcd617c36dc1b3d75" id="r_a753047fc85b1477bcd617c36dc1b3d75"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_sturm.html#aa456480f0107f1ae6f3e69101575e372">Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a753047fc85b1477bcd617c36dc1b3d75">coeffs</a> () const</td></tr>
+<tr class="separator:a753047fc85b1477bcd617c36dc1b3d75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8dc727dc94df89a6f4b59e9f458e9318" id="r_a8dc727dc94df89a6f4b59e9f458e9318"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_sturm.html#aad1114e76ee0064c465261eb130fb4ab">Integer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8dc727dc94df89a6f4b59e9f458e9318">degree</a> () const</td></tr>
+<tr class="separator:a8dc727dc94df89a6f4b59e9f458e9318"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af88299ebfde607b225b84c09147f9b09" id="r_af88299ebfde607b225b84c09147f9b09"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_sturm.html#aad1114e76ee0064c465261eb130fb4ab">Integer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af88299ebfde607b225b84c09147f9b09">order</a> () const</td></tr>
+<tr class="separator:af88299ebfde607b225b84c09147f9b09"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac231ed361e75536e2e6c971617a98c83" id="r_ac231ed361e75536e2e6c971617a98c83"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac231ed361e75536e2e6c971617a98c83">to_string</a> () const</td></tr>
+<tr class="separator:ac231ed361e75536e2e6c971617a98c83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55a3c1a8ddfb293bbed7330ba1bc2449" id="r_a55a3c1a8ddfb293bbed7330ba1bc2449"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_sturm.html#aaa1b5226335eadcf7d426f26f2c1641d">Real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a55a3c1a8ddfb293bbed7330ba1bc2449">evaluate</a> (<a class="el" href="namespace_sturm.html#aaa1b5226335eadcf7d426f26f2c1641d">Real</a> x) const</td></tr>
+<tr class="separator:a55a3c1a8ddfb293bbed7330ba1bc2449"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1ab0488365e66d11c74a95ba69a3811" id="r_af1ab0488365e66d11c74a95ba69a3811"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_sturm.html#aaa1b5226335eadcf7d426f26f2c1641d">Real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af1ab0488365e66d11c74a95ba69a3811">evaluate_derivative</a> (<a class="el" href="namespace_sturm.html#aaa1b5226335eadcf7d426f26f2c1641d">Real</a> x) const</td></tr>
+<tr class="separator:af1ab0488365e66d11c74a95ba69a3811"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17423f6d7430dac14451aab9a3bb1e14" id="r_a17423f6d7430dac14451aab9a3bb1e14"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a17423f6d7430dac14451aab9a3bb1e14">evaluate</a> (<a class="el" href="namespace_sturm.html#aaa1b5226335eadcf7d426f26f2c1641d">Real</a> x, <a class="el" href="namespace_sturm.html#aaa1b5226335eadcf7d426f26f2c1641d">Real</a> &amp;p, <a class="el" href="namespace_sturm.html#aaa1b5226335eadcf7d426f26f2c1641d">Real</a> &amp;Dp) const</td></tr>
+<tr class="separator:a17423f6d7430dac14451aab9a3bb1e14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3be7ed1b5d6c43c08a1c73a8c2c90d72" id="r_a3be7ed1b5d6c43c08a1c73a8c2c90d72"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_sturm.html#aaa1b5226335eadcf7d426f26f2c1641d">Real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3be7ed1b5d6c43c08a1c73a8c2c90d72">leading_coeff</a> () const</td></tr>
+<tr class="separator:a3be7ed1b5d6c43c08a1c73a8c2c90d72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad874eadf5f4236de51173884e6d72cbd" id="r_ad874eadf5f4236de51173884e6d72cbd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad874eadf5f4236de51173884e6d72cbd">derivative</a> (<a class="el" href="class_sturm_1_1_poly.html">Poly</a> &amp;res) const</td></tr>
+<tr class="separator:ad874eadf5f4236de51173884e6d72cbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf50516d7e493da67c43b84ed9485dd3" id="r_abf50516d7e493da67c43b84ed9485dd3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abf50516d7e493da67c43b84ed9485dd3">integral</a> (<a class="el" href="class_sturm_1_1_poly.html">Poly</a> &amp;res) const</td></tr>
+<tr class="separator:abf50516d7e493da67c43b84ed9485dd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1d7f95dc895f36d64bc8c540aa5bea0" id="r_ab1d7f95dc895f36d64bc8c540aa5bea0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_sturm.html#aaa1b5226335eadcf7d426f26f2c1641d">Real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab1d7f95dc895f36d64bc8c540aa5bea0">normalize</a> ()</td></tr>
+<tr class="separator:ab1d7f95dc895f36d64bc8c540aa5bea0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5eb5324a064b126bc23ff83a980175f" id="r_ab5eb5324a064b126bc23ff83a980175f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab5eb5324a064b126bc23ff83a980175f">purge</a> (<a class="el" href="namespace_sturm.html#aaa1b5226335eadcf7d426f26f2c1641d">Real</a> epsi)</td></tr>
+<tr class="separator:ab5eb5324a064b126bc23ff83a980175f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf4c7dc0f8f6be724c0330d5efb226ef" id="r_aaf4c7dc0f8f6be724c0330d5efb226ef"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaf4c7dc0f8f6be724c0330d5efb226ef">adjust_degree</a> ()</td></tr>
+<tr class="separator:aaf4c7dc0f8f6be724c0330d5efb226ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf6ddf3cf137178cef6eb8bbd2de1dd8" id="r_acf6ddf3cf137178cef6eb8bbd2de1dd8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_sturm.html#aad1114e76ee0064c465261eb130fb4ab">Integer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acf6ddf3cf137178cef6eb8bbd2de1dd8">sign_variations</a> () const</td></tr>
+<tr class="separator:acf6ddf3cf137178cef6eb8bbd2de1dd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9badea38872442a789dd937fea24dc43" id="r_a9badea38872442a789dd937fea24dc43"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9badea38872442a789dd937fea24dc43">make_monic</a> ()</td></tr>
+<tr class="separator:a9badea38872442a789dd937fea24dc43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a178d70bc8117142e563c86750cde8137" id="r_a178d70bc8117142e563c86750cde8137"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_sturm_1_1_poly.html">Poly</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a178d70bc8117142e563c86750cde8137">operator=</a> (<a class="el" href="class_sturm_1_1_poly.html">Poly</a> const &amp;p)</td></tr>
+<tr class="separator:a178d70bc8117142e563c86750cde8137"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71a0bb2e9e0a95d0afc09aa30a2e9a54" id="r_a71a0bb2e9e0a95d0afc09aa30a2e9a54"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_sturm_1_1_poly.html">Poly</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a71a0bb2e9e0a95d0afc09aa30a2e9a54">operator-</a> ()</td></tr>
+<tr class="separator:a71a0bb2e9e0a95d0afc09aa30a2e9a54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab87c70fc2061ee8497a8adc89d414934" id="r_ab87c70fc2061ee8497a8adc89d414934"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_sturm_1_1_poly.html">Poly</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab87c70fc2061ee8497a8adc89d414934">operator+=</a> (<a class="el" href="class_sturm_1_1_poly.html">Poly</a> const &amp;p)</td></tr>
+<tr class="separator:ab87c70fc2061ee8497a8adc89d414934"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a164a6980f5ca88f7816a920f0b6d0931" id="r_a164a6980f5ca88f7816a920f0b6d0931"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_sturm_1_1_poly.html">Poly</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a164a6980f5ca88f7816a920f0b6d0931">operator-=</a> (<a class="el" href="class_sturm_1_1_poly.html">Poly</a> const &amp;p)</td></tr>
+<tr class="separator:a164a6980f5ca88f7816a920f0b6d0931"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d79283c6e5895f4aa1a6655d15384a8" id="r_a2d79283c6e5895f4aa1a6655d15384a8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_sturm_1_1_poly.html">Poly</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2d79283c6e5895f4aa1a6655d15384a8">operator*=</a> (<a class="el" href="class_sturm_1_1_poly.html">Poly</a> const &amp;p)</td></tr>
+<tr class="separator:a2d79283c6e5895f4aa1a6655d15384a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35716b597568421247b1377c7a343901" id="r_a35716b597568421247b1377c7a343901"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_sturm_1_1_poly.html">Poly</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a35716b597568421247b1377c7a343901">operator+=</a> (<a class="el" href="namespace_sturm.html#aaa1b5226335eadcf7d426f26f2c1641d">Real</a> s)</td></tr>
+<tr class="separator:a35716b597568421247b1377c7a343901"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5b63589a470c2d5087598e0c970ed42" id="r_ad5b63589a470c2d5087598e0c970ed42"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_sturm_1_1_poly.html">Poly</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad5b63589a470c2d5087598e0c970ed42">operator-=</a> (<a class="el" href="namespace_sturm.html#aaa1b5226335eadcf7d426f26f2c1641d">Real</a> s)</td></tr>
+<tr class="separator:ad5b63589a470c2d5087598e0c970ed42"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43a070f1333d5b1b5888dcf1345fa920" id="r_a43a070f1333d5b1b5888dcf1345fa920"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_sturm_1_1_poly.html">Poly</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a43a070f1333d5b1b5888dcf1345fa920">operator*=</a> (<a class="el" href="namespace_sturm.html#aaa1b5226335eadcf7d426f26f2c1641d">Real</a> s)</td></tr>
+<tr class="separator:a43a070f1333d5b1b5888dcf1345fa920"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:ae9fb7116f7737a7ccf634ea378295759" id="r_ae9fb7116f7737a7ccf634ea378295759"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_sturm.html#aa456480f0107f1ae6f3e69101575e372">Vector</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae9fb7116f7737a7ccf634ea378295759">to_eigen</a> ()</td></tr>
+<tr class="separator:ae9fb7116f7737a7ccf634ea378295759"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:aa5bd9a8e9f1c3631200631eca8a53a0e" id="r_aa5bd9a8e9f1c3631200631eca8a53a0e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_sturm.html#aad1114e76ee0064c465261eb130fb4ab">Integer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa5bd9a8e9f1c3631200631eca8a53a0e">m_order</a></td></tr>
+<tr class="separator:aa5bd9a8e9f1c3631200631eca8a53a0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>This class implements a polynomial of the form \( p(x) = \sum_{i=0}^n a_i x^i \). </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a09b21e72c0bf497ab6f922e047498585" name="a09b21e72c0bf497ab6f922e047498585"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a09b21e72c0bf497ab6f922e047498585">&#9670;&#160;</a></span>Poly() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Sturm::Poly::Poly </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Class constructor from a vector. </p>
+
+</div>
+</div>
+<a id="a58b14e9892c6088b3d5ee68018c831a3" name="a58b14e9892c6088b3d5ee68018c831a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58b14e9892c6088b3d5ee68018c831a3">&#9670;&#160;</a></span>Poly() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Sturm::Poly::Poly </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespace_sturm.html#aad1114e76ee0064c465261eb130fb4ab">Integer</a></td>          <td class="paramname"><span class="paramname"><em>order</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel explicit">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Class constructor from a vector. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">order</td><td>Order of the polynomial. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a4b41f738776115ea56769aa8072edebb" name="a4b41f738776115ea56769aa8072edebb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b41f738776115ea56769aa8072edebb">&#9670;&#160;</a></span>Poly() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Sturm::Poly::Poly </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_sturm_1_1_poly.html">Poly</a> const &amp;</td>          <td class="paramname"><span class="paramname"><em>c</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Class constructor from a vector. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">c</td><td><a class="el" href="namespace_sturm.html#aa456480f0107f1ae6f3e69101575e372">Vector</a> of coefficients. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ae3695c3d3104e3ac48500ea4900c7a61" name="ae3695c3d3104e3ac48500ea4900c7a61"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3695c3d3104e3ac48500ea4900c7a61">&#9670;&#160;</a></span>Poly() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Sturm::Poly::Poly </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespace_sturm.html#aa456480f0107f1ae6f3e69101575e372">Vector</a> const &amp;</td>          <td class="paramname"><span class="paramname"><em>c</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel explicit">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Class constructor from a vector. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">c</td><td><a class="el" href="namespace_sturm.html#aa456480f0107f1ae6f3e69101575e372">Vector</a> of coefficients. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="aaf4c7dc0f8f6be724c0330d5efb226ef" name="aaf4c7dc0f8f6be724c0330d5efb226ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf4c7dc0f8f6be724c0330d5efb226ef">&#9670;&#160;</a></span>adjust_degree()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Sturm::Poly::adjust_degree </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Adjust the degree of the polynomial to ensure the leading coefficient is non-zero. </p>
+
+</div>
+</div>
+<a id="a753047fc85b1477bcd617c36dc1b3d75" name="a753047fc85b1477bcd617c36dc1b3d75"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a753047fc85b1477bcd617c36dc1b3d75">&#9670;&#160;</a></span>coeffs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespace_sturm.html#aa456480f0107f1ae6f3e69101575e372">Vector</a> Sturm::Poly::coeffs </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Get the coefficients of the polynomial. </p><dl class="section return"><dt>Returns</dt><dd>Coefficients at the given index. </dd></dl>
+
+</div>
+</div>
+<a id="a8dc727dc94df89a6f4b59e9f458e9318" name="a8dc727dc94df89a6f4b59e9f458e9318"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8dc727dc94df89a6f4b59e9f458e9318">&#9670;&#160;</a></span>degree()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespace_sturm.html#aad1114e76ee0064c465261eb130fb4ab">Integer</a> Sturm::Poly::degree </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Get the degree of the polynomial. </p><dl class="section return"><dt>Returns</dt><dd>Degree of the polynomial. </dd></dl>
+
+</div>
+</div>
+<a id="ad874eadf5f4236de51173884e6d72cbd" name="ad874eadf5f4236de51173884e6d72cbd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad874eadf5f4236de51173884e6d72cbd">&#9670;&#160;</a></span>derivative()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Sturm::Poly::derivative </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_sturm_1_1_poly.html">Poly</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>res</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Compute the derivative of the polynomial. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">res</td><td>Polynomial representing the derivative. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a55a3c1a8ddfb293bbed7330ba1bc2449" name="a55a3c1a8ddfb293bbed7330ba1bc2449"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a55a3c1a8ddfb293bbed7330ba1bc2449">&#9670;&#160;</a></span>evaluate() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespace_sturm.html#aaa1b5226335eadcf7d426f26f2c1641d">Real</a> Sturm::Poly::evaluate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespace_sturm.html#aaa1b5226335eadcf7d426f26f2c1641d">Real</a></td>          <td class="paramname"><span class="paramname"><em>x</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Evaluate the polynomial at a given point. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>Point at which to evaluate the polynomial. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Value of the polynomial at the given point. </dd></dl>
+
+</div>
+</div>
+<a id="a17423f6d7430dac14451aab9a3bb1e14" name="a17423f6d7430dac14451aab9a3bb1e14"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a17423f6d7430dac14451aab9a3bb1e14">&#9670;&#160;</a></span>evaluate() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Sturm::Poly::evaluate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespace_sturm.html#aaa1b5226335eadcf7d426f26f2c1641d">Real</a></td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespace_sturm.html#aaa1b5226335eadcf7d426f26f2c1641d">Real</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>p</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespace_sturm.html#aaa1b5226335eadcf7d426f26f2c1641d">Real</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>Dp</em></span>&#160;) const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Evaluate the polynomial and its derivative at a given point. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>Point at which to evaluate. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">p</td><td>Value of the polynomial at the given point. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">Dp</td><td>Value of the derivative at the given point. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="af1ab0488365e66d11c74a95ba69a3811" name="af1ab0488365e66d11c74a95ba69a3811"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af1ab0488365e66d11c74a95ba69a3811">&#9670;&#160;</a></span>evaluate_derivative()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespace_sturm.html#aaa1b5226335eadcf7d426f26f2c1641d">Real</a> Sturm::Poly::evaluate_derivative </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespace_sturm.html#aaa1b5226335eadcf7d426f26f2c1641d">Real</a></td>          <td class="paramname"><span class="paramname"><em>x</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Evaluate the derivative of the polynomial at a given point. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>Point at which to evaluate the derivative. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Value of the derivative at the given point. </dd></dl>
+
+</div>
+</div>
+<a id="abf50516d7e493da67c43b84ed9485dd3" name="abf50516d7e493da67c43b84ed9485dd3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf50516d7e493da67c43b84ed9485dd3">&#9670;&#160;</a></span>integral()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Sturm::Poly::integral </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_sturm_1_1_poly.html">Poly</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>res</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Compute the integral of the polynomial. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">res</td><td>Polynomial representing the integral. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a3be7ed1b5d6c43c08a1c73a8c2c90d72" name="a3be7ed1b5d6c43c08a1c73a8c2c90d72"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3be7ed1b5d6c43c08a1c73a8c2c90d72">&#9670;&#160;</a></span>leading_coeff()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespace_sturm.html#aaa1b5226335eadcf7d426f26f2c1641d">Real</a> Sturm::Poly::leading_coeff </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Get the leading coefficient of the polynomial. </p><dl class="section return"><dt>Returns</dt><dd>Leading coefficient. </dd></dl>
+
+</div>
+</div>
+<a id="a9badea38872442a789dd937fea24dc43" name="a9badea38872442a789dd937fea24dc43"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9badea38872442a789dd937fea24dc43">&#9670;&#160;</a></span>make_monic()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Sturm::Poly::make_monic </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Change the polynomial in such a way \( p(x) = x^n + \sum_{i=0}^{n-1} a_i x^i \). </p>
+
+</div>
+</div>
+<a id="ab1d7f95dc895f36d64bc8c540aa5bea0" name="ab1d7f95dc895f36d64bc8c540aa5bea0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1d7f95dc895f36d64bc8c540aa5bea0">&#9670;&#160;</a></span>normalize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespace_sturm.html#aaa1b5226335eadcf7d426f26f2c1641d">Real</a> Sturm::Poly::normalize </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Normalize the polynomial such that the maximum absolute coefficient is 1. </p><dl class="section return"><dt>Returns</dt><dd>Scaling value used for normalization. </dd></dl>
+
+</div>
+</div>
+<a id="a2d79283c6e5895f4aa1a6655d15384a8" name="a2d79283c6e5895f4aa1a6655d15384a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d79283c6e5895f4aa1a6655d15384a8">&#9670;&#160;</a></span>operator*=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_sturm_1_1_poly.html">Poly</a> &amp; Sturm::Poly::operator*= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_sturm_1_1_poly.html">Poly</a> const &amp;</td>          <td class="paramname"><span class="paramname"><em>p</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Define the multiplication with another polynomial. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">p</td><td>Polynomial to multiply. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Reference to the polynomial. </dd></dl>
+
+</div>
+</div>
+<a id="a43a070f1333d5b1b5888dcf1345fa920" name="a43a070f1333d5b1b5888dcf1345fa920"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43a070f1333d5b1b5888dcf1345fa920">&#9670;&#160;</a></span>operator*=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_sturm_1_1_poly.html">Poly</a> &amp; Sturm::Poly::operator*= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespace_sturm.html#aaa1b5226335eadcf7d426f26f2c1641d">Real</a></td>          <td class="paramname"><span class="paramname"><em>s</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Define the multiplication with a scalar. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">s</td><td>Scalar to multiply. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Reference to the polynomial. </dd></dl>
+
+</div>
+</div>
+<a id="ab87c70fc2061ee8497a8adc89d414934" name="ab87c70fc2061ee8497a8adc89d414934"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab87c70fc2061ee8497a8adc89d414934">&#9670;&#160;</a></span>operator+=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_sturm_1_1_poly.html">Poly</a> &amp; Sturm::Poly::operator+= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_sturm_1_1_poly.html">Poly</a> const &amp;</td>          <td class="paramname"><span class="paramname"><em>p</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Define the addition with another polynomial. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">p</td><td>Polynomial to add. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Reference to the polynomial. </dd></dl>
+
+</div>
+</div>
+<a id="a35716b597568421247b1377c7a343901" name="a35716b597568421247b1377c7a343901"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35716b597568421247b1377c7a343901">&#9670;&#160;</a></span>operator+=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_sturm_1_1_poly.html">Poly</a> &amp; Sturm::Poly::operator+= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespace_sturm.html#aaa1b5226335eadcf7d426f26f2c1641d">Real</a></td>          <td class="paramname"><span class="paramname"><em>s</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Define the addition with a scalar. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">s</td><td>Scalar to add. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Reference to the polynomial. </dd></dl>
+
+</div>
+</div>
+<a id="a71a0bb2e9e0a95d0afc09aa30a2e9a54" name="a71a0bb2e9e0a95d0afc09aa30a2e9a54"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a71a0bb2e9e0a95d0afc09aa30a2e9a54">&#9670;&#160;</a></span>operator-()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_sturm_1_1_poly.html">Poly</a> Sturm::Poly::operator- </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Define the negation of the polynomial. </p><dl class="section return"><dt>Returns</dt><dd>Negated polynomial. </dd></dl>
+
+</div>
+</div>
+<a id="a164a6980f5ca88f7816a920f0b6d0931" name="a164a6980f5ca88f7816a920f0b6d0931"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a164a6980f5ca88f7816a920f0b6d0931">&#9670;&#160;</a></span>operator-=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_sturm_1_1_poly.html">Poly</a> &amp; Sturm::Poly::operator-= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_sturm_1_1_poly.html">Poly</a> const &amp;</td>          <td class="paramname"><span class="paramname"><em>p</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Define the subtraction with another polynomial. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">p</td><td>Polynomial to subtract. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Reference to the polynomial. </dd></dl>
+
+</div>
+</div>
+<a id="ad5b63589a470c2d5087598e0c970ed42" name="ad5b63589a470c2d5087598e0c970ed42"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5b63589a470c2d5087598e0c970ed42">&#9670;&#160;</a></span>operator-=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_sturm_1_1_poly.html">Poly</a> &amp; Sturm::Poly::operator-= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespace_sturm.html#aaa1b5226335eadcf7d426f26f2c1641d">Real</a></td>          <td class="paramname"><span class="paramname"><em>s</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Define the subtraction with a scalar. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">s</td><td>Scalar to subtract. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Reference to the polynomial. </dd></dl>
+
+</div>
+</div>
+<a id="a178d70bc8117142e563c86750cde8137" name="a178d70bc8117142e563c86750cde8137"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a178d70bc8117142e563c86750cde8137">&#9670;&#160;</a></span>operator=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_sturm_1_1_poly.html">Poly</a> &amp; Sturm::Poly::operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_sturm_1_1_poly.html">Poly</a> const &amp;</td>          <td class="paramname"><span class="paramname"><em>p</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Define the assignment with another polynomial. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">p</td><td>Polynomial to assign from. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Reference to the polynomial. </dd></dl>
+
+</div>
+</div>
+<a id="af88299ebfde607b225b84c09147f9b09" name="af88299ebfde607b225b84c09147f9b09"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af88299ebfde607b225b84c09147f9b09">&#9670;&#160;</a></span>order()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespace_sturm.html#aad1114e76ee0064c465261eb130fb4ab">Integer</a> Sturm::Poly::order </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Get the order of the polynomial. </p><dl class="section return"><dt>Returns</dt><dd>Order of the polynomial. </dd></dl>
+
+</div>
+</div>
+<a id="ab5eb5324a064b126bc23ff83a980175f" name="ab5eb5324a064b126bc23ff83a980175f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab5eb5324a064b126bc23ff83a980175f">&#9670;&#160;</a></span>purge()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Sturm::Poly::purge </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespace_sturm.html#aaa1b5226335eadcf7d426f26f2c1641d">Real</a></td>          <td class="paramname"><span class="paramname"><em>epsi</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Purge (set to 0) coefficients that are less than or equal to a given epsilon. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">epsi</td><td>Epsilon value for purging coefficients. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a0efb81f810d2dc4f075c36fb18612a4b" name="a0efb81f810d2dc4f075c36fb18612a4b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0efb81f810d2dc4f075c36fb18612a4b">&#9670;&#160;</a></span>set_degree()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Sturm::Poly::set_degree </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespace_sturm.html#aad1114e76ee0064c465261eb130fb4ab">Integer</a></td>          <td class="paramname"><span class="paramname"><em>degree</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Set the degree of the polynomial. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">degree</td><td>Degree of the polynomial. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a5a95703834300337c1f12dc388cc9faa" name="a5a95703834300337c1f12dc388cc9faa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a95703834300337c1f12dc388cc9faa">&#9670;&#160;</a></span>set_monomial()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_sturm_1_1_poly.html">Poly</a> &amp; Sturm::Poly::set_monomial </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespace_sturm.html#aaa1b5226335eadcf7d426f26f2c1641d">Real</a></td>          <td class="paramname"><span class="paramname"><em>a</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set the polynomial to a monomial with a given coefficient. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">a</td><td>Coefficient of the monomial. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Reference to the polynomial. </dd></dl>
+
+</div>
+</div>
+<a id="a2fd39af893d760a19f2f9e6ac304446d" name="a2fd39af893d760a19f2f9e6ac304446d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2fd39af893d760a19f2f9e6ac304446d">&#9670;&#160;</a></span>set_order()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Sturm::Poly::set_order </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespace_sturm.html#aad1114e76ee0064c465261eb130fb4ab">Integer</a></td>          <td class="paramname"><span class="paramname"><em>order</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Set the order of the polynomial. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">order</td><td>Order of the polynomial. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a3264d1f833828084b2b3d2b9841de12e" name="a3264d1f833828084b2b3d2b9841de12e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3264d1f833828084b2b3d2b9841de12e">&#9670;&#160;</a></span>set_scalar()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_sturm_1_1_poly.html">Poly</a> &amp; Sturm::Poly::set_scalar </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespace_sturm.html#aaa1b5226335eadcf7d426f26f2c1641d">Real</a></td>          <td class="paramname"><span class="paramname"><em>a</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set the polynomial to a scalar value. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">a</td><td>Scalar value. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Reference to the polynomial. </dd></dl>
+
+</div>
+</div>
+<a id="acf6ddf3cf137178cef6eb8bbd2de1dd8" name="acf6ddf3cf137178cef6eb8bbd2de1dd8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf6ddf3cf137178cef6eb8bbd2de1dd8">&#9670;&#160;</a></span>sign_variations()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespace_sturm.html#aad1114e76ee0064c465261eb130fb4ab">Integer</a> Sturm::Poly::sign_variations </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Count the number of sign variations in the polynomial coefficients. </p><dl class="section return"><dt>Returns</dt><dd>Number of sign variations. </dd></dl>
+
+</div>
+</div>
+<a id="ae9fb7116f7737a7ccf634ea378295759" name="ae9fb7116f7737a7ccf634ea378295759"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9fb7116f7737a7ccf634ea378295759">&#9670;&#160;</a></span>to_eigen() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespace_sturm.html#aa456480f0107f1ae6f3e69101575e372">Vector</a> &amp; Sturm::Poly::to_eigen </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Access to the Eigen class. </p><dl class="section return"><dt>Returns</dt><dd>The Eigen class. </dd></dl>
+
+</div>
+</div>
+<a id="a75e4a270b2d804b35bd65343353899b9" name="a75e4a270b2d804b35bd65343353899b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a75e4a270b2d804b35bd65343353899b9">&#9670;&#160;</a></span>to_eigen() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespace_sturm.html#aa456480f0107f1ae6f3e69101575e372">Vector</a> const  &amp; Sturm::Poly::to_eigen </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Access to the Eigen const class. </p><dl class="section return"><dt>Returns</dt><dd>The Eigen const class. </dd></dl>
+
+</div>
+</div>
+<a id="ac231ed361e75536e2e6c971617a98c83" name="ac231ed361e75536e2e6c971617a98c83"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac231ed361e75536e2e6c971617a98c83">&#9670;&#160;</a></span>to_string()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Sturm::Poly::to_string </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Convert the polynomial to a string representation. </p><dl class="section return"><dt>Returns</dt><dd>String representation of the polynomial. </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="aa5bd9a8e9f1c3631200631eca8a53a0e" name="aa5bd9a8e9f1c3631200631eca8a53a0e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa5bd9a8e9f1c3631200631eca8a53a0e">&#9670;&#160;</a></span>m_order</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespace_sturm.html#aad1114e76ee0064c465261eb130fb4ab">Integer</a> Sturm::Poly::m_order</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Polynomial order. </p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>include/Sturm/<a class="el" href="_poly_8hxx_source.html">Poly.hxx</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespace_sturm.html">Sturm</a></li><li class="navelem"><a class="el" href="class_sturm_1_1_poly.html">Poly</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+  </ul>
+</div>
+</body>
+</html>
