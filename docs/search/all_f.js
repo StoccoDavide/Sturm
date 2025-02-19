@@ -8,7 +8,7 @@ var searchData=
   ['set_5forder_5',['set_order',['../class_sturm_1_1_poly.html#a2fd39af893d760a19f2f9e6ac304446d',1,'Sturm::Poly']]],
   ['set_5fscalar_6',['set_scalar',['../class_sturm_1_1_poly.html#a3264d1f833828084b2b3d2b9841de12e',1,'Sturm::Poly']]],
   ['sign_5fvariations_7',['sign_variations',['../class_sturm_1_1_poly.html#acf6ddf3cf137178cef6eb8bbd2de1dd8',1,'Sturm::Poly::sign_variations()'],['../class_sturm_1_1_sequence.html#a19db48c8376bddfb64334cf95501b987',1,'Sturm::Sequence::sign_variations(Real x, bool &amp;on_root) const']]],
-  ['solver_8',['Solver',['../class_sturm_1_1_sequence.html#aa8fa86d343d9d34869e026bc9f3ad565',1,'Sturm::Sequence']]],
+  ['solver_8',['Solver',['../class_sturm_1_1_sequence.html#af3f3f70981264b5d47277f043cf38713',1,'Sturm::Sequence']]],
   ['sturm_9',['Sturm',['../namespace_sturm.html',1,'Sturm'],['../index.html',1,'Sturm']]],
   ['sturm_2ehh_10',['Sturm.hh',['../_sturm_8hh.html',1,'']]],
   ['sturm_5fassert_11',['STURM_ASSERT',['../_sturm_8hh.html#ae61b22c7859a6cd54c1578d8006048ac',1,'Sturm.hh']]],

@@ -2,7 +2,7 @@ var class_sturm_1_1_sequence =
 [
     [ "Function", "class_sturm_1_1_sequence.html#a746fcc1e5e8bda47682c135b52176a02", null ],
     [ "Interval", "class_sturm_1_1_sequence.html#abe900669e6c8b4af71848dd59cc212cb", null ],
-    [ "Solver", "class_sturm_1_1_sequence.html#aa8fa86d343d9d34869e026bc9f3ad565", null ],
+    [ "Solver", "class_sturm_1_1_sequence.html#af3f3f70981264b5d47277f043cf38713", null ],
     [ "Sequence", "class_sturm_1_1_sequence.html#ad2f387cc313b57f86a21e0eabd82efeb", null ],
     [ "Sequence", "class_sturm_1_1_sequence.html#ae699664bbb924a2f2792b3a8aa991820", null ],
     [ "a", "class_sturm_1_1_sequence.html#a89ea31a2447d1741f9f98c775fe179af", null ],

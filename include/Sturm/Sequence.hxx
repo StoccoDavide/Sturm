@@ -35,7 +35,7 @@ namespace Sturm
     }; /**< Interval structure. */
 
   private:
-    using Solver = typename Optimist::ScalarRootFinder::Algo748; /**< Solver class of the Sturm sequence. */
+    using Solver = typename Optimist::ScalarRootFinder::Chandrupatla; /**< Solver class of the Sturm sequence. */
     using Function = Solver::FunctionWrapper; /**< Function class of the Sturm sequence. */
 
     Solver                m_solver;    /**< Solver class of the Sturm sequence. */

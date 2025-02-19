@@ -192,7 +192,8 @@ namespace Sturm {
       if (I.a_on_root) {r = I.a;}
       else if (I.b_on_root) {r = I.b;}
       else {
-        this->m_solver.solve_impl(this->m_function, I.a+I.b/2, r, I.a, I.b);
+        this->m_solver.bounds(I.a, I.b);
+        this->m_solver.solve(this->m_function, 0.0, r);
         STURM_ASSERT_WARNING(this->m_solver.converged(),
           "Sturm::Sequence::refine_roots(...): failed at interval n = " << n);
       }
