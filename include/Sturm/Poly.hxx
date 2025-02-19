@@ -21,7 +21,7 @@ namespace Sturm
   *
   * This class implements a polynomial of the form \f$ p(x) = \sum_{i=0}^n a_i x^i \f$.
   */
-  class Poly : public Eigen::Vector<Real, Eigen::Dynamic> {
+  class Poly : public Vector {
 
     Integer m_order; /**< Polynomial order. */
 
@@ -51,7 +51,7 @@ namespace Sturm
     * Class constructor from a vector.
     * \param[in] c Vector of coefficients.
     */
-    Poly(Poly const & c) : m_order(c.m_order) {*this = c;}
+    Poly(Poly const & c) : Vector(c), m_order(c.m_order) {}
 
     /**
     * Class constructor from a vector.
