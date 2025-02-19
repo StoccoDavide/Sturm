@@ -20,6 +20,10 @@ if(NOT TARGET Eigen3::Eigen)
     URL "https://gitlab.com/libeigen/eigen/-/archive/${EIGEN_REQUIRED_VERSION}/eigen-${EIGEN_REQUIRED_VERSION}.tar.gz")
 
   fetchcontent_makeavailable(Eigen3)
+
+  if(NOT TARGET Eigen3::Eigen)
+    message(FATAL_ERROR "Eigen3::Eigen target was not found after fetchcontent")
+  endif()
 else()
   get_target_property(EIGEN_INCLUDE_DIRS
     Eigen3::Eigen

@@ -23,6 +23,10 @@ if(NOT TARGET Optimist::Optimist)
   )
 
   fetchcontent_makeavailable(Optimist)
+
+  if(NOT TARGET Optimist::Optimist)
+    message(FATAL_ERROR "Optimist::Optimist target was not found after fetchcontent")
+  endif()
 else()
   get_target_property(OPTIMIST_INCLUDE_DIRS
     Optimist::Optimist
