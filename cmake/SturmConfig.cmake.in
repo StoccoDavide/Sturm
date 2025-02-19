@@ -1,0 +1,5 @@
+@PACKAGE_INIT@
+
+if (NOT TARGET Sturm::Sturm)
+  include ("${CMAKE_CURRENT_LIST_DIR}/SturmTargets.cmake")
+endif (NOT TARGET Sturm::Sturm)
