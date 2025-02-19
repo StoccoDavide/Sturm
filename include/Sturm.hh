@@ -1,11 +1,11 @@
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *\
- * Copyright (c) 2025, Davide Stocco, Mattia Piazza and Enrico Bertolazzi.                       *
+ * Copyright (c) 2025, Davide Stocco and Enrico Bertolazzi.                                      *
  *                                                                                               *
  * The Sturm project is distributed under the BSD 2-Clause License.                              *
  *                                                                                               *
- * Davide Stocco                          Mattia Piazza                        Enrico Bertolazzi *
- * University of Trento               University of Trento                  University of Trento *
- * davide.stocco@unitn.it            mattia.piazza@unitn.it           enrico.bertolazzi@unitn.it *
+ * Davide Stocco                                                               Enrico Bertolazzi *
+ * University of Trento                                                     University of Trento *
+ * davide.stocco@unitn.it                                             enrico.bertolazzi@unitn.it *
 \* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
 #pragma once
@@ -22,6 +22,9 @@
 
 // Eigen library
 #include <Eigen/Dense>
+
+// Optimist library
+#include <Optimist.hh>
 
 // Print Sturm errors
 #ifndef STURM_ERROR
@@ -79,13 +82,13 @@ namespace Sturm
     std::ostringstream os;
     os
       << "* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *" << std::endl
-      << "* Copyright (c) 2025, Davide Stocco, Mattia Piazza and Enrico Bertolazzi.                       *" << std::endl
+      << "* Copyright (c) 2025, Davide Stocco and Enrico Bertolazzi.                                      *" << std::endl
       << "*                                                                                               *" << std::endl
       << "* The Sturm project is distributed under the BSD 2-Clause License.                              *" << std::endl
       << "*                                                                                               *" << std::endl
-      << "* Davide Stocco                          Mattia Piazza                        Enrico Bertolazzi *" << std::endl
-      << "* University of Trento               University of Trento                  University of Trento *" << std::endl
-      << "* davide.stocco@unitn.it            mattia.piazza@unitn.it           enrico.bertolazzi@unitn.it *" << std::endl
+      << "* Davide Stocco                                                               Enrico Bertolazzi *" << std::endl
+      << "* University of Trento                                                     University of Trento *" << std::endl
+      << "* davide.stocco@unitn.it                                             enrico.bertolazzi@unitn.it *" << std::endl
       << "* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *" << std::endl;
     return os.str();
   }

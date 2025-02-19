@@ -1,11 +1,11 @@
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
-# Copyright (c) 2025, Davide Stocco, Mattia Piazza and Enrico Bertolazzi.                         #
+# Copyright (c) 2025, Davide Stocco and Enrico Bertolazzi.                                        #
 #                                                                                                 #
 # The Sturm project is distributed under the BSD 2-Clause License.                                #
 #                                                                                                 #
-# Davide Stocco                           Mattia Piazza                         Enrico Bertolazzi #
-# University of Trento                University of Trento                   University of Trento #
-# davide.stocco@unitn.it             mattia.piazza@unitn.it            enrico.bertolazzi@unitn.it #
+# Davide Stocco                                                                 Enrico Bertolazzi #
+# University of Trento                                                       University of Trento #
+# davide.stocco@unitn.it                                               enrico.bertolazzi@unitn.it #
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 
 cmake_minimum_required(VERSION 3.14)
@@ -43,20 +43,31 @@ endif()
 include(SturmEigen3)
 include(SturmOptimist)
 
+# Collect source files
+file(GLOB_RECURSE HEADER_FILES "${CMAKE_CURRENT_SOURCE_DIR}/include/*.hh" "${CMAKE_CURRENT_SOURCE_DIR}/include/*.hxx")
+file(GLOB_RECURSE SOURCE_FILES "${CMAKE_CURRENT_SOURCE_DIR}/src/*.cxx")
+foreach(HEADER_FILE IN LISTS HEADER_FILES)
+file(
+  RELATIVE_PATH
+  RELATIVE_PATH_HEADER_FILE
+  ${CMAKE_CURRENT_SOURCE_DIR} ${HEADER_FILE}
+)
+list(APPEND RELATIVE_HEADER_FILES ${RELATIVE_PATH_HEADER_FILE})
+endforeach()
+
 # Library definition
-add_library(Sturm SHARED ${SOURCE_FILES_CXX} ${HEADER_FILES_HH} ${HEADER_FILES_HXX})
+add_library(Sturm SHARED ${SOURCE_FILES} ${HEADER_FILES})
 add_library(Sturm::Sturm ALIAS Sturm)
 
-target_link_libraries(Sturm PUBLIC Eigen3::Eigen)
+# Link dependencies
+target_link_libraries(Sturm PUBLIC Eigen3::Eigen Optimist::Optimist)
 
 target_include_directories(Sturm PUBLIC
   $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
   $<INSTALL_INTERFACE:include>
 )
 
-# INFO: Ensure this options are only available to developers. In theory we could leave them available,
-# but the call to `target_sources` breaks `fetchcontent` compatibility due to absolute paths being
-# added to `INTERFACE_SOURCES`. I tried solving it, but it seems to be poorly documented, supported, etc.
+# Build options
 if(CMAKE_CURRENT_SOURCE_DIR STREQUAL CMAKE_SOURCE_DIR)
   if(NOT CMAKE_BUILD_TYPE)
     set(CMAKE_BUILD_TYPE "Debug")
@@ -66,19 +77,6 @@ if(CMAKE_CURRENT_SOURCE_DIR STREQUAL CMAKE_SOURCE_DIR)
   option(BUILD_TESTS "Build tests" OFF)
   option(BUILD_BENCHMARKS "Build benchmarks" OFF)
   option(BUILD_EXAMPLES "Build examples" OFF)
-
-  file(GLOB_RECURSE HEADER_FILES_HH "${CMAKE_CURRENT_SOURCE_DIR}/include/*.hh")
-  file(GLOB_RECURSE HEADER_FILES_HXX "${CMAKE_CURRENT_SOURCE_DIR}/include/*.hxx")
-  file(GLOB_RECURSE SOURCE_FILES_CXX "${CMAKE_CURRENT_SOURCE_DIR}/src/*.cxx")
-  foreach(HEADER_FILE IN LISTS HEADER_FILES_HH HEADER_FILES_HXX)
-    file(
-      RELATIVE_PATH
-      RELATIVE_PATH_HEADER_FILE
-      ${CMAKE_CURRENT_SOURCE_DIR} ${HEADER_FILE}
-    )
-    list(APPEND RELATIVE_HEADER_FILES ${RELATIVE_PATH_HEADER_FILE})
-  endforeach()
-  target_sources(Sturm PRIVATE ${SOURCE_FILES_CXX})
 
   if(BUILD_TESTS)
     add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/tests)
@@ -93,6 +91,7 @@ if(CMAKE_CURRENT_SOURCE_DIR STREQUAL CMAKE_SOURCE_DIR)
   endif()
 endif()
 
+# Compiler options
 if(MSVC)
   target_compile_options(Sturm PRIVATE /W4 /WX)
 else()
@@ -100,11 +99,7 @@ else()
 endif()
 
 # Installation
-install(TARGETS Sturm EXPORT SturmTargets
-  LIBRARY DESTINATION lib
-  ARCHIVE DESTINATION lib
-  RUNTIME DESTINATION bin
-)
+install(TARGETS Sturm EXPORT SturmTargets)
 
 install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/include/ DESTINATION include)
 

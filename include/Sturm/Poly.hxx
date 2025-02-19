@@ -1,11 +1,11 @@
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *\
- * Copyright (c) 2025, Davide Stocco, Mattia Piazza and Enrico Bertolazzi.                       *
+ * Copyright (c) 2025, Davide Stocco and Enrico Bertolazzi.                                      *
  *                                                                                               *
  * The Sturm project is distributed under the BSD 2-Clause License.                              *
  *                                                                                               *
- * Davide Stocco                          Mattia Piazza                        Enrico Bertolazzi *
- * University of Trento               University of Trento                  University of Trento *
- * davide.stocco@unitn.it            mattia.piazza@unitn.it           enrico.bertolazzi@unitn.it *
+ * Davide Stocco                                                               Enrico Bertolazzi *
+ * University of Trento                                                     University of Trento *
+ * davide.stocco@unitn.it                                             enrico.bertolazzi@unitn.it *
 \* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
 #pragma once
@@ -168,6 +168,13 @@ namespace Sturm
     * \param[out] res Polynomial representing the integral.
     */
     void integral(Poly & res) const;
+
+    /**
+    * Compute the integral of the polynomial with a given constant.
+    * \param[out] res Polynomial representing the integral.
+    * \param[in] c Constant value for the integral.
+    */
+    void integral(Poly & res, Real c) const;
 
     /**
     * Normalize the polynomial such that the maximum absolute coefficient is 1.

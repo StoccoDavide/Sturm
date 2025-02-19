@@ -1,11 +1,11 @@
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *\
- * Copyright (c) 2025, Davide Stocco, Mattia Piazza and Enrico Bertolazzi.                       *
+ * Copyright (c) 2025, Davide Stocco and Enrico Bertolazzi.                                      *
  *                                                                                               *
  * The Sturm project is distributed under the BSD 2-Clause License.                              *
  *                                                                                               *
- * Davide Stocco                          Mattia Piazza                        Enrico Bertolazzi *
- * University of Trento               University of Trento                  University of Trento *
- * davide.stocco@unitn.it            mattia.piazza@unitn.it           enrico.bertolazzi@unitn.it *
+ * Davide Stocco                                                               Enrico Bertolazzi *
+ * University of Trento                                                     University of Trento *
+ * davide.stocco@unitn.it                                             enrico.bertolazzi@unitn.it *
 \* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
 #include "Sturm.hh"
@@ -143,6 +143,18 @@ namespace Sturm
     }
     res.m_order = this->m_order + 1;
   }
+
+  // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+  void Poly::integral(Poly & res, Real c) const {
+    res.resize(this->m_order + 1);
+    res.coeffRef(0) = c;
+    for (Integer i{1}; i <= this->m_order; ++i) {
+      res.coeffRef(i) = this->coeff(i - 1)/i;
+    }
+    res.m_order = this->m_order + 1;
+  }
+
 
   // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -449,17 +461,17 @@ namespace Sturm
 
   // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-  void GCD(Poly const & a, Poly const & b, Poly & g, Real eps)
+  void GCD(Poly const & a, Poly const & b, Poly & gcd, Real eps)
   {
     if (b.order() > 0) {
       Poly q, r;
       Sturm::divide(a, b, q, r);
       r.purge(eps);
-      Sturm::GCD(b, r, g, eps);
+      Sturm::GCD(b, r, gcd, eps);
     } else {
-      g = a;
+      gcd = a;
     }
-    g.normalize();
+    gcd.normalize();
   }
 
   // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -

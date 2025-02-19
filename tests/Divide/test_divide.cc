@@ -16,31 +16,29 @@
 
 using namespace Sturm;
 
-TEST_CASE("Root") {
+TEST_CASE("Division") {
 
   Poly p1(3); p1 << 1.0, -3.0, 2.0; // p1(x) = 1 - 3x + 2x^2
   Poly p2(3); p2 << 0.0, 1.0, 1.0; // p2(x) = x + x^2
 
-  SECTION("Number") {
-    Sequence seq(p1); Integer n_roots;
-    n_roots = seq.separate_roots(-2.0, -1.0);
-    REQUIRE(n_roots == 0);
-    n_roots = seq.separate_roots(-1.0, 1.0);
-    REQUIRE(n_roots == 1);
-    n_roots = seq.separate_roots(-10.0, 10.0);
-    REQUIRE(n_roots == 2);
+  SECTION("Test 1") {
+    Poly q, r; Sturm::divide(p1, p2, q, r);
+    Vector sol_quot(1); sol_quot << 2.0; // q(x) = 2
+    Vector sol_rem(2); sol_rem << 1.0, -5.0; // r(x) = x - 5
+    REQUIRE(q.coeffs().isApprox(sol_quot));
+    REQUIRE(r.coeffs().isApprox(sol_rem));
+    REQUIRE(q.degree() == 0);
+    REQUIRE(r.degree() == 1);
   }
 
-  SECTION("Computation") {
-    Sequence seq(p1);
-    seq.separate_roots(-10.0, 10.0);
-    seq.refine_roots();
-    Vector roots{seq.roots()};
-    std::cout << "Roots: " << roots.transpose() << std::endl;
-    REQUIRE(roots.size() == 2);
-    Vector sol_roots(2); sol_roots << 0.5, 1.0;
-    REQUIRE(roots.isApprox(sol_roots));
+  SECTION("Test 2") {
+    Poly q, r; Sturm::divide(p2, p1, q, r);
+    Vector sol_quot(1); sol_quot << 1.0/2.0; // q(x) = 1/2
+    Vector sol_rem(2); sol_rem << -1.0/2.0, 5.0/2.0; // r(x) = -1/2 + 5/2x
+    REQUIRE(q.coeffs().isApprox(sol_quot));
+    REQUIRE(r.coeffs().isApprox(sol_rem));
+    REQUIRE(q.degree() == 0);
+    REQUIRE(r.degree() == 1);
   }
-
 
 }

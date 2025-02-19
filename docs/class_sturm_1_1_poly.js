@@ -12,6 +12,7 @@ var class_sturm_1_1_poly =
     [ "evaluate", "class_sturm_1_1_poly.html#a17423f6d7430dac14451aab9a3bb1e14", null ],
     [ "evaluate_derivative", "class_sturm_1_1_poly.html#af1ab0488365e66d11c74a95ba69a3811", null ],
     [ "integral", "class_sturm_1_1_poly.html#abf50516d7e493da67c43b84ed9485dd3", null ],
+    [ "integral", "class_sturm_1_1_poly.html#a030f826ad9ad64d93be62f045d7eb48f", null ],
     [ "leading_coeff", "class_sturm_1_1_poly.html#a3be7ed1b5d6c43c08a1c73a8c2c90d72", null ],
     [ "make_monic", "class_sturm_1_1_poly.html#a9badea38872442a789dd937fea24dc43", null ],
     [ "normalize", "class_sturm_1_1_poly.html#ab1d7f95dc895f36d64bc8c540aa5bea0", null ],

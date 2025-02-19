@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['real_0',['Real',['../namespace_sturm.html#aaa1b5226335eadcf7d426f26f2c1641d',1,'Sturm']]]
+  ['integer_0',['Integer',['../namespace_sturm.html#aad1114e76ee0064c465261eb130fb4ab',1,'Sturm']]],
+  ['interval_1',['Interval',['../class_sturm_1_1_sequence.html#abe900669e6c8b4af71848dd59cc212cb',1,'Sturm::Sequence']]]
 ];

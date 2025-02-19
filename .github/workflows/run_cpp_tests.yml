@@ -15,7 +15,6 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y build-essential cmake g++
-          sudo apt-get install libeigen3-dev
 
       - name: cmake
         run: |
@@ -28,5 +27,5 @@ jobs:
           cd build
           make -j
 
-      #- name: ctest
-      #  run: ctest --test-dir build/tests --output-on-failure -V
+      - name: ctest
+        run: ctest --test-dir build/tests --output-on-failure -V

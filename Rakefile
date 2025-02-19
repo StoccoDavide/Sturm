@@ -1,11 +1,11 @@
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
-# Copyright (c) 2025, Davide Stocco, Mattia Piazza and Enrico Bertolazzi.                         #
+# Copyright (c) 2025, Davide Stocco and Enrico Bertolazzi.                                        #
 #                                                                                                 #
-# The Sturm project is distributed under the BSD 2-Clause License.                             #
+# The Sturm project is distributed under the BSD 2-Clause License.                                #
 #                                                                                                 #
-# Davide Stocco                           Mattia Piazza                         Enrico Bertolazzi #
-# University of Trento                University of Trento                   University of Trento #
-# davide.stocco@unitn.it             mattia.piazza@unitn.it            enrico.bertolazzi@unitn.it #
+# Davide Stocco                                                                 Enrico Bertolazzi #
+# University of Trento                                                       University of Trento #
+# davide.stocco@unitn.it                                               enrico.bertolazzi@unitn.it #
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 
 %w(colorize rake fileutils).each do |gem|

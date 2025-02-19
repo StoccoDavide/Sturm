@@ -195,6 +195,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ad874eadf5f4236de51173884e6d72cbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abf50516d7e493da67c43b84ed9485dd3" id="r_abf50516d7e493da67c43b84ed9485dd3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abf50516d7e493da67c43b84ed9485dd3">integral</a> (<a class="el" href="class_sturm_1_1_poly.html">Poly</a> &amp;res) const</td></tr>
 <tr class="separator:abf50516d7e493da67c43b84ed9485dd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a030f826ad9ad64d93be62f045d7eb48f" id="r_a030f826ad9ad64d93be62f045d7eb48f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a030f826ad9ad64d93be62f045d7eb48f">integral</a> (<a class="el" href="class_sturm_1_1_poly.html">Poly</a> &amp;res, <a class="el" href="namespace_sturm.html#aaa1b5226335eadcf7d426f26f2c1641d">Real</a> c) const</td></tr>
+<tr class="separator:a030f826ad9ad64d93be62f045d7eb48f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab1d7f95dc895f36d64bc8c540aa5bea0" id="r_ab1d7f95dc895f36d64bc8c540aa5bea0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_sturm.html#aaa1b5226335eadcf7d426f26f2c1641d">Real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab1d7f95dc895f36d64bc8c540aa5bea0">normalize</a> ()</td></tr>
 <tr class="separator:ab1d7f95dc895f36d64bc8c540aa5bea0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab5eb5324a064b126bc23ff83a980175f" id="r_ab5eb5324a064b126bc23ff83a980175f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab5eb5324a064b126bc23ff83a980175f">purge</a> (<a class="el" href="namespace_sturm.html#aaa1b5226335eadcf7d426f26f2c1641d">Real</a> epsi)</td></tr>
@@ -531,7 +533,7 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <a id="abf50516d7e493da67c43b84ed9485dd3" name="abf50516d7e493da67c43b84ed9485dd3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abf50516d7e493da67c43b84ed9485dd3">&#9670;&#160;</a></span>integral()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#abf50516d7e493da67c43b84ed9485dd3">&#9670;&#160;</a></span>integral() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -547,6 +549,34 @@ Private Attributes</h2></td></tr>
 <p>Compute the integral of the polynomial. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[out]</td><td class="paramname">res</td><td>Polynomial representing the integral. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a030f826ad9ad64d93be62f045d7eb48f" name="a030f826ad9ad64d93be62f045d7eb48f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a030f826ad9ad64d93be62f045d7eb48f">&#9670;&#160;</a></span>integral() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Sturm::Poly::integral </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_sturm_1_1_poly.html">Poly</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>res</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespace_sturm.html#aaa1b5226335eadcf7d426f26f2c1641d">Real</a></td>          <td class="paramname"><span class="paramname"><em>c</em></span>&#160;) const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Compute the integral of the polynomial with a given constant. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">res</td><td>Polynomial representing the integral. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">c</td><td>Constant value for the integral. </td></tr>
   </table>
   </dd>
 </dl>

@@ -1,11 +1,11 @@
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *\
- * Copyright (c) 2025, Davide Stocco, Mattia Piazza and Enrico Bertolazzi.                       *
+ * Copyright (c) 2025, Davide Stocco and Enrico Bertolazzi.                                      *
  *                                                                                               *
  * The Sturm project is distributed under the BSD 2-Clause License.                              *
  *                                                                                               *
- * Davide Stocco                          Mattia Piazza                        Enrico Bertolazzi *
- * University of Trento               University of Trento                  University of Trento *
- * davide.stocco@unitn.it            mattia.piazza@unitn.it           enrico.bertolazzi@unitn.it *
+ * Davide Stocco                                                               Enrico Bertolazzi *
+ * University of Trento                                                     University of Trento *
+ * davide.stocco@unitn.it                                             enrico.bertolazzi@unitn.it *
 \* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
 #include "Sturm.hh"
@@ -73,8 +73,8 @@ namespace Sturm {
     this->m_intervals.reserve(this->m_sequence.size());
 
     Interval I_0, I_1;
-    m_a = I_0.a = a_in;
-    m_b = I_0.b = b_in;
+    this->m_a = I_0.a = a_in;
+    this->m_b = I_0.b = b_in;
 
     I_0.va = this->sign_variations(I_0.a, I_0.a_on_root);
     I_0.vb = this->sign_variations(I_0.b, I_0.b_on_root);
@@ -182,17 +182,19 @@ namespace Sturm {
 
   void
   Sequence::refine_roots() {
-    //FIXMEm_fun.setup( &this->m_sequence[0]);
-    m_roots.resize(this->m_intervals.size());
-    Integer n = 0;
+    this->m_function = std::function<void(Real x, Real & out)>([this](Real x, Real & out) {
+      out = this->m_sequence[0].evaluate(x);
+    });
+    this->m_roots.resize(this->m_intervals.size());
+    Integer n{0};
     for (auto & I : this->m_intervals) {
-      Real & r = m_roots.coeffRef(n++);
+      Real & r{this->m_roots.coeffRef(n++)};
       if (I.a_on_root) {r = I.a;}
       else if (I.b_on_root) {r = I.b;}
       else {
-        //FIXMEr = m_solver.eval( I.a, I.b, &m_fun);
-        //FIXMEif (!m_solver.converged() )
-          //FIXMEfmt::print( "Warning: Sequence::refine_roots failed at interval N.{}\n", n);
+        //FIXME: this->m_solver.solve(this->m_function, r, I.a, I.b);
+        STURM_ASSERT_WARNING(this->m_solver.converged(),
+          "Sturm::Sequence::refine_roots(...): failed at interval n = " << n);
       }
     }
   }

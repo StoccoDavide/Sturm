@@ -86,15 +86,20 @@ target_link_libraries(your_target PRIVATE Sturm::Sturm)
   Department of Industrial Engineering <br>
   email: davide.stocco@unitn.it
 
-- Mattia Piazza <br>
-  University of Trento <br>
-  Department of Industrial Engineering <br>
-  email: mattia.piazza@unitn.it
-
 - Enrico Bertolazzi <br>
   University of Trento <br>
   Department of Industrial Engineering <br>
   email: enrico.bertolazzi@unitn.it
+
+Aka...
+
+```
+▗▄▄▄  ▄   ▄  ▐▌    ▗▞▀▜▌▄▄▄▄     ▐▌    ▗▄▄▖ ▗▞▀▚▖ ▄▄▄ ▄   ▄
+▐▌  █ █   █  ▐▌    ▝▚▄▟▌█   █    ▐▌    ▐▌ ▐▌▐▛▀▀▘█    █   █
+▐▌  █  ▀▄▀▗▞▀▜▌         █   █ ▗▞▀▜▌    ▐▛▀▚▖▝▚▄▄▖█     ▀▀▀█
+▐▙▄▄▀     ▝▚▄▟▌               ▝▚▄▟▌    ▐▙▄▞▘          ▄   █
+                                                       ▀▀▀
+```
 
 ## License
 

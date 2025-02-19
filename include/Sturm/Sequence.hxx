@@ -1,11 +1,11 @@
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *\
- * Copyright (c) 2025, Davide Stocco, Mattia Piazza and Enrico Bertolazzi.                       *
+ * Copyright (c) 2025, Davide Stocco and Enrico Bertolazzi.                                      *
  *                                                                                               *
  * The Sturm project is distributed under the BSD 2-Clause License.                              *
  *                                                                                               *
- * Davide Stocco                          Mattia Piazza                        Enrico Bertolazzi *
- * University of Trento               University of Trento                  University of Trento *
- * davide.stocco@unitn.it            mattia.piazza@unitn.it           enrico.bertolazzi@unitn.it *
+ * Davide Stocco                                                               Enrico Bertolazzi *
+ * University of Trento                                                     University of Trento *
+ * davide.stocco@unitn.it                                             enrico.bertolazzi@unitn.it *
 \* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
 #pragma once
@@ -16,31 +16,30 @@
 namespace Sturm
 {
 
-
+  /**
+  * \brief Sturm sequence class.
+  *
+  * This class implements the Sturm sequence for a given polynomial \f$ p(x) \f$. Such sequence is
+  * a sequence of polynomials \f$ p_0(x), p_1(x), \ldots, p_n(x) \f$ and allows to compute the number
+  * roots in a given interval \f$ [a, b] \f$.
+  */
   class Sequence {
   public:
-
     using Interval = struct Interval {
-      Real    a;
-      Real    b;
-      Integer va;
-      Integer vb;
-      bool    a_on_root;
-      bool    b_on_root;
+      Real    a; /**< Lower bound of the interval. */
+      Real    b; /**< Upper bound of the interval. */
+      Integer va; /**< Sign of the polynomial at the lower bound. */
+      Integer vb; /**< Sign of the polynomial at the upper bound. */
+      bool    a_on_root; /**< True if the lower bound is a root. */
+      bool    b_on_root; /**< True if the upper bound is a root. */
     }; /**< Interval structure. */
 
-    // FIXMEclass Algo748_fun : public Algo748_base_fun<Real> {
-    // FIXME  Poly<Real> const * P = nullptr;
-    // FIXMEpublic:
-    // FIXME  void setup( Poly<Real> const * Pin ) { P = Pin;}
-    // FIXME  Real eval( Real x ) const override {return P->eval(x);}
-    // FIXME};
-
   private:
+    using Solver = typename Optimist::ScalarRootFinder::Newton; /**< Solver class of the Sturm sequence. */
+    using Function = Solver::FunctionWrapper; /**< Function class of the Sturm sequence. */
 
-    //FIXME: Algo748<Real>    m_solver;
-    //FIXME: Algo748_fun      m_fun;
-
+    Solver                m_solver;    /**< Solver class of the Sturm sequence. */
+    Function              m_function;  /**< Function class of the Sturm sequence. */
     std::vector<Poly>     m_sequence;  /**< Sturm sequence. */
     std::vector<Interval> m_intervals; /**< Computed intervals. */
     Vector                m_roots;     /**< Computed roots. */
@@ -52,6 +51,12 @@ namespace Sturm
     * Class constructor for the Sturm sequence.
     */
     Sequence() {}
+
+    /**
+    * Class constructor for the Sturm sequence given the polynomial \f$ p(x) \f$.
+    * \param[in] p Polynomial.
+    */
+    Sequence(Poly const & p) {this->build(p);}
 
     /**
     * Get the lower bound of the interval containing the roots.
