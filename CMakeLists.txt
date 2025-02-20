@@ -1,5 +1,5 @@
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
-# Copyright (c) 2025, Davide Stocco and Enrico Bertolazzi.                                        #
+# Copyright (c) 2025, Davide Stocco, Mattia Piazza and Enrico Bertolazzi.                         #
 #                                                                                                 #
 # The Sturm project is distributed under the BSD 2-Clause License.                                #
 #                                                                                                 #
@@ -43,40 +43,45 @@ endif()
 include(SturmEigen3)
 include(SturmOptimist)
 
-# Collect source files
-file(GLOB_RECURSE HEADER_FILES "${CMAKE_CURRENT_SOURCE_DIR}/include/*.hh" "${CMAKE_CURRENT_SOURCE_DIR}/include/*.hxx")
-file(GLOB_RECURSE SOURCE_FILES "${CMAKE_CURRENT_SOURCE_DIR}/src/*.cxx")
-foreach(HEADER_FILE IN LISTS HEADER_FILES)
-file(
-  RELATIVE_PATH
-  RELATIVE_PATH_HEADER_FILE
-  ${CMAKE_CURRENT_SOURCE_DIR} ${HEADER_FILE}
-)
-list(APPEND RELATIVE_HEADER_FILES ${RELATIVE_PATH_HEADER_FILE})
-endforeach()
-
 # Library definition
-add_library(Sturm SHARED ${SOURCE_FILES} ${HEADER_FILES})
+add_library(Sturm INTERFACE)
 add_library(Sturm::Sturm ALIAS Sturm)
 
-# Link dependencies
-target_link_libraries(Sturm PUBLIC Eigen3::Eigen Optimist::Optimist)
+target_link_libraries(Sturm INTERFACE Eigen3::Eigen Optimist::Optimist)
 
-target_include_directories(Sturm PUBLIC
+target_include_directories(Sturm INTERFACE
   $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
   $<INSTALL_INTERFACE:include>
 )
 
-# Build options
+# INFO: Ensure this options are only available to developers. In theory we could leave them available,
+# but the call to `target_sources` breaks `fetchcontent` compatibility due to absolute paths being
+# added to `INTERFACE_SOURCES`. I tried solving it, but it seems to be poorly documented, supported, etc.
 if(CMAKE_CURRENT_SOURCE_DIR STREQUAL CMAKE_SOURCE_DIR)
   if(NOT CMAKE_BUILD_TYPE)
     set(CMAKE_BUILD_TYPE "Debug")
-    message(STATUS "Sturm: CMAKE_BUILD_TYPE not specified, defaulting to ${CMAKE_BUILD_TYPE}")
+    message(STATUS
+      "Sturm: "
+      "CMAKE_BUILD_TYPE not specified, defaulting to ${CMAKE_BUILD_TYPE}"
+    )
   endif()
 
   option(BUILD_TESTS "Build tests" OFF)
   option(BUILD_BENCHMARKS "Build benchmarks" OFF)
   option(BUILD_EXAMPLES "Build examples" OFF)
+  option(STURM_ENABLE_PLOTTING "Enable plotting with Matplot++" OFF)
+
+  file(GLOB_RECURSE HEADER_FILES_HH "${CMAKE_CURRENT_SOURCE_DIR}/include/*.hh")
+  file(GLOB_RECURSE HEADER_FILES_HXX "${CMAKE_CURRENT_SOURCE_DIR}/include/*.hxx")
+  foreach(HEADER_FILE IN LISTS HEADER_FILES_HH HEADER_FILES_HXX)
+    file(
+      RELATIVE_PATH
+      RELATIVE_PATH_HEADER_FILE
+      ${CMAKE_CURRENT_SOURCE_DIR} ${HEADER_FILE}
+    )
+    list(APPEND RELATIVE_HEADER_FILES ${RELATIVE_PATH_HEADER_FILE})
+  endforeach()
+  target_sources(Sturm INTERFACE $<BUILD_INTERFACE:${RELATIVE_HEADER_FILES}>)
 
   if(BUILD_TESTS)
     add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/tests)
@@ -89,13 +94,16 @@ if(CMAKE_CURRENT_SOURCE_DIR STREQUAL CMAKE_SOURCE_DIR)
   if(BUILD_EXAMPLES)
     add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/examples)
   endif()
+
+  if(STURM_ENABLE_PLOTTING)
+    target_compile_definitions(Sturm INTERFACE STURM_ENABLE_PLOTTING)
+  endif()
 endif()
 
-# Compiler options
 if(MSVC)
-  target_compile_options(Sturm PRIVATE /W4 /WX)
+  target_compile_options(Sturm INTERFACE /W4 /WX)
 else()
-  target_compile_options(Sturm PRIVATE -Wall -Wextra -pedantic -Werror)
+  target_compile_options(Sturm INTERFACE -Wall -Wextra -pedantic -Werror)
 endif()
 
 # Installation

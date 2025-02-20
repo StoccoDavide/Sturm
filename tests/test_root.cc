@@ -36,7 +36,6 @@ TEST_CASE("Root") {
     seq.separate_roots(-10.0, 10.0);
     seq.refine_roots();
     Vector roots{seq.roots()};
-    std::cout << "Roots: " << roots.transpose() << std::endl;
     REQUIRE(roots.size() == 2);
     Vector sol_roots(2); sol_roots << 0.5, 1.0;
     REQUIRE(roots.isApprox(sol_roots));
