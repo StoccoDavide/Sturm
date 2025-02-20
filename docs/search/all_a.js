@@ -1,4 +1,12 @@
 var searchData=
 [
-  ['normalize_0',['normalize',['../class_sturm_1_1_poly.html#ab1d7f95dc895f36d64bc8c540aa5bea0',1,'Sturm::Poly']]]
+  ['operator_2a_0',['operator*',['../namespace_sturm.html#a2d7e792f3f593ef12261001271957a44',1,'Sturm::operator*(Poly const &amp;p_1, Poly const &amp;p_2)'],['../namespace_sturm.html#a910bd0221ea3c8b0fc6a7105e3ca10f8',1,'Sturm::operator*(Real p, Poly const &amp;s)'],['../namespace_sturm.html#a2c97a500a74cc75f72ab52cb748ff676',1,'Sturm::operator*(Poly const &amp;s, Real p)']]],
+  ['operator_2a_3d_1',['operator*=',['../class_sturm_1_1_poly.html#a2d79283c6e5895f4aa1a6655d15384a8',1,'Sturm::Poly::operator*=(Poly const &amp;p)'],['../class_sturm_1_1_poly.html#a43a070f1333d5b1b5888dcf1345fa920',1,'Sturm::Poly::operator*=(Real s)']]],
+  ['operator_2b_2',['operator+',['../namespace_sturm.html#a03d1a9185a195dce70d456404fcf0765',1,'Sturm::operator+(Poly const &amp;p_1, Poly const &amp;p_2)'],['../namespace_sturm.html#afd86b76ed9f4a96e2b3bf5293d024a4b',1,'Sturm::operator+(Poly const &amp;p, Real s)'],['../namespace_sturm.html#aff17484eb9d89f7f710009da41f6ade8',1,'Sturm::operator+(Real s, Poly const &amp;p)']]],
+  ['operator_2b_3d_3',['operator+=',['../class_sturm_1_1_poly.html#ab87c70fc2061ee8497a8adc89d414934',1,'Sturm::Poly::operator+=(Poly const &amp;p)'],['../class_sturm_1_1_poly.html#a35716b597568421247b1377c7a343901',1,'Sturm::Poly::operator+=(Real s)']]],
+  ['operator_2d_4',['operator-',['../class_sturm_1_1_poly.html#a71a0bb2e9e0a95d0afc09aa30a2e9a54',1,'Sturm::Poly::operator-()'],['../namespace_sturm.html#a7f52e3bddd5796da5749bb5ef0e51203',1,'Sturm::operator-(Poly const &amp;p_1, Poly const &amp;p_2)'],['../namespace_sturm.html#af18e0aee5a15d4a8282cb3091f1c485c',1,'Sturm::operator-(Poly const &amp;p, Real s)'],['../namespace_sturm.html#a6e95ad85b757f1e8c68901c934817f56',1,'Sturm::operator-(Real s, Poly const &amp;p)']]],
+  ['operator_2d_3d_5',['operator-=',['../class_sturm_1_1_poly.html#a164a6980f5ca88f7816a920f0b6d0931',1,'Sturm::Poly::operator-=(Poly const &amp;p)'],['../class_sturm_1_1_poly.html#ad5b63589a470c2d5087598e0c970ed42',1,'Sturm::Poly::operator-=(Real s)']]],
+  ['operator_3c_3c_6',['operator&lt;&lt;',['../namespace_sturm.html#a5a3792c0fa79f172a25f87f4990eb06d',1,'Sturm::operator&lt;&lt;(std::ostream &amp;os, Poly const &amp;p)'],['../namespace_sturm.html#acd328487393b9d1cc6a5e94cb401db9e',1,'Sturm::operator&lt;&lt;(std::ostream &amp;os, Sequence const &amp;s)']]],
+  ['operator_3d_7',['operator=',['../class_sturm_1_1_poly.html#a178d70bc8117142e563c86750cde8137',1,'Sturm::Poly']]],
+  ['order_8',['order',['../class_sturm_1_1_poly.html#af88299ebfde607b225b84c09147f9b09',1,'Sturm::Poly']]]
 ];

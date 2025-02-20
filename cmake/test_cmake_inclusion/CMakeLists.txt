@@ -32,7 +32,7 @@ if(FETCH_CONTENT_METHOD)
   set(FETCHCONTENT_BASE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/third_party")
   fetchcontent_declare(
     Sturm
-    GIT_REPOSITORY https://github.com/StoccoDavide/Sturm.git
+    GIT_REPOSITORY "https://github.com/StoccoDavide/Sturm.git"
     GIT_TAG        main
   )
 

@@ -1,6 +1,10 @@
 var searchData=
 [
-  ['leading_5fcoeff_0',['leading_coeff',['../class_sturm_1_1_poly.html#a3be7ed1b5d6c43c08a1c73a8c2c90d72',1,'Sturm::Poly']]],
-  ['length_1',['length',['../class_sturm_1_1_sequence.html#a0c891476501c4dd77ebfdd84d7ebabd4',1,'Sturm::Sequence']]],
-  ['license_2',['License',['../index.html#autotoc_md5',1,'']]]
+  ['m_5fa_0',['m_a',['../class_sturm_1_1_sequence.html#acaa6429117cc260b142fd164027e083a',1,'Sturm::Sequence']]],
+  ['m_5fb_1',['m_b',['../class_sturm_1_1_sequence.html#aa3927e67533ecc938e9cac9daa2bdc16',1,'Sturm::Sequence']]],
+  ['m_5fintervals_2',['m_intervals',['../class_sturm_1_1_sequence.html#a1f83eee4a01ec530dc5f50fb89625a0e',1,'Sturm::Sequence']]],
+  ['m_5forder_3',['m_order',['../class_sturm_1_1_poly.html#aa5bd9a8e9f1c3631200631eca8a53a0e',1,'Sturm::Poly']]],
+  ['m_5fsequence_4',['m_sequence',['../class_sturm_1_1_sequence.html#a785c18bff876fa6b4102b6479f3be3ac',1,'Sturm::Sequence']]],
+  ['mainpage_2emd_5',['Mainpage.md',['../_mainpage_8md.html',1,'']]],
+  ['make_5fmonic_6',['make_monic',['../class_sturm_1_1_poly.html#a9badea38872442a789dd937fea24dc43',1,'Sturm::Poly']]]
 ];

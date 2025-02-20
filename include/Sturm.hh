@@ -23,9 +23,6 @@
 // Eigen library
 #include <Eigen/Dense>
 
-// Optimist library
-#include <Optimist.hh>
-
 // Print Sturm errors
 #ifndef STURM_ERROR
 #define STURM_ERROR(MSG)                \
@@ -78,7 +75,7 @@ namespace Sturm
   * Print Sturm library information on a string.
   * \return A string with the Sturm library information.
   */
-  inline std::string Info() {
+  std::string Info() {
     std::ostringstream os;
     os
       << "* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *" << std::endl
@@ -97,7 +94,7 @@ namespace Sturm
   * Print Sturm library information on a stream.
   * \param[in] os Output stream.
   */
-  inline void Info(std::ostream & os) {os << Info();}
+  void Info(std::ostream & os) {os << Info();}
 
 } // namespace Sturm
 

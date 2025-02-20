@@ -41,13 +41,12 @@ endif()
 
 # Dependencies
 include(SturmEigen3)
-include(SturmOptimist)
 
 # Library definition
 add_library(Sturm INTERFACE)
 add_library(Sturm::Sturm ALIAS Sturm)
 
-target_link_libraries(Sturm INTERFACE Eigen3::Eigen Optimist::Optimist)
+target_link_libraries(Sturm INTERFACE Eigen3::Eigen)
 
 target_include_directories(Sturm INTERFACE
   $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>

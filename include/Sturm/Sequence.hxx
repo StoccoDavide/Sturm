@@ -35,14 +35,8 @@ namespace Sturm
     }; /**< Interval structure. */
 
   private:
-    using Solver = typename Optimist::ScalarRootFinder::Algo748; /**< Solver class of the Sturm sequence. */
-    using Function = Solver::FunctionWrapper; /**< Function class of the Sturm sequence. */
-
-    Solver                m_solver;    /**< Solver class of the Sturm sequence. */
-    Function              m_function;  /**< Function class of the Sturm sequence. */
     std::vector<Poly>     m_sequence;  /**< Sturm sequence. */
     std::vector<Interval> m_intervals; /**< Computed intervals. */
-    Vector                m_roots;     /**< Computed roots. */
     Real                  m_a{0.0};    /**< Lower bound of the interval containing the roots. */
     Real                  m_b{0.0};    /**< Upper bound of the interval containing the roots. */
 
@@ -267,41 +261,6 @@ namespace Sturm
     * \return The \f$ i \f$-th interval containing a single root.
     */
     Interval const & interval(Integer i) const {return this->m_intervals[i];}
-
-    /**
-    * Compute the roots in the intervals after the separation.
-    */
-    void refine_roots() {
-      this->m_function = std::function<void(Real x, Real & out)>([this](Real x, Real & out) {
-        out = this->m_sequence[0].evaluate(x);
-      });
-      this->m_roots.resize(this->m_intervals.size());
-      Integer n{0};
-      for (auto & I : this->m_intervals) {
-        Real & r{this->m_roots.coeffRef(n++)};
-        if (I.a_on_root) {r = I.a;}
-        else if (I.b_on_root) {r = I.b;}
-        else {
-          this->m_solver.bounds(I.a, I.b);
-          this->m_solver.solve(this->m_function, 0.0, r);
-          STURM_ASSERT_WARNING(this->m_solver.converged(),
-            "Sturm::Sequence::refine_roots(...): failed at interval n = " << n);
-        }
-      }
-    }
-
-    /**
-    * Get a vector with the computed roots.
-    * \return A vector with the computed roots.
-    */
-    Vector const & roots() const {return this->m_roots;}
-
-    /**
-    * Get the /f i /f-th root.
-    * \param[in] i Index of the root.
-    * \return The /f i /f-th root.
-    */
-    Real root(Integer i) const {return this->m_roots[i];}
 
   };
 

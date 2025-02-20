@@ -31,15 +31,4 @@ TEST_CASE("Root") {
     REQUIRE(n_roots == 2);
   }
 
-  SECTION("Computation") {
-    Sequence seq(p1);
-    seq.separate_roots(-10.0, 10.0);
-    seq.refine_roots();
-    Vector roots{seq.roots()};
-    REQUIRE(roots.size() == 2);
-    Vector sol_roots(2); sol_roots << 0.5, 1.0;
-    REQUIRE(roots.isApprox(sol_roots));
-  }
-
-
 }
