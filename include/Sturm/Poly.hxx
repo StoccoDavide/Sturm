@@ -464,7 +464,7 @@ namespace Sturm
   * \param[in] p_2 Second polynomial to sum.
   * \return The operation result.
   */
-  Poly operator+ (Poly const & p_1, Poly const & p_2) {
+  inline Poly operator+ (Poly const & p_1, Poly const & p_2) {
     Integer max_order{std::max(p_1.order(), p_2.order())};
     Integer min_order{std::min(p_1.order(), p_2.order())};
     Poly res(max_order);
@@ -483,7 +483,7 @@ namespace Sturm
   * \param[in] s Scalar to sum.
   * \return The operation result.
   */
-  Poly operator+ (Poly const & p, Real s) {
+  inline Poly operator+ (Poly const & p, Real s) {
     Integer max_order{std::max(p.order(), 1)};
     Poly res(max_order);
     if (p.order() > 0) {
@@ -501,7 +501,7 @@ namespace Sturm
   * \param[in] p Polynomial to sum.
   * \return The operation result.
   */
-  Poly operator+ (Real s, Poly const & p) {
+  inline Poly operator+ (Real s, Poly const & p) {
     Integer max_order{std::max(p.order(), 1)};
     Poly res(max_order);
     if (p.order() > 0) {
@@ -519,7 +519,7 @@ namespace Sturm
   * \param[in] p_2 Second polynomial to subtract.
   * \return The operation result.
   */
-  Poly operator- (Poly const & p_1, Poly const & p_2) {
+  inline Poly operator- (Poly const & p_1, Poly const & p_2) {
     Integer max_order{std::max(p_1.order(), p_2.order())};
     Integer min_order{std::min(p_1.order(), p_2.order())};
     Poly res(max_order);
@@ -538,7 +538,7 @@ namespace Sturm
   * \param[in] s Scalar to subtract.
   * \return The operation result.
   */
-  Poly operator- (Poly const & p, Real s) {
+  inline Poly operator- (Poly const & p, Real s) {
     Integer max_order{std::max(p.order(), 1)};
     Poly res(max_order);
     if (p.order() > 0) {
@@ -556,7 +556,7 @@ namespace Sturm
   * \param[in] p Polynomial to subtract.
   * \return The operation result.
   */
-  Poly operator- (Real s, Poly const & p) {
+  inline Poly operator- (Real s, Poly const & p) {
     Integer max_order{std::max(p.order(), 1)};
     Poly res(max_order);
     if (p.order() > 0) {
@@ -574,7 +574,7 @@ namespace Sturm
   * \param[in] p_2 Second polynomial to multiply.
   * \return The operation result.
   */
-  Poly operator* (Poly const & p_1, Poly const & p_2) {
+  inline Poly operator* (Poly const & p_1, Poly const & p_2) {
     Poly res(p_1.order() + p_2.order() - 1);
     for(Integer i{0}; i < p_1.order(); ++i) {
       for(Integer j{0}; j < p_2.order(); ++j) {
@@ -589,7 +589,7 @@ namespace Sturm
   * \param[in] s Scalar to multiply.
   * \return The operation result.
   */
-  Poly operator* (Real p, Poly const & s) {
+  inline Poly operator* (Real p, Poly const & s) {
     Poly res(s.order());
     res.noalias() = p*s.to_eigen();
     return res;
@@ -601,7 +601,7 @@ namespace Sturm
   * \param[in] p Polynomial to multiply.
   * \return The operation result.
   */
-  Poly operator* (Poly const & s, Real p) {
+  inline Poly operator* (Poly const & s, Real p) {
     Poly res(s.order());
     res.noalias() = s.to_eigen()*p;
     return res;
@@ -614,7 +614,7 @@ namespace Sturm
   * \param[out] q Quotient polynomial.
   * \param[out] r Remainder polynomial.
   */
-  void divide(Poly const & p_1, Poly const & p_2, Poly & q, Poly & r) {
+  inline void divide(Poly const & p_1, Poly const & p_2, Poly & q, Poly & r) {
     // Scale polynomials as p_1_norm(x) = p_1(x) / scale_p_1, and p_2_norm(x) = p_2(x) / scale_p_2
     Poly p_1_norm(p_1), p_2_norm(p_2);
     Real scale_p_1{p_1_norm.normalize()};
@@ -633,7 +633,7 @@ namespace Sturm
       q.set_order(d+1);
 
       STURM_ASSERT(std::abs(leading_b_norm) > EPSILON,
-        "Sturm::divide(...): leading coefficient of p_2(x) is 0.");
+        "Sturm::Poly::divide(...): leading coefficient of p_2(x) is 0.");
 
       while (d >= 0 && r_degree >= 0) {
         Real leading_r = {r(r_degree)};
@@ -666,7 +666,7 @@ namespace Sturm
   * \param[out] gcd Greatest common divisor polynomial.
   * \param[in] eps Epsilon value for purging coefficients.
   */
-  void GCD(Poly const & p_1, Poly const & p_2, Poly & gcd, Real eps = EPSILON)
+  inline void GCD(Poly const & p_1, Poly const & p_2, Poly & gcd, Real eps = EPSILON)
   {
     if (p_2.order() > 0) {
       Poly q, r;
@@ -685,7 +685,7 @@ namespace Sturm
   * \param[in] p Polynomial.
   * \return The output stream.
   */
-  std::ostream & operator<< (std::ostream & os, Poly const & p) {
+  inline std::ostream & operator<< (std::ostream & os, Poly const & p) {
     os << p.to_string();
     return os;
   }

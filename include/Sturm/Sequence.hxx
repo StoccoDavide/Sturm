@@ -270,7 +270,7 @@ namespace Sturm
   * \param[in] s Sturm sequence.
   * \return The output stream.
   */
-  std::ostream & operator<< (std::ostream & os, Sequence const & s) {
+  inline std::ostream & operator<< (std::ostream & os, Sequence const & s) {
     // Print the Sturm sequence
     os << "Sturm sequence" << std::endl;
     for (Integer i{0}; i < s.length(); ++i) {

@@ -75,7 +75,7 @@ namespace Sturm
   * Print Sturm library information on a string.
   * \return A string with the Sturm library information.
   */
-  std::string Info() {
+  inline std::string Info() {
     std::ostringstream os;
     os
       << "* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *" << std::endl
@@ -94,7 +94,7 @@ namespace Sturm
   * Print Sturm library information on a stream.
   * \param[in] os Output stream.
   */
-  void Info(std::ostream & os) {os << Info();}
+  inline void Info(std::ostream & os) {os << Info();}
 
 } // namespace Sturm
 
