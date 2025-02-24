@@ -1,17 +1,17 @@
 var _poly_8hxx =
 [
-    [ "Sturm::Poly", "class_sturm_1_1_poly.html", "class_sturm_1_1_poly" ],
+    [ "Sturm::Poly< Real >", "class_sturm_1_1_poly.html", "class_sturm_1_1_poly" ],
     [ "INCLUDE_STURM_POLY_HXX", "_poly_8hxx.html#ae71daff6b23810d167c1da40aab80097", null ],
-    [ "Sturm::divide", "namespace_sturm.html#afa4d27edccd16b9bbe26fa8de6fba04d", null ],
-    [ "Sturm::GCD", "namespace_sturm.html#a42f2e54301cef7a6399b95932273c6d0", null ],
-    [ "Sturm::operator*", "namespace_sturm.html#a2d7e792f3f593ef12261001271957a44", null ],
-    [ "Sturm::operator*", "namespace_sturm.html#a2c97a500a74cc75f72ab52cb748ff676", null ],
-    [ "Sturm::operator*", "namespace_sturm.html#a910bd0221ea3c8b0fc6a7105e3ca10f8", null ],
-    [ "Sturm::operator+", "namespace_sturm.html#afd86b76ed9f4a96e2b3bf5293d024a4b", null ],
-    [ "Sturm::operator+", "namespace_sturm.html#a03d1a9185a195dce70d456404fcf0765", null ],
-    [ "Sturm::operator+", "namespace_sturm.html#aff17484eb9d89f7f710009da41f6ade8", null ],
-    [ "Sturm::operator-", "namespace_sturm.html#af18e0aee5a15d4a8282cb3091f1c485c", null ],
-    [ "Sturm::operator-", "namespace_sturm.html#a7f52e3bddd5796da5749bb5ef0e51203", null ],
-    [ "Sturm::operator-", "namespace_sturm.html#a6e95ad85b757f1e8c68901c934817f56", null ],
-    [ "Sturm::operator<<", "namespace_sturm.html#a5a3792c0fa79f172a25f87f4990eb06d", null ]
+    [ "Sturm::divide", "namespace_sturm.html#a336183294eb8fba3370fa67617b25fdf", null ],
+    [ "Sturm::GCD", "namespace_sturm.html#a54551ffa365fe15981aeaa792c511f2b", null ],
+    [ "Sturm::operator*", "namespace_sturm.html#a57a812179645a3d8336f5529571e1201", null ],
+    [ "Sturm::operator*", "namespace_sturm.html#a01b3082f4de836007c17755643fba2d2", null ],
+    [ "Sturm::operator*", "namespace_sturm.html#af92ea699d6bee93085296890cde80721", null ],
+    [ "Sturm::operator+", "namespace_sturm.html#a4cded8ba6832b2e9dc6a4acf5fae06f1", null ],
+    [ "Sturm::operator+", "namespace_sturm.html#af6781eeb7e94b7b39a34e8f5c6b09891", null ],
+    [ "Sturm::operator+", "namespace_sturm.html#acf8082758d3b7beaf0055fdc421fd66c", null ],
+    [ "Sturm::operator-", "namespace_sturm.html#a183214b99967e4115f73a94f8ba2cfa6", null ],
+    [ "Sturm::operator-", "namespace_sturm.html#aa74954c99a03ab9070a1b956d942d675", null ],
+    [ "Sturm::operator-", "namespace_sturm.html#a725eb2426bb796f143595801f9fbb016", null ],
+    [ "Sturm::operator<<", "namespace_sturm.html#a3357f1cd37de5f2b976538bded35295a", null ]
 ];

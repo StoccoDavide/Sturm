@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['degree_0',['degree',['../class_sturm_1_1_poly.html#a8dc727dc94df89a6f4b59e9f458e9318',1,'Sturm::Poly']]],
-  ['derivative_1',['derivative',['../class_sturm_1_1_poly.html#ad874eadf5f4236de51173884e6d72cbd',1,'Sturm::Poly']]],
+  ['degree_0',['degree',['../class_sturm_1_1_poly.html#acd14a0714e85551fe13725ebd5aff820',1,'Sturm::Poly']]],
+  ['derivative_1',['derivative',['../class_sturm_1_1_poly.html#a2faa2f693e4de719f00e3a1602bef3f0',1,'Sturm::Poly']]],
   ['dirty_2',['Quick and dirty',['../index.html#autotoc_md2',1,'']]],
-  ['divide_3',['divide',['../namespace_sturm.html#afa4d27edccd16b9bbe26fa8de6fba04d',1,'Sturm']]]
+  ['divide_3',['divide',['../namespace_sturm.html#a336183294eb8fba3370fa67617b25fdf',1,'Sturm']]]
 ];

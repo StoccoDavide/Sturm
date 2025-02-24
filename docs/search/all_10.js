@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['vector_0',['Vector',['../namespace_sturm.html#aa456480f0107f1ae6f3e69101575e372',1,'Sturm']]]
+  ['vector_0',['Vector',['../class_sturm_1_1_poly.html#af4c9e61a288e45dca13c7d675467c0d7',1,'Sturm::Poly::Vector'],['../class_sturm_1_1_sequence.html#a23fd189b34a570fe305c8dfc912d2328',1,'Sturm::Sequence::Vector'],['../namespace_sturm.html#a296315d41accb3b26d7eb5458fd61732',1,'Sturm::Vector']]]
 ];

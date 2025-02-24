@@ -6,9 +6,7 @@ var _sturm_8hh =
     [ "STURM_ERROR", "_sturm_8hh.html#a9fa9ff7546d4dc910c16a3321df0c82e", null ],
     [ "STURM_WARNING", "_sturm_8hh.html#a4e8329b39116ecdaebedaaa4fa8a27b1", null ],
     [ "Sturm::Integer", "namespace_sturm.html#aad1114e76ee0064c465261eb130fb4ab", null ],
-    [ "Sturm::Real", "namespace_sturm.html#aaa1b5226335eadcf7d426f26f2c1641d", null ],
-    [ "Sturm::Vector", "namespace_sturm.html#aa456480f0107f1ae6f3e69101575e372", null ],
+    [ "Sturm::Vector", "namespace_sturm.html#a296315d41accb3b26d7eb5458fd61732", null ],
     [ "Sturm::Info", "namespace_sturm.html#aee56f350d689baadf15b0833a4660b38", null ],
-    [ "Sturm::Info", "namespace_sturm.html#a37538ce05375cedf03562014e802dad8", null ],
-    [ "Sturm::EPSILON", "namespace_sturm.html#a8a7d4fc169beb1294c2bf997fdd970a6", null ]
+    [ "Sturm::Info", "namespace_sturm.html#a37538ce05375cedf03562014e802dad8", null ]
 ];

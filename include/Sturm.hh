@@ -65,11 +65,9 @@
 namespace Sturm
 {
 
-  using Real    = double; /**< Real number type. */
-  using Integer = int;    /**< Integer number type. */
-  using Vector  = Eigen::Vector<Real, Eigen::Dynamic>; /**< Vector of real numbers. */
-
-  static const Real EPSILON = std::numeric_limits<Real>::epsilon(); /**< Machine epsilon. */
+  template <typename Real>
+  using Vector = Eigen::Vector<Real, Eigen::Dynamic>; /**< Vector of real numbers. */
+  using Integer = int; /**< Integer number type. */
 
   /**
   * Print Sturm library information on a string.

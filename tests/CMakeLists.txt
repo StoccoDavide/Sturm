@@ -11,8 +11,8 @@
 include(SturmCatch2)
 
 file(GLOB_RECURSE TEST_POLY "${CMAKE_CURRENT_SOURCE_DIR}/test_poly.cc")
-add_executable(test_poly ${TEST_POLY})
-target_link_libraries(test_poly PRIVATE Sturm Catch2::Catch2WithMain)
+add_executable(test_Poly ${TEST_POLY})
+target_link_libraries(test_Poly PRIVATE Sturm Catch2::Catch2WithMain)
 
 file(GLOB_RECURSE TEST_DIVIDE "${CMAKE_CURRENT_SOURCE_DIR}/test_divide.cc")
 add_executable(test_divide ${TEST_DIVIDE})

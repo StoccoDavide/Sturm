@@ -16,7 +16,7 @@
 <meta name="twitter:title" content="Doxygen Awesome" />
 <meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
 <!-- END twitter metadata -->
-<title>Sturm: Sturm::Poly Class Reference</title>
+<title>Sturm: Sturm::Poly&lt; Real &gt; Class Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link rel="icon" type="image/svg+xml" href="logo.png"/>
 <script type="text/javascript" src="jquery.js"></script>
@@ -140,11 +140,13 @@ $(function(){initNavTree('class_sturm_1_1_poly.html',''); initResizable(true); }
 
 <div class="header">
   <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_sturm_1_1_poly-members.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">Sturm::Poly Class Reference</div></div>
+  <div class="headertitle"><div class="title">Sturm::Poly&lt; Real &gt; Class Template Reference</div></div>
 </div><!--header-->
 <div class="contents">
 
@@ -153,101 +155,137 @@ $(function(){initNavTree('class_sturm_1_1_poly.html',''); initResizable(true); }
 
 <p><code>#include &lt;<a class="el" href="_poly_8hxx_source.html">Poly.hxx</a>&gt;</code></p>
 
-<p>Inherits Vector.</p>
+<p>Inherits Eigen::Vector&lt; Real, Eigen::Dynamic &gt;.</p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:af4c9e61a288e45dca13c7d675467c0d7" id="r_af4c9e61a288e45dca13c7d675467c0d7"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af4c9e61a288e45dca13c7d675467c0d7">Vector</a> = Eigen::Vector&lt;Real, Eigen::Dynamic&gt;</td></tr>
+<tr class="separator:af4c9e61a288e45dca13c7d675467c0d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a09b21e72c0bf497ab6f922e047498585" id="r_a09b21e72c0bf497ab6f922e047498585"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a09b21e72c0bf497ab6f922e047498585">Poly</a> ()</td></tr>
-<tr class="separator:a09b21e72c0bf497ab6f922e047498585"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a58b14e9892c6088b3d5ee68018c831a3" id="r_a58b14e9892c6088b3d5ee68018c831a3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a58b14e9892c6088b3d5ee68018c831a3">Poly</a> (<a class="el" href="namespace_sturm.html#aad1114e76ee0064c465261eb130fb4ab">Integer</a> <a class="el" href="#af88299ebfde607b225b84c09147f9b09">order</a>)</td></tr>
-<tr class="separator:a58b14e9892c6088b3d5ee68018c831a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4b41f738776115ea56769aa8072edebb" id="r_a4b41f738776115ea56769aa8072edebb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4b41f738776115ea56769aa8072edebb">Poly</a> (<a class="el" href="class_sturm_1_1_poly.html">Poly</a> const &amp;c)</td></tr>
-<tr class="separator:a4b41f738776115ea56769aa8072edebb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae3695c3d3104e3ac48500ea4900c7a61" id="r_ae3695c3d3104e3ac48500ea4900c7a61"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae3695c3d3104e3ac48500ea4900c7a61">Poly</a> (<a class="el" href="namespace_sturm.html#aa456480f0107f1ae6f3e69101575e372">Vector</a> const &amp;c)</td></tr>
-<tr class="separator:ae3695c3d3104e3ac48500ea4900c7a61"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a75e4a270b2d804b35bd65343353899b9" id="r_a75e4a270b2d804b35bd65343353899b9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_sturm.html#aa456480f0107f1ae6f3e69101575e372">Vector</a> const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a75e4a270b2d804b35bd65343353899b9">to_eigen</a> () const</td></tr>
-<tr class="separator:a75e4a270b2d804b35bd65343353899b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2fd39af893d760a19f2f9e6ac304446d" id="r_a2fd39af893d760a19f2f9e6ac304446d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2fd39af893d760a19f2f9e6ac304446d">set_order</a> (<a class="el" href="namespace_sturm.html#aad1114e76ee0064c465261eb130fb4ab">Integer</a> <a class="el" href="#af88299ebfde607b225b84c09147f9b09">order</a>)</td></tr>
-<tr class="separator:a2fd39af893d760a19f2f9e6ac304446d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0efb81f810d2dc4f075c36fb18612a4b" id="r_a0efb81f810d2dc4f075c36fb18612a4b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0efb81f810d2dc4f075c36fb18612a4b">set_degree</a> (<a class="el" href="namespace_sturm.html#aad1114e76ee0064c465261eb130fb4ab">Integer</a> <a class="el" href="#a8dc727dc94df89a6f4b59e9f458e9318">degree</a>)</td></tr>
-<tr class="separator:a0efb81f810d2dc4f075c36fb18612a4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5c5b1b900e2654c6f73ebd9fa0c02645" id="r_a5c5b1b900e2654c6f73ebd9fa0c02645"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_sturm_1_1_poly.html">Poly</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5c5b1b900e2654c6f73ebd9fa0c02645">set_scalar</a> (<a class="el" href="namespace_sturm.html#aaa1b5226335eadcf7d426f26f2c1641d">Real</a> s)</td></tr>
-<tr class="separator:a5c5b1b900e2654c6f73ebd9fa0c02645"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5a95703834300337c1f12dc388cc9faa" id="r_a5a95703834300337c1f12dc388cc9faa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_sturm_1_1_poly.html">Poly</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5a95703834300337c1f12dc388cc9faa">set_monomial</a> (<a class="el" href="namespace_sturm.html#aaa1b5226335eadcf7d426f26f2c1641d">Real</a> a)</td></tr>
-<tr class="separator:a5a95703834300337c1f12dc388cc9faa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a753047fc85b1477bcd617c36dc1b3d75" id="r_a753047fc85b1477bcd617c36dc1b3d75"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_sturm.html#aa456480f0107f1ae6f3e69101575e372">Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a753047fc85b1477bcd617c36dc1b3d75">coeffs</a> () const</td></tr>
-<tr class="separator:a753047fc85b1477bcd617c36dc1b3d75"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8dc727dc94df89a6f4b59e9f458e9318" id="r_a8dc727dc94df89a6f4b59e9f458e9318"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_sturm.html#aad1114e76ee0064c465261eb130fb4ab">Integer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8dc727dc94df89a6f4b59e9f458e9318">degree</a> () const</td></tr>
-<tr class="separator:a8dc727dc94df89a6f4b59e9f458e9318"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af88299ebfde607b225b84c09147f9b09" id="r_af88299ebfde607b225b84c09147f9b09"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_sturm.html#aad1114e76ee0064c465261eb130fb4ab">Integer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af88299ebfde607b225b84c09147f9b09">order</a> () const</td></tr>
-<tr class="separator:af88299ebfde607b225b84c09147f9b09"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac231ed361e75536e2e6c971617a98c83" id="r_ac231ed361e75536e2e6c971617a98c83"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac231ed361e75536e2e6c971617a98c83">to_string</a> () const</td></tr>
-<tr class="separator:ac231ed361e75536e2e6c971617a98c83"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a55a3c1a8ddfb293bbed7330ba1bc2449" id="r_a55a3c1a8ddfb293bbed7330ba1bc2449"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_sturm.html#aaa1b5226335eadcf7d426f26f2c1641d">Real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a55a3c1a8ddfb293bbed7330ba1bc2449">evaluate</a> (<a class="el" href="namespace_sturm.html#aaa1b5226335eadcf7d426f26f2c1641d">Real</a> x) const</td></tr>
-<tr class="separator:a55a3c1a8ddfb293bbed7330ba1bc2449"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af1ab0488365e66d11c74a95ba69a3811" id="r_af1ab0488365e66d11c74a95ba69a3811"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_sturm.html#aaa1b5226335eadcf7d426f26f2c1641d">Real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af1ab0488365e66d11c74a95ba69a3811">evaluate_derivative</a> (<a class="el" href="namespace_sturm.html#aaa1b5226335eadcf7d426f26f2c1641d">Real</a> x) const</td></tr>
-<tr class="separator:af1ab0488365e66d11c74a95ba69a3811"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a17423f6d7430dac14451aab9a3bb1e14" id="r_a17423f6d7430dac14451aab9a3bb1e14"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a17423f6d7430dac14451aab9a3bb1e14">evaluate</a> (<a class="el" href="namespace_sturm.html#aaa1b5226335eadcf7d426f26f2c1641d">Real</a> x, <a class="el" href="namespace_sturm.html#aaa1b5226335eadcf7d426f26f2c1641d">Real</a> &amp;p, <a class="el" href="namespace_sturm.html#aaa1b5226335eadcf7d426f26f2c1641d">Real</a> &amp;Dp) const</td></tr>
-<tr class="separator:a17423f6d7430dac14451aab9a3bb1e14"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3be7ed1b5d6c43c08a1c73a8c2c90d72" id="r_a3be7ed1b5d6c43c08a1c73a8c2c90d72"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_sturm.html#aaa1b5226335eadcf7d426f26f2c1641d">Real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3be7ed1b5d6c43c08a1c73a8c2c90d72">leading_coeff</a> () const</td></tr>
-<tr class="separator:a3be7ed1b5d6c43c08a1c73a8c2c90d72"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad874eadf5f4236de51173884e6d72cbd" id="r_ad874eadf5f4236de51173884e6d72cbd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad874eadf5f4236de51173884e6d72cbd">derivative</a> (<a class="el" href="class_sturm_1_1_poly.html">Poly</a> &amp;res) const</td></tr>
-<tr class="separator:ad874eadf5f4236de51173884e6d72cbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abf50516d7e493da67c43b84ed9485dd3" id="r_abf50516d7e493da67c43b84ed9485dd3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abf50516d7e493da67c43b84ed9485dd3">integral</a> (<a class="el" href="class_sturm_1_1_poly.html">Poly</a> &amp;res) const</td></tr>
-<tr class="separator:abf50516d7e493da67c43b84ed9485dd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a030f826ad9ad64d93be62f045d7eb48f" id="r_a030f826ad9ad64d93be62f045d7eb48f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a030f826ad9ad64d93be62f045d7eb48f">integral</a> (<a class="el" href="class_sturm_1_1_poly.html">Poly</a> &amp;res, <a class="el" href="namespace_sturm.html#aaa1b5226335eadcf7d426f26f2c1641d">Real</a> c) const</td></tr>
-<tr class="separator:a030f826ad9ad64d93be62f045d7eb48f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab1d7f95dc895f36d64bc8c540aa5bea0" id="r_ab1d7f95dc895f36d64bc8c540aa5bea0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_sturm.html#aaa1b5226335eadcf7d426f26f2c1641d">Real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab1d7f95dc895f36d64bc8c540aa5bea0">normalize</a> ()</td></tr>
-<tr class="separator:ab1d7f95dc895f36d64bc8c540aa5bea0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a72abe3ffa1a54882b65abbf10eea93bc" id="r_a72abe3ffa1a54882b65abbf10eea93bc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a72abe3ffa1a54882b65abbf10eea93bc">purge</a> (<a class="el" href="namespace_sturm.html#aaa1b5226335eadcf7d426f26f2c1641d">Real</a> eps)</td></tr>
-<tr class="separator:a72abe3ffa1a54882b65abbf10eea93bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaf4c7dc0f8f6be724c0330d5efb226ef" id="r_aaf4c7dc0f8f6be724c0330d5efb226ef"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaf4c7dc0f8f6be724c0330d5efb226ef">adjust_degree</a> ()</td></tr>
-<tr class="separator:aaf4c7dc0f8f6be724c0330d5efb226ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acf6ddf3cf137178cef6eb8bbd2de1dd8" id="r_acf6ddf3cf137178cef6eb8bbd2de1dd8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_sturm.html#aad1114e76ee0064c465261eb130fb4ab">Integer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acf6ddf3cf137178cef6eb8bbd2de1dd8">sign_variations</a> () const</td></tr>
-<tr class="separator:acf6ddf3cf137178cef6eb8bbd2de1dd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9badea38872442a789dd937fea24dc43" id="r_a9badea38872442a789dd937fea24dc43"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9badea38872442a789dd937fea24dc43">make_monic</a> ()</td></tr>
-<tr class="separator:a9badea38872442a789dd937fea24dc43"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a178d70bc8117142e563c86750cde8137" id="r_a178d70bc8117142e563c86750cde8137"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_sturm_1_1_poly.html">Poly</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a178d70bc8117142e563c86750cde8137">operator=</a> (<a class="el" href="class_sturm_1_1_poly.html">Poly</a> const &amp;p)</td></tr>
-<tr class="separator:a178d70bc8117142e563c86750cde8137"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a71a0bb2e9e0a95d0afc09aa30a2e9a54" id="r_a71a0bb2e9e0a95d0afc09aa30a2e9a54"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_sturm_1_1_poly.html">Poly</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a71a0bb2e9e0a95d0afc09aa30a2e9a54">operator-</a> ()</td></tr>
-<tr class="separator:a71a0bb2e9e0a95d0afc09aa30a2e9a54"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab87c70fc2061ee8497a8adc89d414934" id="r_ab87c70fc2061ee8497a8adc89d414934"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_sturm_1_1_poly.html">Poly</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab87c70fc2061ee8497a8adc89d414934">operator+=</a> (<a class="el" href="class_sturm_1_1_poly.html">Poly</a> const &amp;p)</td></tr>
-<tr class="separator:ab87c70fc2061ee8497a8adc89d414934"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a164a6980f5ca88f7816a920f0b6d0931" id="r_a164a6980f5ca88f7816a920f0b6d0931"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_sturm_1_1_poly.html">Poly</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a164a6980f5ca88f7816a920f0b6d0931">operator-=</a> (<a class="el" href="class_sturm_1_1_poly.html">Poly</a> const &amp;p)</td></tr>
-<tr class="separator:a164a6980f5ca88f7816a920f0b6d0931"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2d79283c6e5895f4aa1a6655d15384a8" id="r_a2d79283c6e5895f4aa1a6655d15384a8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_sturm_1_1_poly.html">Poly</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2d79283c6e5895f4aa1a6655d15384a8">operator*=</a> (<a class="el" href="class_sturm_1_1_poly.html">Poly</a> const &amp;p)</td></tr>
-<tr class="separator:a2d79283c6e5895f4aa1a6655d15384a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a35716b597568421247b1377c7a343901" id="r_a35716b597568421247b1377c7a343901"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_sturm_1_1_poly.html">Poly</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a35716b597568421247b1377c7a343901">operator+=</a> (<a class="el" href="namespace_sturm.html#aaa1b5226335eadcf7d426f26f2c1641d">Real</a> s)</td></tr>
-<tr class="separator:a35716b597568421247b1377c7a343901"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad5b63589a470c2d5087598e0c970ed42" id="r_ad5b63589a470c2d5087598e0c970ed42"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_sturm_1_1_poly.html">Poly</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad5b63589a470c2d5087598e0c970ed42">operator-=</a> (<a class="el" href="namespace_sturm.html#aaa1b5226335eadcf7d426f26f2c1641d">Real</a> s)</td></tr>
-<tr class="separator:ad5b63589a470c2d5087598e0c970ed42"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a43a070f1333d5b1b5888dcf1345fa920" id="r_a43a070f1333d5b1b5888dcf1345fa920"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_sturm_1_1_poly.html">Poly</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a43a070f1333d5b1b5888dcf1345fa920">operator*=</a> (<a class="el" href="namespace_sturm.html#aaa1b5226335eadcf7d426f26f2c1641d">Real</a> s)</td></tr>
-<tr class="separator:a43a070f1333d5b1b5888dcf1345fa920"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abca31d36d37d4d4bce31041760df545b" id="r_abca31d36d37d4d4bce31041760df545b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abca31d36d37d4d4bce31041760df545b">Poly</a> ()</td></tr>
+<tr class="separator:abca31d36d37d4d4bce31041760df545b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e37b60eac7847957fd23812e3061220" id="r_a9e37b60eac7847957fd23812e3061220"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9e37b60eac7847957fd23812e3061220">Poly</a> (<a class="el" href="namespace_sturm.html#aad1114e76ee0064c465261eb130fb4ab">Integer</a> <a class="el" href="#ad755ed4e490a95f465de6d0946153ad9">order</a>)</td></tr>
+<tr class="separator:a9e37b60eac7847957fd23812e3061220"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c156d0b4687c087933f847f0508b186" id="r_a9c156d0b4687c087933f847f0508b186"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9c156d0b4687c087933f847f0508b186">Poly</a> (<a class="el" href="class_sturm_1_1_poly.html">Poly</a> const &amp;c)</td></tr>
+<tr class="separator:a9c156d0b4687c087933f847f0508b186"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac449bb337618f44077570fcefef194df" id="r_ac449bb337618f44077570fcefef194df"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac449bb337618f44077570fcefef194df">Poly</a> (<a class="el" href="#af4c9e61a288e45dca13c7d675467c0d7">Vector</a> const &amp;c)</td></tr>
+<tr class="separator:ac449bb337618f44077570fcefef194df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0221127010f8cab17e55e39e24b00363" id="r_a0221127010f8cab17e55e39e24b00363"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#af4c9e61a288e45dca13c7d675467c0d7">Vector</a> const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0221127010f8cab17e55e39e24b00363">to_eigen</a> () const</td></tr>
+<tr class="separator:a0221127010f8cab17e55e39e24b00363"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf8b58bb1af80780cbaba1b7bbf01f7b" id="r_adf8b58bb1af80780cbaba1b7bbf01f7b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adf8b58bb1af80780cbaba1b7bbf01f7b">set_order</a> (<a class="el" href="namespace_sturm.html#aad1114e76ee0064c465261eb130fb4ab">Integer</a> <a class="el" href="#ad755ed4e490a95f465de6d0946153ad9">order</a>)</td></tr>
+<tr class="separator:adf8b58bb1af80780cbaba1b7bbf01f7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a075d5b6ea7f9afffa376533b91ce0d80" id="r_a075d5b6ea7f9afffa376533b91ce0d80"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a075d5b6ea7f9afffa376533b91ce0d80">set_degree</a> (<a class="el" href="namespace_sturm.html#aad1114e76ee0064c465261eb130fb4ab">Integer</a> <a class="el" href="#acd14a0714e85551fe13725ebd5aff820">degree</a>)</td></tr>
+<tr class="separator:a075d5b6ea7f9afffa376533b91ce0d80"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9da52096fcad40fa9034fc49c906286a" id="r_a9da52096fcad40fa9034fc49c906286a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_sturm_1_1_poly.html">Poly</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9da52096fcad40fa9034fc49c906286a">set_scalar</a> (Real s)</td></tr>
+<tr class="separator:a9da52096fcad40fa9034fc49c906286a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a011733b0bee51db8cf3b15589b6099" id="r_a9a011733b0bee51db8cf3b15589b6099"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_sturm_1_1_poly.html">Poly</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9a011733b0bee51db8cf3b15589b6099">set_monomial</a> (Real a)</td></tr>
+<tr class="separator:a9a011733b0bee51db8cf3b15589b6099"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d6a5907a70b9147da1b300765de88d1" id="r_a8d6a5907a70b9147da1b300765de88d1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#af4c9e61a288e45dca13c7d675467c0d7">Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8d6a5907a70b9147da1b300765de88d1">coeffs</a> () const</td></tr>
+<tr class="separator:a8d6a5907a70b9147da1b300765de88d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd14a0714e85551fe13725ebd5aff820" id="r_acd14a0714e85551fe13725ebd5aff820"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_sturm.html#aad1114e76ee0064c465261eb130fb4ab">Integer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acd14a0714e85551fe13725ebd5aff820">degree</a> () const</td></tr>
+<tr class="separator:acd14a0714e85551fe13725ebd5aff820"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad755ed4e490a95f465de6d0946153ad9" id="r_ad755ed4e490a95f465de6d0946153ad9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_sturm.html#aad1114e76ee0064c465261eb130fb4ab">Integer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad755ed4e490a95f465de6d0946153ad9">order</a> () const</td></tr>
+<tr class="separator:ad755ed4e490a95f465de6d0946153ad9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac88d9baa560a6c2e9f23488e1147094c" id="r_ac88d9baa560a6c2e9f23488e1147094c"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac88d9baa560a6c2e9f23488e1147094c">to_string</a> () const</td></tr>
+<tr class="separator:ac88d9baa560a6c2e9f23488e1147094c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acfa82d1469997780dca6c6ba41d6aa38" id="r_acfa82d1469997780dca6c6ba41d6aa38"><td class="memItemLeft" align="right" valign="top">Real&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acfa82d1469997780dca6c6ba41d6aa38">evaluate</a> (Real x) const</td></tr>
+<tr class="separator:acfa82d1469997780dca6c6ba41d6aa38"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aadcdbec523d263d1377d12469d2863c4" id="r_aadcdbec523d263d1377d12469d2863c4"><td class="memItemLeft" align="right" valign="top">Real&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aadcdbec523d263d1377d12469d2863c4">evaluate_derivative</a> (Real x) const</td></tr>
+<tr class="separator:aadcdbec523d263d1377d12469d2863c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a4ab37ee886965dbc2d196755e7b675" id="r_a9a4ab37ee886965dbc2d196755e7b675"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9a4ab37ee886965dbc2d196755e7b675">evaluate</a> (Real x, Real &amp;p, Real &amp;Dp) const</td></tr>
+<tr class="separator:a9a4ab37ee886965dbc2d196755e7b675"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ddc215001858aa54b35b6204178a767" id="r_a9ddc215001858aa54b35b6204178a767"><td class="memItemLeft" align="right" valign="top">Real&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9ddc215001858aa54b35b6204178a767">leading_coeff</a> () const</td></tr>
+<tr class="separator:a9ddc215001858aa54b35b6204178a767"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2faa2f693e4de719f00e3a1602bef3f0" id="r_a2faa2f693e4de719f00e3a1602bef3f0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2faa2f693e4de719f00e3a1602bef3f0">derivative</a> (<a class="el" href="class_sturm_1_1_poly.html">Poly</a> &amp;res) const</td></tr>
+<tr class="separator:a2faa2f693e4de719f00e3a1602bef3f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a993ba83ec1c90353d0980e8f561dabd1" id="r_a993ba83ec1c90353d0980e8f561dabd1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a993ba83ec1c90353d0980e8f561dabd1">integral</a> (<a class="el" href="class_sturm_1_1_poly.html">Poly</a> &amp;res) const</td></tr>
+<tr class="separator:a993ba83ec1c90353d0980e8f561dabd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af29393ab959f419838b5482be709415d" id="r_af29393ab959f419838b5482be709415d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af29393ab959f419838b5482be709415d">integral</a> (<a class="el" href="class_sturm_1_1_poly.html">Poly</a> &amp;res, Real c) const</td></tr>
+<tr class="separator:af29393ab959f419838b5482be709415d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad09a4fa559931aa825b3233802fb6526" id="r_ad09a4fa559931aa825b3233802fb6526"><td class="memItemLeft" align="right" valign="top">Real&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad09a4fa559931aa825b3233802fb6526">normalize</a> ()</td></tr>
+<tr class="separator:ad09a4fa559931aa825b3233802fb6526"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50620b33ab9f63bf3f4249df6a9e821e" id="r_a50620b33ab9f63bf3f4249df6a9e821e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a50620b33ab9f63bf3f4249df6a9e821e">purge</a> (Real eps)</td></tr>
+<tr class="separator:a50620b33ab9f63bf3f4249df6a9e821e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a855c33832168d99dd58a9d962bcd09b2" id="r_a855c33832168d99dd58a9d962bcd09b2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a855c33832168d99dd58a9d962bcd09b2">adjust_degree</a> ()</td></tr>
+<tr class="separator:a855c33832168d99dd58a9d962bcd09b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af34e67d24c0bd6684b40cecd96881925" id="r_af34e67d24c0bd6684b40cecd96881925"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_sturm.html#aad1114e76ee0064c465261eb130fb4ab">Integer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af34e67d24c0bd6684b40cecd96881925">sign_variations</a> () const</td></tr>
+<tr class="separator:af34e67d24c0bd6684b40cecd96881925"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c9b1379ced82a7b77716639ca756ca6" id="r_a3c9b1379ced82a7b77716639ca756ca6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3c9b1379ced82a7b77716639ca756ca6">make_monic</a> ()</td></tr>
+<tr class="separator:a3c9b1379ced82a7b77716639ca756ca6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae461fd6350e2c73973e1baab27407bd2" id="r_ae461fd6350e2c73973e1baab27407bd2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_sturm_1_1_poly.html">Poly</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae461fd6350e2c73973e1baab27407bd2">operator=</a> (<a class="el" href="class_sturm_1_1_poly.html">Poly</a> const &amp;p)</td></tr>
+<tr class="separator:ae461fd6350e2c73973e1baab27407bd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6fb532a7be1c0905cdad1a0ac9c4a181" id="r_a6fb532a7be1c0905cdad1a0ac9c4a181"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_sturm_1_1_poly.html">Poly</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6fb532a7be1c0905cdad1a0ac9c4a181">operator-</a> ()</td></tr>
+<tr class="separator:a6fb532a7be1c0905cdad1a0ac9c4a181"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f5e20889544cc22302b286157429bb2" id="r_a7f5e20889544cc22302b286157429bb2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_sturm_1_1_poly.html">Poly</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7f5e20889544cc22302b286157429bb2">operator+=</a> (<a class="el" href="class_sturm_1_1_poly.html">Poly</a> const &amp;p)</td></tr>
+<tr class="separator:a7f5e20889544cc22302b286157429bb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e0cca9856ea11023d6cdfd1564b3553" id="r_a5e0cca9856ea11023d6cdfd1564b3553"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_sturm_1_1_poly.html">Poly</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5e0cca9856ea11023d6cdfd1564b3553">operator-=</a> (<a class="el" href="class_sturm_1_1_poly.html">Poly</a> const &amp;p)</td></tr>
+<tr class="separator:a5e0cca9856ea11023d6cdfd1564b3553"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a480fc00d997b5f09a62242ebe639a1e1" id="r_a480fc00d997b5f09a62242ebe639a1e1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_sturm_1_1_poly.html">Poly</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a480fc00d997b5f09a62242ebe639a1e1">operator*=</a> (<a class="el" href="class_sturm_1_1_poly.html">Poly</a> const &amp;p)</td></tr>
+<tr class="separator:a480fc00d997b5f09a62242ebe639a1e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6bdb4a63f7b19802c3391e287a06b893" id="r_a6bdb4a63f7b19802c3391e287a06b893"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_sturm_1_1_poly.html">Poly</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6bdb4a63f7b19802c3391e287a06b893">operator+=</a> (Real s)</td></tr>
+<tr class="separator:a6bdb4a63f7b19802c3391e287a06b893"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21f450a685eae153a103e7a6180cc6e5" id="r_a21f450a685eae153a103e7a6180cc6e5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_sturm_1_1_poly.html">Poly</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a21f450a685eae153a103e7a6180cc6e5">operator-=</a> (Real s)</td></tr>
+<tr class="separator:a21f450a685eae153a103e7a6180cc6e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaccd600cd6c7aeace0fbc3a9e424618c" id="r_aaccd600cd6c7aeace0fbc3a9e424618c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_sturm_1_1_poly.html">Poly</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaccd600cd6c7aeace0fbc3a9e424618c">operator*=</a> (Real s)</td></tr>
+<tr class="separator:aaccd600cd6c7aeace0fbc3a9e424618c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
+Static Public Attributes</h2></td></tr>
+<tr class="memitem:a4661dabad05f12cbc6af66ce5de6c50a" id="r_a4661dabad05f12cbc6af66ce5de6c50a"><td class="memItemLeft" align="right" valign="top">static constexpr const Real&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4661dabad05f12cbc6af66ce5de6c50a">EPSILON</a> {std::numeric_limits&lt;Real&gt;::epsilon()}</td></tr>
+<tr class="separator:a4661dabad05f12cbc6af66ce5de6c50a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
-<tr class="memitem:ae9fb7116f7737a7ccf634ea378295759" id="r_ae9fb7116f7737a7ccf634ea378295759"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_sturm.html#aa456480f0107f1ae6f3e69101575e372">Vector</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae9fb7116f7737a7ccf634ea378295759">to_eigen</a> ()</td></tr>
-<tr class="separator:ae9fb7116f7737a7ccf634ea378295759"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f0b06f9ccafa275700112df27966281" id="r_a9f0b06f9ccafa275700112df27966281"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#af4c9e61a288e45dca13c7d675467c0d7">Vector</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9f0b06f9ccafa275700112df27966281">to_eigen</a> ()</td></tr>
+<tr class="separator:a9f0b06f9ccafa275700112df27966281"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:aa5bd9a8e9f1c3631200631eca8a53a0e" id="r_aa5bd9a8e9f1c3631200631eca8a53a0e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_sturm.html#aad1114e76ee0064c465261eb130fb4ab">Integer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa5bd9a8e9f1c3631200631eca8a53a0e">m_order</a></td></tr>
-<tr class="separator:aa5bd9a8e9f1c3631200631eca8a53a0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c52a343d16e82bf29f4d66934ed713c" id="r_a4c52a343d16e82bf29f4d66934ed713c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_sturm.html#aad1114e76ee0064c465261eb130fb4ab">Integer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4c52a343d16e82bf29f4d66934ed713c">m_order</a></td></tr>
+<tr class="separator:a4c52a343d16e82bf29f4d66934ed713c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>This class implements a polynomial of the form \( p(x) = \sum_{i=0}^n a_i x^i \). </p>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a09b21e72c0bf497ab6f922e047498585" name="a09b21e72c0bf497ab6f922e047498585"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a09b21e72c0bf497ab6f922e047498585">&#9670;&#160;</a></span>Poly() <span class="overload">[1/4]</span></h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;typename Real&gt;<br />
+class Sturm::Poly&lt; Real &gt;</div><p>This class implements a polynomial of the form \( p(x) = \sum_{i=0}^n a_i x^i \). </p><dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Real</td><td>Scalar number type. </td></tr>
+  </table>
+  </dd>
+</dl>
+</div><h2 class="groupheader">Member Typedef Documentation</h2>
+<a id="af4c9e61a288e45dca13c7d675467c0d7" name="af4c9e61a288e45dca13c7d675467c0d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4c9e61a288e45dca13c7d675467c0d7">&#9670;&#160;</a></span>Vector</h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename Real&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="class_sturm_1_1_poly.html">Sturm::Poly</a>&lt; Real &gt;::Vector = Eigen::Vector&lt;Real, Eigen::Dynamic&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p><a class="el" href="#af4c9e61a288e45dca13c7d675467c0d7">Vector</a> of real numbers. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="abca31d36d37d4d4bce31041760df545b" name="abca31d36d37d4d4bce31041760df545b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abca31d36d37d4d4bce31041760df545b">&#9670;&#160;</a></span>Poly() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Real&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">Sturm::Poly::Poly </td>
+          <td class="memname"><a class="el" href="class_sturm_1_1_poly.html">Sturm::Poly</a>&lt; Real &gt;::Poly </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -263,17 +301,19 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a58b14e9892c6088b3d5ee68018c831a3" name="a58b14e9892c6088b3d5ee68018c831a3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a58b14e9892c6088b3d5ee68018c831a3">&#9670;&#160;</a></span>Poly() <span class="overload">[2/4]</span></h2>
+<a id="a9e37b60eac7847957fd23812e3061220" name="a9e37b60eac7847957fd23812e3061220"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e37b60eac7847957fd23812e3061220">&#9670;&#160;</a></span>Poly() <span class="overload">[2/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename Real&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">Sturm::Poly::Poly </td>
+          <td class="memname"><a class="el" href="class_sturm_1_1_poly.html">Sturm::Poly</a>&lt; Real &gt;::Poly </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="namespace_sturm.html#aad1114e76ee0064c465261eb130fb4ab">Integer</a></td>          <td class="paramname"><span class="paramname"><em>order</em></span></td><td>)</td>
           <td></td>
@@ -294,19 +334,21 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a4b41f738776115ea56769aa8072edebb" name="a4b41f738776115ea56769aa8072edebb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4b41f738776115ea56769aa8072edebb">&#9670;&#160;</a></span>Poly() <span class="overload">[3/4]</span></h2>
+<a id="a9c156d0b4687c087933f847f0508b186" name="a9c156d0b4687c087933f847f0508b186"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c156d0b4687c087933f847f0508b186">&#9670;&#160;</a></span>Poly() <span class="overload">[3/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename Real&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">Sturm::Poly::Poly </td>
+          <td class="memname"><a class="el" href="class_sturm_1_1_poly.html">Sturm::Poly</a>&lt; Real &gt;::Poly </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_sturm_1_1_poly.html">Poly</a> const &amp;</td>          <td class="paramname"><span class="paramname"><em>c</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="class_sturm_1_1_poly.html">Poly</a>&lt; Real &gt; const &amp;</td>          <td class="paramname"><span class="paramname"><em>c</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -318,26 +360,28 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>Class constructor from a vector. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">c</td><td><a class="el" href="namespace_sturm.html#aa456480f0107f1ae6f3e69101575e372">Vector</a> of coefficients. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">c</td><td><a class="el" href="#af4c9e61a288e45dca13c7d675467c0d7">Vector</a> of coefficients. </td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
-<a id="ae3695c3d3104e3ac48500ea4900c7a61" name="ae3695c3d3104e3ac48500ea4900c7a61"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae3695c3d3104e3ac48500ea4900c7a61">&#9670;&#160;</a></span>Poly() <span class="overload">[4/4]</span></h2>
+<a id="ac449bb337618f44077570fcefef194df" name="ac449bb337618f44077570fcefef194df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac449bb337618f44077570fcefef194df">&#9670;&#160;</a></span>Poly() <span class="overload">[4/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename Real&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">Sturm::Poly::Poly </td>
+          <td class="memname"><a class="el" href="class_sturm_1_1_poly.html">Sturm::Poly</a>&lt; Real &gt;::Poly </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="namespace_sturm.html#aa456480f0107f1ae6f3e69101575e372">Vector</a> const &amp;</td>          <td class="paramname"><span class="paramname"><em>c</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="#af4c9e61a288e45dca13c7d675467c0d7">Vector</a> const &amp;</td>          <td class="paramname"><span class="paramname"><em>c</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -349,7 +393,7 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>Class constructor from a vector. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">c</td><td><a class="el" href="namespace_sturm.html#aa456480f0107f1ae6f3e69101575e372">Vector</a> of coefficients. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">c</td><td><a class="el" href="#af4c9e61a288e45dca13c7d675467c0d7">Vector</a> of coefficients. </td></tr>
   </table>
   </dd>
 </dl>
@@ -357,17 +401,19 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="aaf4c7dc0f8f6be724c0330d5efb226ef" name="aaf4c7dc0f8f6be724c0330d5efb226ef"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaf4c7dc0f8f6be724c0330d5efb226ef">&#9670;&#160;</a></span>adjust_degree()</h2>
+<a id="a855c33832168d99dd58a9d962bcd09b2" name="a855c33832168d99dd58a9d962bcd09b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a855c33832168d99dd58a9d962bcd09b2">&#9670;&#160;</a></span>adjust_degree()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename Real&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void Sturm::Poly::adjust_degree </td>
+          <td class="memname">void <a class="el" href="class_sturm_1_1_poly.html">Sturm::Poly</a>&lt; Real &gt;::adjust_degree </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -383,17 +429,19 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a753047fc85b1477bcd617c36dc1b3d75" name="a753047fc85b1477bcd617c36dc1b3d75"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a753047fc85b1477bcd617c36dc1b3d75">&#9670;&#160;</a></span>coeffs()</h2>
+<a id="a8d6a5907a70b9147da1b300765de88d1" name="a8d6a5907a70b9147da1b300765de88d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d6a5907a70b9147da1b300765de88d1">&#9670;&#160;</a></span>coeffs()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename Real&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_sturm.html#aa456480f0107f1ae6f3e69101575e372">Vector</a> Sturm::Poly::coeffs </td>
+          <td class="memname"><a class="el" href="#af4c9e61a288e45dca13c7d675467c0d7">Vector</a> <a class="el" href="class_sturm_1_1_poly.html">Sturm::Poly</a>&lt; Real &gt;::coeffs </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -409,17 +457,19 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a8dc727dc94df89a6f4b59e9f458e9318" name="a8dc727dc94df89a6f4b59e9f458e9318"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8dc727dc94df89a6f4b59e9f458e9318">&#9670;&#160;</a></span>degree()</h2>
+<a id="acd14a0714e85551fe13725ebd5aff820" name="acd14a0714e85551fe13725ebd5aff820"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd14a0714e85551fe13725ebd5aff820">&#9670;&#160;</a></span>degree()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename Real&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_sturm.html#aad1114e76ee0064c465261eb130fb4ab">Integer</a> Sturm::Poly::degree </td>
+          <td class="memname"><a class="el" href="namespace_sturm.html#aad1114e76ee0064c465261eb130fb4ab">Integer</a> <a class="el" href="class_sturm_1_1_poly.html">Sturm::Poly</a>&lt; Real &gt;::degree </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -435,19 +485,21 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="ad874eadf5f4236de51173884e6d72cbd" name="ad874eadf5f4236de51173884e6d72cbd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad874eadf5f4236de51173884e6d72cbd">&#9670;&#160;</a></span>derivative()</h2>
+<a id="a2faa2f693e4de719f00e3a1602bef3f0" name="a2faa2f693e4de719f00e3a1602bef3f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2faa2f693e4de719f00e3a1602bef3f0">&#9670;&#160;</a></span>derivative()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename Real&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void Sturm::Poly::derivative </td>
+          <td class="memname">void <a class="el" href="class_sturm_1_1_poly.html">Sturm::Poly</a>&lt; Real &gt;::derivative </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_sturm_1_1_poly.html">Poly</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>res</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="class_sturm_1_1_poly.html">Poly</a>&lt; Real &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>res</em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -466,19 +518,21 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a55a3c1a8ddfb293bbed7330ba1bc2449" name="a55a3c1a8ddfb293bbed7330ba1bc2449"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a55a3c1a8ddfb293bbed7330ba1bc2449">&#9670;&#160;</a></span>evaluate() <span class="overload">[1/2]</span></h2>
+<a id="acfa82d1469997780dca6c6ba41d6aa38" name="acfa82d1469997780dca6c6ba41d6aa38"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acfa82d1469997780dca6c6ba41d6aa38">&#9670;&#160;</a></span>evaluate() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename Real&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_sturm.html#aaa1b5226335eadcf7d426f26f2c1641d">Real</a> Sturm::Poly::evaluate </td>
+          <td class="memname">Real <a class="el" href="class_sturm_1_1_poly.html">Sturm::Poly</a>&lt; Real &gt;::evaluate </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="namespace_sturm.html#aaa1b5226335eadcf7d426f26f2c1641d">Real</a></td>          <td class="paramname"><span class="paramname"><em>x</em></span></td><td>)</td>
+          <td class="paramtype">Real</td>          <td class="paramname"><span class="paramname"><em>x</em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -498,29 +552,31 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a17423f6d7430dac14451aab9a3bb1e14" name="a17423f6d7430dac14451aab9a3bb1e14"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a17423f6d7430dac14451aab9a3bb1e14">&#9670;&#160;</a></span>evaluate() <span class="overload">[2/2]</span></h2>
+<a id="a9a4ab37ee886965dbc2d196755e7b675" name="a9a4ab37ee886965dbc2d196755e7b675"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a4ab37ee886965dbc2d196755e7b675">&#9670;&#160;</a></span>evaluate() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename Real&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void Sturm::Poly::evaluate </td>
+          <td class="memname">void <a class="el" href="class_sturm_1_1_poly.html">Sturm::Poly</a>&lt; Real &gt;::evaluate </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="namespace_sturm.html#aaa1b5226335eadcf7d426f26f2c1641d">Real</a></td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+          <td class="paramtype">Real</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_sturm.html#aaa1b5226335eadcf7d426f26f2c1641d">Real</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>p</em></span>, </td>
+          <td class="paramtype">Real &amp;</td>          <td class="paramname"><span class="paramname"><em>p</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_sturm.html#aaa1b5226335eadcf7d426f26f2c1641d">Real</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>Dp</em></span>&#160;) const</td>
+          <td class="paramtype">Real &amp;</td>          <td class="paramname"><span class="paramname"><em>Dp</em></span>&#160;) const</td>
         </tr>
       </table>
   </td>
@@ -540,19 +596,21 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="af1ab0488365e66d11c74a95ba69a3811" name="af1ab0488365e66d11c74a95ba69a3811"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af1ab0488365e66d11c74a95ba69a3811">&#9670;&#160;</a></span>evaluate_derivative()</h2>
+<a id="aadcdbec523d263d1377d12469d2863c4" name="aadcdbec523d263d1377d12469d2863c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aadcdbec523d263d1377d12469d2863c4">&#9670;&#160;</a></span>evaluate_derivative()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename Real&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_sturm.html#aaa1b5226335eadcf7d426f26f2c1641d">Real</a> Sturm::Poly::evaluate_derivative </td>
+          <td class="memname">Real <a class="el" href="class_sturm_1_1_poly.html">Sturm::Poly</a>&lt; Real &gt;::evaluate_derivative </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="namespace_sturm.html#aaa1b5226335eadcf7d426f26f2c1641d">Real</a></td>          <td class="paramname"><span class="paramname"><em>x</em></span></td><td>)</td>
+          <td class="paramtype">Real</td>          <td class="paramname"><span class="paramname"><em>x</em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -572,19 +630,21 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="abf50516d7e493da67c43b84ed9485dd3" name="abf50516d7e493da67c43b84ed9485dd3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abf50516d7e493da67c43b84ed9485dd3">&#9670;&#160;</a></span>integral() <span class="overload">[1/2]</span></h2>
+<a id="a993ba83ec1c90353d0980e8f561dabd1" name="a993ba83ec1c90353d0980e8f561dabd1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a993ba83ec1c90353d0980e8f561dabd1">&#9670;&#160;</a></span>integral() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename Real&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void Sturm::Poly::integral </td>
+          <td class="memname">void <a class="el" href="class_sturm_1_1_poly.html">Sturm::Poly</a>&lt; Real &gt;::integral </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_sturm_1_1_poly.html">Poly</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>res</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="class_sturm_1_1_poly.html">Poly</a>&lt; Real &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>res</em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -603,24 +663,26 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a030f826ad9ad64d93be62f045d7eb48f" name="a030f826ad9ad64d93be62f045d7eb48f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a030f826ad9ad64d93be62f045d7eb48f">&#9670;&#160;</a></span>integral() <span class="overload">[2/2]</span></h2>
+<a id="af29393ab959f419838b5482be709415d" name="af29393ab959f419838b5482be709415d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af29393ab959f419838b5482be709415d">&#9670;&#160;</a></span>integral() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename Real&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void Sturm::Poly::integral </td>
+          <td class="memname">void <a class="el" href="class_sturm_1_1_poly.html">Sturm::Poly</a>&lt; Real &gt;::integral </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_sturm_1_1_poly.html">Poly</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>res</em></span>, </td>
+          <td class="paramtype"><a class="el" href="class_sturm_1_1_poly.html">Poly</a>&lt; Real &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>res</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_sturm.html#aaa1b5226335eadcf7d426f26f2c1641d">Real</a></td>          <td class="paramname"><span class="paramname"><em>c</em></span>&#160;) const</td>
+          <td class="paramtype">Real</td>          <td class="paramname"><span class="paramname"><em>c</em></span>&#160;) const</td>
         </tr>
       </table>
   </td>
@@ -639,17 +701,19 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a3be7ed1b5d6c43c08a1c73a8c2c90d72" name="a3be7ed1b5d6c43c08a1c73a8c2c90d72"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3be7ed1b5d6c43c08a1c73a8c2c90d72">&#9670;&#160;</a></span>leading_coeff()</h2>
+<a id="a9ddc215001858aa54b35b6204178a767" name="a9ddc215001858aa54b35b6204178a767"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ddc215001858aa54b35b6204178a767">&#9670;&#160;</a></span>leading_coeff()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename Real&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_sturm.html#aaa1b5226335eadcf7d426f26f2c1641d">Real</a> Sturm::Poly::leading_coeff </td>
+          <td class="memname">Real <a class="el" href="class_sturm_1_1_poly.html">Sturm::Poly</a>&lt; Real &gt;::leading_coeff </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -665,17 +729,19 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a9badea38872442a789dd937fea24dc43" name="a9badea38872442a789dd937fea24dc43"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9badea38872442a789dd937fea24dc43">&#9670;&#160;</a></span>make_monic()</h2>
+<a id="a3c9b1379ced82a7b77716639ca756ca6" name="a3c9b1379ced82a7b77716639ca756ca6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c9b1379ced82a7b77716639ca756ca6">&#9670;&#160;</a></span>make_monic()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename Real&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void Sturm::Poly::make_monic </td>
+          <td class="memname">void <a class="el" href="class_sturm_1_1_poly.html">Sturm::Poly</a>&lt; Real &gt;::make_monic </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -691,17 +757,19 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="ab1d7f95dc895f36d64bc8c540aa5bea0" name="ab1d7f95dc895f36d64bc8c540aa5bea0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab1d7f95dc895f36d64bc8c540aa5bea0">&#9670;&#160;</a></span>normalize()</h2>
+<a id="ad09a4fa559931aa825b3233802fb6526" name="ad09a4fa559931aa825b3233802fb6526"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad09a4fa559931aa825b3233802fb6526">&#9670;&#160;</a></span>normalize()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename Real&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_sturm.html#aaa1b5226335eadcf7d426f26f2c1641d">Real</a> Sturm::Poly::normalize </td>
+          <td class="memname">Real <a class="el" href="class_sturm_1_1_poly.html">Sturm::Poly</a>&lt; Real &gt;::normalize </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -717,19 +785,21 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a2d79283c6e5895f4aa1a6655d15384a8" name="a2d79283c6e5895f4aa1a6655d15384a8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2d79283c6e5895f4aa1a6655d15384a8">&#9670;&#160;</a></span>operator*=() <span class="overload">[1/2]</span></h2>
+<a id="a480fc00d997b5f09a62242ebe639a1e1" name="a480fc00d997b5f09a62242ebe639a1e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a480fc00d997b5f09a62242ebe639a1e1">&#9670;&#160;</a></span>operator*=() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename Real&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_sturm_1_1_poly.html">Poly</a> &amp; Sturm::Poly::operator*= </td>
+          <td class="memname"><a class="el" href="class_sturm_1_1_poly.html">Poly</a> &amp; <a class="el" href="class_sturm_1_1_poly.html">Sturm::Poly</a>&lt; Real &gt;::operator*= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_sturm_1_1_poly.html">Poly</a> const &amp;</td>          <td class="paramname"><span class="paramname"><em>p</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="class_sturm_1_1_poly.html">Poly</a>&lt; Real &gt; const &amp;</td>          <td class="paramname"><span class="paramname"><em>p</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -749,19 +819,21 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a43a070f1333d5b1b5888dcf1345fa920" name="a43a070f1333d5b1b5888dcf1345fa920"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a43a070f1333d5b1b5888dcf1345fa920">&#9670;&#160;</a></span>operator*=() <span class="overload">[2/2]</span></h2>
+<a id="aaccd600cd6c7aeace0fbc3a9e424618c" name="aaccd600cd6c7aeace0fbc3a9e424618c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaccd600cd6c7aeace0fbc3a9e424618c">&#9670;&#160;</a></span>operator*=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename Real&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_sturm_1_1_poly.html">Poly</a> &amp; Sturm::Poly::operator*= </td>
+          <td class="memname"><a class="el" href="class_sturm_1_1_poly.html">Poly</a> &amp; <a class="el" href="class_sturm_1_1_poly.html">Sturm::Poly</a>&lt; Real &gt;::operator*= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="namespace_sturm.html#aaa1b5226335eadcf7d426f26f2c1641d">Real</a></td>          <td class="paramname"><span class="paramname"><em>s</em></span></td><td>)</td>
+          <td class="paramtype">Real</td>          <td class="paramname"><span class="paramname"><em>s</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -781,19 +853,21 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="ab87c70fc2061ee8497a8adc89d414934" name="ab87c70fc2061ee8497a8adc89d414934"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab87c70fc2061ee8497a8adc89d414934">&#9670;&#160;</a></span>operator+=() <span class="overload">[1/2]</span></h2>
+<a id="a7f5e20889544cc22302b286157429bb2" name="a7f5e20889544cc22302b286157429bb2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f5e20889544cc22302b286157429bb2">&#9670;&#160;</a></span>operator+=() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename Real&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_sturm_1_1_poly.html">Poly</a> &amp; Sturm::Poly::operator+= </td>
+          <td class="memname"><a class="el" href="class_sturm_1_1_poly.html">Poly</a> &amp; <a class="el" href="class_sturm_1_1_poly.html">Sturm::Poly</a>&lt; Real &gt;::operator+= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_sturm_1_1_poly.html">Poly</a> const &amp;</td>          <td class="paramname"><span class="paramname"><em>p</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="class_sturm_1_1_poly.html">Poly</a>&lt; Real &gt; const &amp;</td>          <td class="paramname"><span class="paramname"><em>p</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -813,19 +887,21 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a35716b597568421247b1377c7a343901" name="a35716b597568421247b1377c7a343901"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a35716b597568421247b1377c7a343901">&#9670;&#160;</a></span>operator+=() <span class="overload">[2/2]</span></h2>
+<a id="a6bdb4a63f7b19802c3391e287a06b893" name="a6bdb4a63f7b19802c3391e287a06b893"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6bdb4a63f7b19802c3391e287a06b893">&#9670;&#160;</a></span>operator+=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename Real&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_sturm_1_1_poly.html">Poly</a> &amp; Sturm::Poly::operator+= </td>
+          <td class="memname"><a class="el" href="class_sturm_1_1_poly.html">Poly</a> &amp; <a class="el" href="class_sturm_1_1_poly.html">Sturm::Poly</a>&lt; Real &gt;::operator+= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="namespace_sturm.html#aaa1b5226335eadcf7d426f26f2c1641d">Real</a></td>          <td class="paramname"><span class="paramname"><em>s</em></span></td><td>)</td>
+          <td class="paramtype">Real</td>          <td class="paramname"><span class="paramname"><em>s</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -845,17 +921,19 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a71a0bb2e9e0a95d0afc09aa30a2e9a54" name="a71a0bb2e9e0a95d0afc09aa30a2e9a54"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a71a0bb2e9e0a95d0afc09aa30a2e9a54">&#9670;&#160;</a></span>operator-()</h2>
+<a id="a6fb532a7be1c0905cdad1a0ac9c4a181" name="a6fb532a7be1c0905cdad1a0ac9c4a181"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6fb532a7be1c0905cdad1a0ac9c4a181">&#9670;&#160;</a></span>operator-()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename Real&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_sturm_1_1_poly.html">Poly</a> Sturm::Poly::operator- </td>
+          <td class="memname"><a class="el" href="class_sturm_1_1_poly.html">Poly</a> <a class="el" href="class_sturm_1_1_poly.html">Sturm::Poly</a>&lt; Real &gt;::operator- </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -871,19 +949,21 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a164a6980f5ca88f7816a920f0b6d0931" name="a164a6980f5ca88f7816a920f0b6d0931"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a164a6980f5ca88f7816a920f0b6d0931">&#9670;&#160;</a></span>operator-=() <span class="overload">[1/2]</span></h2>
+<a id="a5e0cca9856ea11023d6cdfd1564b3553" name="a5e0cca9856ea11023d6cdfd1564b3553"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e0cca9856ea11023d6cdfd1564b3553">&#9670;&#160;</a></span>operator-=() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename Real&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_sturm_1_1_poly.html">Poly</a> &amp; Sturm::Poly::operator-= </td>
+          <td class="memname"><a class="el" href="class_sturm_1_1_poly.html">Poly</a> &amp; <a class="el" href="class_sturm_1_1_poly.html">Sturm::Poly</a>&lt; Real &gt;::operator-= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_sturm_1_1_poly.html">Poly</a> const &amp;</td>          <td class="paramname"><span class="paramname"><em>p</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="class_sturm_1_1_poly.html">Poly</a>&lt; Real &gt; const &amp;</td>          <td class="paramname"><span class="paramname"><em>p</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -903,19 +983,21 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="ad5b63589a470c2d5087598e0c970ed42" name="ad5b63589a470c2d5087598e0c970ed42"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad5b63589a470c2d5087598e0c970ed42">&#9670;&#160;</a></span>operator-=() <span class="overload">[2/2]</span></h2>
+<a id="a21f450a685eae153a103e7a6180cc6e5" name="a21f450a685eae153a103e7a6180cc6e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21f450a685eae153a103e7a6180cc6e5">&#9670;&#160;</a></span>operator-=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename Real&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_sturm_1_1_poly.html">Poly</a> &amp; Sturm::Poly::operator-= </td>
+          <td class="memname"><a class="el" href="class_sturm_1_1_poly.html">Poly</a> &amp; <a class="el" href="class_sturm_1_1_poly.html">Sturm::Poly</a>&lt; Real &gt;::operator-= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="namespace_sturm.html#aaa1b5226335eadcf7d426f26f2c1641d">Real</a></td>          <td class="paramname"><span class="paramname"><em>s</em></span></td><td>)</td>
+          <td class="paramtype">Real</td>          <td class="paramname"><span class="paramname"><em>s</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -935,19 +1017,21 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a178d70bc8117142e563c86750cde8137" name="a178d70bc8117142e563c86750cde8137"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a178d70bc8117142e563c86750cde8137">&#9670;&#160;</a></span>operator=()</h2>
+<a id="ae461fd6350e2c73973e1baab27407bd2" name="ae461fd6350e2c73973e1baab27407bd2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae461fd6350e2c73973e1baab27407bd2">&#9670;&#160;</a></span>operator=()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename Real&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_sturm_1_1_poly.html">Poly</a> &amp; Sturm::Poly::operator= </td>
+          <td class="memname"><a class="el" href="class_sturm_1_1_poly.html">Poly</a> &amp; <a class="el" href="class_sturm_1_1_poly.html">Sturm::Poly</a>&lt; Real &gt;::operator= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_sturm_1_1_poly.html">Poly</a> const &amp;</td>          <td class="paramname"><span class="paramname"><em>p</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="class_sturm_1_1_poly.html">Poly</a>&lt; Real &gt; const &amp;</td>          <td class="paramname"><span class="paramname"><em>p</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -967,17 +1051,19 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="af88299ebfde607b225b84c09147f9b09" name="af88299ebfde607b225b84c09147f9b09"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af88299ebfde607b225b84c09147f9b09">&#9670;&#160;</a></span>order()</h2>
+<a id="ad755ed4e490a95f465de6d0946153ad9" name="ad755ed4e490a95f465de6d0946153ad9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad755ed4e490a95f465de6d0946153ad9">&#9670;&#160;</a></span>order()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename Real&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_sturm.html#aad1114e76ee0064c465261eb130fb4ab">Integer</a> Sturm::Poly::order </td>
+          <td class="memname"><a class="el" href="namespace_sturm.html#aad1114e76ee0064c465261eb130fb4ab">Integer</a> <a class="el" href="class_sturm_1_1_poly.html">Sturm::Poly</a>&lt; Real &gt;::order </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -993,19 +1079,21 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a72abe3ffa1a54882b65abbf10eea93bc" name="a72abe3ffa1a54882b65abbf10eea93bc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a72abe3ffa1a54882b65abbf10eea93bc">&#9670;&#160;</a></span>purge()</h2>
+<a id="a50620b33ab9f63bf3f4249df6a9e821e" name="a50620b33ab9f63bf3f4249df6a9e821e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a50620b33ab9f63bf3f4249df6a9e821e">&#9670;&#160;</a></span>purge()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename Real&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void Sturm::Poly::purge </td>
+          <td class="memname">void <a class="el" href="class_sturm_1_1_poly.html">Sturm::Poly</a>&lt; Real &gt;::purge </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="namespace_sturm.html#aaa1b5226335eadcf7d426f26f2c1641d">Real</a></td>          <td class="paramname"><span class="paramname"><em>eps</em></span></td><td>)</td>
+          <td class="paramtype">Real</td>          <td class="paramname"><span class="paramname"><em>eps</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1024,17 +1112,19 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a0efb81f810d2dc4f075c36fb18612a4b" name="a0efb81f810d2dc4f075c36fb18612a4b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0efb81f810d2dc4f075c36fb18612a4b">&#9670;&#160;</a></span>set_degree()</h2>
+<a id="a075d5b6ea7f9afffa376533b91ce0d80" name="a075d5b6ea7f9afffa376533b91ce0d80"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a075d5b6ea7f9afffa376533b91ce0d80">&#9670;&#160;</a></span>set_degree()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename Real&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void Sturm::Poly::set_degree </td>
+          <td class="memname">void <a class="el" href="class_sturm_1_1_poly.html">Sturm::Poly</a>&lt; Real &gt;::set_degree </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="namespace_sturm.html#aad1114e76ee0064c465261eb130fb4ab">Integer</a></td>          <td class="paramname"><span class="paramname"><em>degree</em></span></td><td>)</td>
           <td></td>
@@ -1055,19 +1145,21 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a5a95703834300337c1f12dc388cc9faa" name="a5a95703834300337c1f12dc388cc9faa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5a95703834300337c1f12dc388cc9faa">&#9670;&#160;</a></span>set_monomial()</h2>
+<a id="a9a011733b0bee51db8cf3b15589b6099" name="a9a011733b0bee51db8cf3b15589b6099"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a011733b0bee51db8cf3b15589b6099">&#9670;&#160;</a></span>set_monomial()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename Real&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_sturm_1_1_poly.html">Poly</a> &amp; Sturm::Poly::set_monomial </td>
+          <td class="memname"><a class="el" href="class_sturm_1_1_poly.html">Poly</a> &amp; <a class="el" href="class_sturm_1_1_poly.html">Sturm::Poly</a>&lt; Real &gt;::set_monomial </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="namespace_sturm.html#aaa1b5226335eadcf7d426f26f2c1641d">Real</a></td>          <td class="paramname"><span class="paramname"><em>a</em></span></td><td>)</td>
+          <td class="paramtype">Real</td>          <td class="paramname"><span class="paramname"><em>a</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1087,17 +1179,19 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a2fd39af893d760a19f2f9e6ac304446d" name="a2fd39af893d760a19f2f9e6ac304446d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2fd39af893d760a19f2f9e6ac304446d">&#9670;&#160;</a></span>set_order()</h2>
+<a id="adf8b58bb1af80780cbaba1b7bbf01f7b" name="adf8b58bb1af80780cbaba1b7bbf01f7b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf8b58bb1af80780cbaba1b7bbf01f7b">&#9670;&#160;</a></span>set_order()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename Real&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void Sturm::Poly::set_order </td>
+          <td class="memname">void <a class="el" href="class_sturm_1_1_poly.html">Sturm::Poly</a>&lt; Real &gt;::set_order </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="namespace_sturm.html#aad1114e76ee0064c465261eb130fb4ab">Integer</a></td>          <td class="paramname"><span class="paramname"><em>order</em></span></td><td>)</td>
           <td></td>
@@ -1118,19 +1212,21 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a5c5b1b900e2654c6f73ebd9fa0c02645" name="a5c5b1b900e2654c6f73ebd9fa0c02645"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5c5b1b900e2654c6f73ebd9fa0c02645">&#9670;&#160;</a></span>set_scalar()</h2>
+<a id="a9da52096fcad40fa9034fc49c906286a" name="a9da52096fcad40fa9034fc49c906286a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9da52096fcad40fa9034fc49c906286a">&#9670;&#160;</a></span>set_scalar()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename Real&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_sturm_1_1_poly.html">Poly</a> &amp; Sturm::Poly::set_scalar </td>
+          <td class="memname"><a class="el" href="class_sturm_1_1_poly.html">Poly</a> &amp; <a class="el" href="class_sturm_1_1_poly.html">Sturm::Poly</a>&lt; Real &gt;::set_scalar </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="namespace_sturm.html#aaa1b5226335eadcf7d426f26f2c1641d">Real</a></td>          <td class="paramname"><span class="paramname"><em>s</em></span></td><td>)</td>
+          <td class="paramtype">Real</td>          <td class="paramname"><span class="paramname"><em>s</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1150,17 +1246,19 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="acf6ddf3cf137178cef6eb8bbd2de1dd8" name="acf6ddf3cf137178cef6eb8bbd2de1dd8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acf6ddf3cf137178cef6eb8bbd2de1dd8">&#9670;&#160;</a></span>sign_variations()</h2>
+<a id="af34e67d24c0bd6684b40cecd96881925" name="af34e67d24c0bd6684b40cecd96881925"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af34e67d24c0bd6684b40cecd96881925">&#9670;&#160;</a></span>sign_variations()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename Real&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_sturm.html#aad1114e76ee0064c465261eb130fb4ab">Integer</a> Sturm::Poly::sign_variations </td>
+          <td class="memname"><a class="el" href="namespace_sturm.html#aad1114e76ee0064c465261eb130fb4ab">Integer</a> <a class="el" href="class_sturm_1_1_poly.html">Sturm::Poly</a>&lt; Real &gt;::sign_variations </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -1176,17 +1274,19 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="ae9fb7116f7737a7ccf634ea378295759" name="ae9fb7116f7737a7ccf634ea378295759"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae9fb7116f7737a7ccf634ea378295759">&#9670;&#160;</a></span>to_eigen() <span class="overload">[1/2]</span></h2>
+<a id="a9f0b06f9ccafa275700112df27966281" name="a9f0b06f9ccafa275700112df27966281"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f0b06f9ccafa275700112df27966281">&#9670;&#160;</a></span>to_eigen() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename Real&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_sturm.html#aa456480f0107f1ae6f3e69101575e372">Vector</a> &amp; Sturm::Poly::to_eigen </td>
+          <td class="memname"><a class="el" href="#af4c9e61a288e45dca13c7d675467c0d7">Vector</a> &amp; <a class="el" href="class_sturm_1_1_poly.html">Sturm::Poly</a>&lt; Real &gt;::to_eigen </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -1202,17 +1302,19 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a75e4a270b2d804b35bd65343353899b9" name="a75e4a270b2d804b35bd65343353899b9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a75e4a270b2d804b35bd65343353899b9">&#9670;&#160;</a></span>to_eigen() <span class="overload">[2/2]</span></h2>
+<a id="a0221127010f8cab17e55e39e24b00363" name="a0221127010f8cab17e55e39e24b00363"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0221127010f8cab17e55e39e24b00363">&#9670;&#160;</a></span>to_eigen() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename Real&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_sturm.html#aa456480f0107f1ae6f3e69101575e372">Vector</a> const  &amp; Sturm::Poly::to_eigen </td>
+          <td class="memname"><a class="el" href="#af4c9e61a288e45dca13c7d675467c0d7">Vector</a> const  &amp; <a class="el" href="class_sturm_1_1_poly.html">Sturm::Poly</a>&lt; Real &gt;::to_eigen </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -1228,17 +1330,19 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="ac231ed361e75536e2e6c971617a98c83" name="ac231ed361e75536e2e6c971617a98c83"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac231ed361e75536e2e6c971617a98c83">&#9670;&#160;</a></span>to_string()</h2>
+<a id="ac88d9baa560a6c2e9f23488e1147094c" name="ac88d9baa560a6c2e9f23488e1147094c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac88d9baa560a6c2e9f23488e1147094c">&#9670;&#160;</a></span>to_string()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename Real&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::string Sturm::Poly::to_string </td>
+          <td class="memname">std::string <a class="el" href="class_sturm_1_1_poly.html">Sturm::Poly</a>&lt; Real &gt;::to_string </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -1255,17 +1359,44 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="aa5bd9a8e9f1c3631200631eca8a53a0e" name="aa5bd9a8e9f1c3631200631eca8a53a0e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa5bd9a8e9f1c3631200631eca8a53a0e">&#9670;&#160;</a></span>m_order</h2>
+<a id="a4661dabad05f12cbc6af66ce5de6c50a" name="a4661dabad05f12cbc6af66ce5de6c50a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4661dabad05f12cbc6af66ce5de6c50a">&#9670;&#160;</a></span>EPSILON</h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename Real&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_sturm.html#aad1114e76ee0064c465261eb130fb4ab">Integer</a> Sturm::Poly::m_order</td>
+          <td class="memname">const Real <a class="el" href="class_sturm_1_1_poly.html">Sturm::Poly</a>&lt; Real &gt;::EPSILON {std::numeric_limits&lt;Real&gt;::epsilon()}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Machine epsilon. </p>
+
+</div>
+</div>
+<a id="a4c52a343d16e82bf29f4d66934ed713c" name="a4c52a343d16e82bf29f4d66934ed713c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c52a343d16e82bf29f4d66934ed713c">&#9670;&#160;</a></span>m_order</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Real&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespace_sturm.html#aad1114e76ee0064c465261eb130fb4ab">Integer</a> <a class="el" href="class_sturm_1_1_poly.html">Sturm::Poly</a>&lt; Real &gt;::m_order</td>
         </tr>
       </table>
   </td>

@@ -6,7 +6,7 @@ var searchData=
   ['info_3',['Info',['../namespace_sturm.html#aee56f350d689baadf15b0833a4660b38',1,'Sturm::Info()'],['../namespace_sturm.html#a37538ce05375cedf03562014e802dad8',1,'Sturm::Info(std::ostream &amp;os)']]],
   ['installation_4',['Installation',['../index.html#autotoc_md1',1,'']]],
   ['integer_5',['Integer',['../namespace_sturm.html#aad1114e76ee0064c465261eb130fb4ab',1,'Sturm']]],
-  ['integral_6',['integral',['../class_sturm_1_1_poly.html#abf50516d7e493da67c43b84ed9485dd3',1,'Sturm::Poly::integral(Poly &amp;res) const'],['../class_sturm_1_1_poly.html#a030f826ad9ad64d93be62f045d7eb48f',1,'Sturm::Poly::integral(Poly &amp;res, Real c) const']]],
-  ['interval_7',['Interval',['../class_sturm_1_1_sequence.html#abe900669e6c8b4af71848dd59cc212cb',1,'Sturm::Sequence']]],
-  ['interval_8',['interval',['../class_sturm_1_1_sequence.html#a172b116b56be7b2a5e90dcb85b3ca6a9',1,'Sturm::Sequence']]]
+  ['integral_6',['integral',['../class_sturm_1_1_poly.html#a993ba83ec1c90353d0980e8f561dabd1',1,'Sturm::Poly::integral(Poly &amp;res) const'],['../class_sturm_1_1_poly.html#af29393ab959f419838b5482be709415d',1,'Sturm::Poly::integral(Poly &amp;res, Real c) const']]],
+  ['interval_7',['Interval',['../class_sturm_1_1_sequence.html#a9feb1de175d9c4a6be8b9e182dc9ec26',1,'Sturm::Sequence']]],
+  ['interval_8',['interval',['../class_sturm_1_1_sequence.html#a1d620999cfafeb9af3106b91bf358fa6',1,'Sturm::Sequence']]]
 ];

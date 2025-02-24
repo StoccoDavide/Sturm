@@ -20,9 +20,16 @@ namespace Sturm
   * \brief Polynomial class.
   *
   * This class implements a polynomial of the form \f$ p(x) = \sum_{i=0}^n a_i x^i \f$.
+  * \tparam Real Scalar number type.
   */
-  class Poly : public Vector {
+  template <typename Real>
+  class Poly : public Eigen::Vector<Real, Eigen::Dynamic>
+  {
+  public:
+    using Vector = Eigen::Vector<Real, Eigen::Dynamic>; /**< Vector of real numbers. */
+    constexpr static const Real EPSILON{std::numeric_limits<Real>::epsilon()}; /**< Machine epsilon. */
 
+  private:
     Integer m_order; /**< Polynomial order. */
 
     /**
@@ -32,7 +39,6 @@ namespace Sturm
     Vector & to_eigen() {return *static_cast<Vector*>(this);}
 
   public:
-
     /**
     * Class constructor from a vector.
     */
@@ -288,7 +294,7 @@ namespace Sturm
     */
     Real normalize() {
       Real scale{this->cwiseAbs().maxCoeff()};
-      if (scale > 0.0) {this->to_eigen() /= scale;}
+      if (scale > static_cast<Real>(0.0)) {this->to_eigen() /= scale;}
       return scale;
     }
 
@@ -463,11 +469,13 @@ namespace Sturm
   * \param[in] p_1 First polynomial to sum.
   * \param[in] p_2 Second polynomial to sum.
   * \return The operation result.
+  * \tparam Real Scalar number type.
   */
-  inline Poly operator+ (Poly const & p_1, Poly const & p_2) {
+  template <typename Real>
+  inline Poly<Real> operator+ (Poly<Real> const & p_1, Poly<Real> const & p_2) {
     Integer max_order{std::max(p_1.order(), p_2.order())};
     Integer min_order{std::min(p_1.order(), p_2.order())};
-    Poly res(max_order);
+    Poly<Real> res(max_order);
     res.head( min_order ).noalias() = p_1.head(min_order) + p_2.head(min_order);
     Integer n_tail{max_order - min_order};
     if (n_tail > 0) {
@@ -482,10 +490,12 @@ namespace Sturm
   * \param[in] p Polynomial to sum.
   * \param[in] s Scalar to sum.
   * \return The operation result.
+  * \tparam Real Scalar number type.
   */
-  inline Poly operator+ (Poly const & p, Real s) {
+  template <typename Real>
+  inline Poly<Real> operator+ (Poly<Real> const & p, Real s) {
     Integer max_order{std::max(p.order(), 1)};
-    Poly res(max_order);
+    Poly<Real> res(max_order);
     if (p.order() > 0) {
       res.coeffRef(0) = p.coeff(0) + s;
       if (p.order() > 1) res.tail(p.order() - 1).noalias() = p.tail(p.order() - 1);
@@ -500,10 +510,12 @@ namespace Sturm
   * \param[in] s Scalar to sum.
   * \param[in] p Polynomial to sum.
   * \return The operation result.
+  * \tparam Real Scalar number type.
   */
-  inline Poly operator+ (Real s, Poly const & p) {
+  template <typename Real>
+  inline Poly<Real> operator+ (Real s, Poly<Real> const & p) {
     Integer max_order{std::max(p.order(), 1)};
-    Poly res(max_order);
+    Poly<Real> res(max_order);
     if (p.order() > 0) {
       res.coeffRef(0) = s + p.coeff(0);
       if (p.order() > 1) res.tail(p.order() - 1).noalias() = p.tail(p.order() - 1);
@@ -518,11 +530,13 @@ namespace Sturm
   * \param[in] p_1 First polynomial to subtract.
   * \param[in] p_2 Second polynomial to subtract.
   * \return The operation result.
+  * \tparam Real Scalar number type.
   */
-  inline Poly operator- (Poly const & p_1, Poly const & p_2) {
+  template <typename Real>
+  inline Poly<Real> operator- (Poly<Real> const & p_1, Poly<Real> const & p_2) {
     Integer max_order{std::max(p_1.order(), p_2.order())};
     Integer min_order{std::min(p_1.order(), p_2.order())};
-    Poly res(max_order);
+    Poly<Real> res(max_order);
     res.head( min_order ).noalias() = p_1.head(min_order) - p_2.head(min_order);
     Integer n_tail{max_order - min_order};
     if (n_tail > 0) {
@@ -537,10 +551,12 @@ namespace Sturm
   * \param[in] p Polynomial to subtract.
   * \param[in] s Scalar to subtract.
   * \return The operation result.
+  * \tparam Real Scalar number type.
   */
-  inline Poly operator- (Poly const & p, Real s) {
+  template <typename Real>
+  inline Poly<Real> operator- (Poly<Real> const & p, Real s) {
     Integer max_order{std::max(p.order(), 1)};
-    Poly res(max_order);
+    Poly<Real> res(max_order);
     if (p.order() > 0) {
       res.coeffRef(0) = p.coeff(0) - s;
       if (p.order() > 1) res.tail( p.order() - 1).noalias() = p.tail(p.order() - 1);
@@ -555,10 +571,12 @@ namespace Sturm
   * \param[in] s Scalar to subtract.
   * \param[in] p Polynomial to subtract.
   * \return The operation result.
+  * \tparam Real Scalar number type.
   */
-  inline Poly operator- (Real s, Poly const & p) {
+  template <typename Real>
+  inline Poly<Real> operator- (Real s, Poly<Real> const & p) {
     Integer max_order{std::max(p.order(), 1)};
-    Poly res(max_order);
+    Poly<Real> res(max_order);
     if (p.order() > 0) {
       res.coeffRef(0) = s - p.coeff(0);
       if (p.order() > 1) {res.tail(p.order() - 1).noalias() = -p.tail(p.order() - 1);}
@@ -573,9 +591,11 @@ namespace Sturm
   * \param[in] p_1 First polynomial to multiply.
   * \param[in] p_2 Second polynomial to multiply.
   * \return The operation result.
+  * \tparam Real Scalar number type.
   */
-  inline Poly operator* (Poly const & p_1, Poly const & p_2) {
-    Poly res(p_1.order() + p_2.order() - 1);
+  template <typename Real>
+  inline Poly<Real> operator* (Poly<Real> const & p_1, Poly<Real> const & p_2) {
+    Poly<Real> res(p_1.order() + p_2.order() - 1);
     for(Integer i{0}; i < p_1.order(); ++i) {
       for(Integer j{0}; j < p_2.order(); ++j) {
         res.coeffRef(i+j) += p_1.coeff(i) * p_2.coeff(j);
@@ -588,9 +608,11 @@ namespace Sturm
   * \param[in] p Polynomial to multiply.
   * \param[in] s Scalar to multiply.
   * \return The operation result.
+  * \tparam Real Scalar number type.
   */
-  inline Poly operator* (Real p, Poly const & s) {
-    Poly res(s.order());
+  template <typename Real>
+  inline Poly<Real> operator* (Real p, Poly<Real> const & s) {
+    Poly<Real> res(s.order());
     res.noalias() = p*s.to_eigen();
     return res;
   }
@@ -600,9 +622,11 @@ namespace Sturm
   * \param[in] s Scalar to multiply.
   * \param[in] p Polynomial to multiply.
   * \return The operation result.
+  * \tparam Real Scalar number type.
   */
-  inline Poly operator* (Poly const & s, Real p) {
-    Poly res(s.order());
+  template <typename Real>
+  inline Poly<Real> operator* (Poly<Real> const & s, Real p) {
+    Poly<Real> res(s.order());
     res.noalias() = s.to_eigen()*p;
     return res;
   }
@@ -613,10 +637,12 @@ namespace Sturm
   * \param[in] p_2 Polynomial to divide by.
   * \param[out] q Quotient polynomial.
   * \param[out] r Remainder polynomial.
+  * \tparam Real Scalar number type.
   */
-  inline void divide(Poly const & p_1, Poly const & p_2, Poly & q, Poly & r) {
+  template <typename Real>
+  inline void divide(Poly<Real> const & p_1, Poly<Real> const & p_2, Poly<Real> & q, Poly<Real> & r) {
     // Scale polynomials as p_1_norm(x) = p_1(x) / scale_p_1, and p_2_norm(x) = p_2(x) / scale_p_2
-    Poly p_1_norm(p_1), p_2_norm(p_2);
+    Poly<Real> p_1_norm(p_1), p_2_norm(p_2);
     Real scale_p_1{p_1_norm.normalize()};
     Real scale_p_2{p_2_norm.normalize()};
 
@@ -632,7 +658,7 @@ namespace Sturm
       Integer r_degree{r.degree()};
       q.set_order(d+1);
 
-      STURM_ASSERT(std::abs(leading_b_norm) > EPSILON,
+      STURM_ASSERT(std::abs(leading_b_norm) > Poly<Real>::EPSILON,
         "Sturm::Poly::divide(...): leading coefficient of p_2(x) is 0.");
 
       while (d >= 0 && r_degree >= 0) {
@@ -665,11 +691,13 @@ namespace Sturm
   * \param[in] p_2 Second polynomial.
   * \param[out] gcd Greatest common divisor polynomial.
   * \param[in] eps Epsilon value for purging coefficients.
+  * \tparam Real Scalar number type.
   */
-  inline void GCD(Poly const & p_1, Poly const & p_2, Poly & gcd, Real eps = EPSILON)
+  template <typename Real>
+  inline void GCD(Poly<Real> const & p_1, Poly<Real> const & p_2, Poly<Real> & gcd, Real eps = Poly<Real>::EPSILON)
   {
     if (p_2.order() > 0) {
-      Poly q, r;
+      Poly<Real> q, r;
       Sturm::divide(p_1, p_2, q, r);
       r.purge(eps);
       Sturm::GCD(p_2, r, gcd, eps);
@@ -684,8 +712,10 @@ namespace Sturm
   * \param[in] os Output stream.
   * \param[in] p Polynomial.
   * \return The output stream.
+  * \tparam Real Scalar number type.
   */
-  inline std::ostream & operator<< (std::ostream & os, Poly const & p) {
+  template <typename Real>
+  inline std::ostream & operator<< (std::ostream & os, Poly<Real> const & p) {
     os << p.to_string();
     return os;
   }

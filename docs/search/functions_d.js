@@ -1,10 +1,10 @@
 var searchData=
 [
-  ['separate_5froots_0',['separate_roots',['../class_sturm_1_1_sequence.html#a3f3d20c746f86dcf1e0224b0e8a6fc62',1,'Sturm::Sequence::separate_roots(Real a_in, Real b_in)'],['../class_sturm_1_1_sequence.html#a9889914fcc3d84d252a2e9e3b3dfe2f0',1,'Sturm::Sequence::separate_roots()']]],
-  ['sequence_1',['Sequence',['../class_sturm_1_1_sequence.html#ad2f387cc313b57f86a21e0eabd82efeb',1,'Sturm::Sequence::Sequence()'],['../class_sturm_1_1_sequence.html#ae699664bbb924a2f2792b3a8aa991820',1,'Sturm::Sequence::Sequence(Poly const &amp;p)']]],
-  ['set_5fdegree_2',['set_degree',['../class_sturm_1_1_poly.html#a0efb81f810d2dc4f075c36fb18612a4b',1,'Sturm::Poly']]],
-  ['set_5fmonomial_3',['set_monomial',['../class_sturm_1_1_poly.html#a5a95703834300337c1f12dc388cc9faa',1,'Sturm::Poly']]],
-  ['set_5forder_4',['set_order',['../class_sturm_1_1_poly.html#a2fd39af893d760a19f2f9e6ac304446d',1,'Sturm::Poly']]],
-  ['set_5fscalar_5',['set_scalar',['../class_sturm_1_1_poly.html#a5c5b1b900e2654c6f73ebd9fa0c02645',1,'Sturm::Poly']]],
-  ['sign_5fvariations_6',['sign_variations',['../class_sturm_1_1_poly.html#acf6ddf3cf137178cef6eb8bbd2de1dd8',1,'Sturm::Poly::sign_variations()'],['../class_sturm_1_1_sequence.html#a19db48c8376bddfb64334cf95501b987',1,'Sturm::Sequence::sign_variations()']]]
+  ['separate_5froots_0',['separate_roots',['../class_sturm_1_1_sequence.html#a8d85cbd513472dba280c66ac2bc8b1be',1,'Sturm::Sequence::separate_roots(Real a_in, Real b_in)'],['../class_sturm_1_1_sequence.html#a693e03b84660f5fe5277522c0a8b2a6d',1,'Sturm::Sequence::separate_roots()']]],
+  ['sequence_1',['Sequence',['../class_sturm_1_1_sequence.html#aa6119872ff5691cee7561a15560aad89',1,'Sturm::Sequence::Sequence()'],['../class_sturm_1_1_sequence.html#af7d6ec7283b0dfbe07b220361d066b86',1,'Sturm::Sequence::Sequence(Poly&lt; Real &gt; const &amp;p)']]],
+  ['set_5fdegree_2',['set_degree',['../class_sturm_1_1_poly.html#a075d5b6ea7f9afffa376533b91ce0d80',1,'Sturm::Poly']]],
+  ['set_5fmonomial_3',['set_monomial',['../class_sturm_1_1_poly.html#a9a011733b0bee51db8cf3b15589b6099',1,'Sturm::Poly']]],
+  ['set_5forder_4',['set_order',['../class_sturm_1_1_poly.html#adf8b58bb1af80780cbaba1b7bbf01f7b',1,'Sturm::Poly']]],
+  ['set_5fscalar_5',['set_scalar',['../class_sturm_1_1_poly.html#a9da52096fcad40fa9034fc49c906286a',1,'Sturm::Poly']]],
+  ['sign_5fvariations_6',['sign_variations',['../class_sturm_1_1_poly.html#af34e67d24c0bd6684b40cecd96881925',1,'Sturm::Poly::sign_variations()'],['../class_sturm_1_1_sequence.html#a7dde2b1f3b9c7ca81fb53fc947a45252',1,'Sturm::Sequence::sign_variations()']]]
 ];

@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['real_0',['Real',['../namespace_sturm.html#aaa1b5226335eadcf7d426f26f2c1641d',1,'Sturm']]],
-  ['roots_5fnumber_1',['roots_number',['../class_sturm_1_1_sequence.html#af033cb9b3b247dcb29d9980bc34610fd',1,'Sturm::Sequence']]]
+  ['roots_5fnumber_0',['roots_number',['../class_sturm_1_1_sequence.html#a07f7ed499009d8ca726087f0c4e7154b',1,'Sturm::Sequence']]]
 ];

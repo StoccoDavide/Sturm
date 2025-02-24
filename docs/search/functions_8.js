@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['make_5fmonic_0',['make_monic',['../class_sturm_1_1_poly.html#a9badea38872442a789dd937fea24dc43',1,'Sturm::Poly']]]
+  ['make_5fmonic_0',['make_monic',['../class_sturm_1_1_poly.html#a3c9b1379ced82a7b77716639ca756ca6',1,'Sturm::Poly']]]
 ];

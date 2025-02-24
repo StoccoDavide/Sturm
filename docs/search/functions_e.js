@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['to_5feigen_0',['to_eigen',['../class_sturm_1_1_poly.html#ae9fb7116f7737a7ccf634ea378295759',1,'Sturm::Poly::to_eigen()'],['../class_sturm_1_1_poly.html#a75e4a270b2d804b35bd65343353899b9',1,'Sturm::Poly::to_eigen() const']]],
-  ['to_5fstring_1',['to_string',['../class_sturm_1_1_poly.html#ac231ed361e75536e2e6c971617a98c83',1,'Sturm::Poly']]]
+  ['to_5feigen_0',['to_eigen',['../class_sturm_1_1_poly.html#a9f0b06f9ccafa275700112df27966281',1,'Sturm::Poly::to_eigen()'],['../class_sturm_1_1_poly.html#a0221127010f8cab17e55e39e24b00363',1,'Sturm::Poly::to_eigen() const']]],
+  ['to_5fstring_1',['to_string',['../class_sturm_1_1_poly.html#ac88d9baa560a6c2e9f23488e1147094c',1,'Sturm::Poly']]]
 ];

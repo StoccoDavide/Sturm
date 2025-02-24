@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['poly_0',['Poly',['../class_sturm_1_1_poly.html#a09b21e72c0bf497ab6f922e047498585',1,'Sturm::Poly::Poly()'],['../class_sturm_1_1_poly.html#a58b14e9892c6088b3d5ee68018c831a3',1,'Sturm::Poly::Poly(Integer order)'],['../class_sturm_1_1_poly.html#a4b41f738776115ea56769aa8072edebb',1,'Sturm::Poly::Poly(Poly const &amp;c)'],['../class_sturm_1_1_poly.html#ae3695c3d3104e3ac48500ea4900c7a61',1,'Sturm::Poly::Poly(Vector const &amp;c)']]],
-  ['purge_1',['purge',['../class_sturm_1_1_poly.html#a72abe3ffa1a54882b65abbf10eea93bc',1,'Sturm::Poly']]]
+  ['poly_0',['Poly',['../class_sturm_1_1_poly.html#abca31d36d37d4d4bce31041760df545b',1,'Sturm::Poly::Poly()'],['../class_sturm_1_1_poly.html#a9e37b60eac7847957fd23812e3061220',1,'Sturm::Poly::Poly(Integer order)'],['../class_sturm_1_1_poly.html#a9c156d0b4687c087933f847f0508b186',1,'Sturm::Poly::Poly(Poly const &amp;c)'],['../class_sturm_1_1_poly.html#ac449bb337618f44077570fcefef194df',1,'Sturm::Poly::Poly(Vector const &amp;c)']]],
+  ['purge_1',['purge',['../class_sturm_1_1_poly.html#a50620b33ab9f63bf3f4249df6a9e821e',1,'Sturm::Poly']]]
 ];

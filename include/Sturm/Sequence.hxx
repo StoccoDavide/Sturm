@@ -22,9 +22,13 @@ namespace Sturm
   * This class implements the Sturm sequence for a given polynomial \f$ p(x) \f$. Such sequence is
   * a sequence of polynomials \f$ p_0(x), p_1(x), \ldots, p_n(x) \f$ and allows to compute the number
   * roots in a given interval \f$ [a, b] \f$.
+  * \tparam Real Scalar number type.
   */
-  class Sequence {
+  template <typename Real>
+  class Sequence
+  {
   public:
+    using Vector = Eigen::Vector<Real, Eigen::Dynamic>; /**< Vector of real numbers. */
     using Interval = struct Interval {
       Real    a; /**< Lower bound of the interval. */
       Real    b; /**< Upper bound of the interval. */
@@ -33,12 +37,13 @@ namespace Sturm
       bool    a_on_root; /**< True if the lower bound is a root. */
       bool    b_on_root; /**< True if the upper bound is a root. */
     }; /**< Interval structure. */
+    constexpr static const Real EPSILON{std::numeric_limits<Real>::epsilon()}; /**< Machine epsilon. */
 
   private:
-    std::vector<Poly>     m_sequence;  /**< Sturm sequence. */
-    std::vector<Interval> m_intervals; /**< Computed intervals. */
-    Real                  m_a{0.0};    /**< Lower bound of the interval containing the roots. */
-    Real                  m_b{0.0};    /**< Upper bound of the interval containing the roots. */
+    std::vector<Poly<Real>> m_sequence;  /**< Sturm sequence. */
+    std::vector<Interval>   m_intervals; /**< Computed intervals. */
+    Real                    m_a{0.0};    /**< Lower bound of the interval containing the roots. */
+    Real                    m_b{0.0};    /**< Upper bound of the interval containing the roots. */
 
   public:
     /**
@@ -50,7 +55,7 @@ namespace Sturm
     * Class constructor for the Sturm sequence given the polynomial \f$ p(x) \f$.
     * \param[in] p Polynomial.
     */
-    Sequence(Poly const & p) {this->build(p);}
+    Sequence(Poly<Real> const & p) {this->build(p);}
 
     /**
     * Get the lower bound of the interval containing the roots.
@@ -67,9 +72,9 @@ namespace Sturm
     /**
     * Given the polynomial \f$ p(x) \f$ build its Sturm sequence
     */
-    void build(Poly const & p) {
+    void build(Poly<Real> const & p) {
       this->m_intervals.clear();
-      Poly dp, q, r;
+      Poly<Real> dp, q, r;
       p.derivative(dp);
       this->m_sequence.clear();
       this->m_sequence.reserve(p.order());
@@ -77,14 +82,14 @@ namespace Sturm
       this->m_sequence.emplace_back(dp); this->m_sequence.back().adjust_degree();
       Integer n_sequence{1};
       while (true) {
-        Sturm::divide(this->m_sequence[n_sequence - 1], this->m_sequence[n_sequence], q, r);
+        Sturm::divide<Real>(this->m_sequence[n_sequence - 1], this->m_sequence[n_sequence], q, r);
         if (r.order() <= 0) {break;}
         this->m_sequence.emplace_back(-r);
         ++n_sequence;
       }
       // Divide by GCD
       for (Integer i{0}; i < n_sequence; ++i) {
-        Sturm::divide(this->m_sequence[i], this->m_sequence.back(), q, r);
+        Sturm::divide<Real>(this->m_sequence[i], this->m_sequence.back(), q, r);
         q.normalize();
         this->m_sequence[i] = q;
       }
@@ -102,7 +107,7 @@ namespace Sturm
     * Get the \f$ i \f$-th polynomial of the stored Sturm sequence.
     * \return The \f$ i \f$-th polynomial of the stored Sturm sequence.
     */
-    Poly const & get(Integer i) const {return this->m_sequence[i];}
+    Poly<Real> const & get(Integer i) const {return this->m_sequence[i];}
 
     /**
     * Compute the sign variations of the stored Sturm sequence at \f$ x \f$.
@@ -190,13 +195,14 @@ namespace Sturm
           } else if (n_roots == 1) {
             this->m_intervals.push_back(I_0);
           }
-        } else if (abs(I_0.b-I_0.a) <= 10*EPSILON*std::max(1.0, std::max(abs(I_0.b),abs(I_0.a)))) {
+        } else if (abs(I_0.b-I_0.a) <= static_cast<Real>(10.0)*EPSILON*std::max(static_cast<Real>(1.0),
+          std::max(abs(I_0.b),abs(I_0.a)))) {
           I_1.a  = I_1.b  = I_0.a;
           I_1.va = I_1.vb = 0;
           I_1.a_on_root = I_1.b_on_root = true;
           I_stack.push_back(I_1);
         } else {
-          Real    c{(I_0.a + I_0.b)/2.0};
+          Real    c{(I_0.a + I_0.b)/static_cast<Real>(2.0)};
           bool    c_on_root;
           Integer vc{this->sign_variations(c, c_on_root)};
           // Check the interval [a, c]
@@ -246,7 +252,7 @@ namespace Sturm
     Integer separate_roots() {
       // Cauchy's bounds for roots
       Real leading_coeff{this->m_sequence[0].leading_coeff()};
-      Real bound{1.0 + this->m_sequence[0].cwiseAbs().maxCoeff() / std::abs(leading_coeff)};
+      Real bound{static_cast<Real>(1.0) + this->m_sequence[0].cwiseAbs().maxCoeff() / std::abs(leading_coeff)};
       return separate_roots(-bound, bound);
     }
 
@@ -262,15 +268,17 @@ namespace Sturm
     */
     Interval const & interval(Integer i) const {return this->m_intervals[i];}
 
-  };
+  }; // class Sequence
 
   /**
   * Print the Sturm sequence on an output stream.
   * \param[in] os Output stream.
   * \param[in] s Sturm sequence.
   * \return The output stream.
+  * \tparam Real Scalar number type.
   */
-  inline std::ostream & operator<< (std::ostream & os, Sequence const & s) {
+  template <typename Real>
+  inline std::ostream & operator<< (std::ostream & os, Sequence<Real> const & s) {
     // Print the Sturm sequence
     os << "Sturm sequence" << std::endl;
     for (Integer i{0}; i < s.length(); ++i) {
@@ -281,7 +289,7 @@ namespace Sturm
     if (n > 0) {
       os << "roots separation for interval [" << s.a() << "," << s.b() << "]" << std::endl;
       for (Integer i{0}; i < n; ++i) {
-        Sequence::Interval const & I = s.interval(i);
+        typename Sequence<Real>::Interval const & I = s.interval(i);
         os << "I = [" << I.a << ", " << I.b << "], V = [" << I.va << ", " << I.vb << "]" << std::endl;
       }
     }
