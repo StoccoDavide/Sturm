@@ -142,8 +142,7 @@ $(function(){initNavTree('_sturm_8hh.html',''); initResizable(true); });
   <div class="summary">
 <a href="#namespaces">Namespaces</a> &#124;
 <a href="#define-members">Macros</a> &#124;
-<a href="#typedef-members">Typedefs</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#typedef-members">Typedefs</a>  </div>
   <div class="headertitle"><div class="title">Sturm.hh File Reference</div></div>
 </div><!--header-->
 <div class="contents">
@@ -181,21 +180,14 @@ Macros</h2></td></tr>
 <tr class="separator:a4e8329b39116ecdaebedaaa4fa8a27b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6f618192f47f7b854b074569c6b8799a" id="r_a6f618192f47f7b854b074569c6b8799a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6f618192f47f7b854b074569c6b8799a">STURM_ASSERT_WARNING</a>(COND,  MSG)</td></tr>
 <tr class="separator:a6f618192f47f7b854b074569c6b8799a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5824c4ee4f14c4b7473c40c0885ab305" id="r_a5824c4ee4f14c4b7473c40c0885ab305"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5824c4ee4f14c4b7473c40c0885ab305">STURM_DEFAULT_INTEGER_TYPE</a>&#160;&#160;&#160;int</td></tr>
+<tr class="separator:a5824c4ee4f14c4b7473c40c0885ab305"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:a296315d41accb3b26d7eb5458fd61732" id="r_a296315d41accb3b26d7eb5458fd61732"><td class="memTemplParams" colspan="2">template&lt;typename Real&gt; </td></tr>
-<tr class="memitem:a296315d41accb3b26d7eb5458fd61732"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_sturm.html#a296315d41accb3b26d7eb5458fd61732">Sturm::Vector</a> = Eigen::Vector&lt;Real, Eigen::Dynamic&gt;</td></tr>
-<tr class="separator:a296315d41accb3b26d7eb5458fd61732"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aad1114e76ee0064c465261eb130fb4ab" id="r_aad1114e76ee0064c465261eb130fb4ab"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_sturm.html#aad1114e76ee0064c465261eb130fb4ab">Sturm::Integer</a> = int</td></tr>
-<tr class="separator:aad1114e76ee0064c465261eb130fb4ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
-Functions</h2></td></tr>
-<tr class="memitem:aee56f350d689baadf15b0833a4660b38" id="r_aee56f350d689baadf15b0833a4660b38"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_sturm.html#aee56f350d689baadf15b0833a4660b38">Sturm::Info</a> ()</td></tr>
-<tr class="separator:aee56f350d689baadf15b0833a4660b38"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a37538ce05375cedf03562014e802dad8" id="r_a37538ce05375cedf03562014e802dad8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_sturm.html#a37538ce05375cedf03562014e802dad8">Sturm::Info</a> (std::ostream &amp;os)</td></tr>
-<tr class="separator:a37538ce05375cedf03562014e802dad8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a493c3484e2c405d35c7b9d2d833a0eb6" id="r_a493c3484e2c405d35c7b9d2d833a0eb6"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_sturm.html#a493c3484e2c405d35c7b9d2d833a0eb6">Sturm::Integer</a> = <a class="el" href="#a5824c4ee4f14c4b7473c40c0885ab305">STURM_DEFAULT_INTEGER_TYPE</a></td></tr>
+<tr class="memdesc:a493c3484e2c405d35c7b9d2d833a0eb6"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="namespace_sturm.html#a493c3484e2c405d35c7b9d2d833a0eb6" title="The Integer type as used for the API.">Integer</a> type as used for the API.  <br /></td></tr>
+<tr class="separator:a493c3484e2c405d35c7b9d2d833a0eb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="aff5e9937460dff14f21b48bafed6c893" name="aff5e9937460dff14f21b48bafed6c893"></a>
@@ -260,6 +252,20 @@ Functions</h2></td></tr>
 <div class="line">    STURM_WARNING(MSG);                 \</div>
 <div class="line">  }</div>
 </div><!-- fragment -->
+</div>
+</div>
+<a id="a5824c4ee4f14c4b7473c40c0885ab305" name="a5824c4ee4f14c4b7473c40c0885ab305"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5824c4ee4f14c4b7473c40c0885ab305">&#9670;&#160;</a></span>STURM_DEFAULT_INTEGER_TYPE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define STURM_DEFAULT_INTEGER_TYPE&#160;&#160;&#160;int</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
 </div>
 </div>
 <a id="a9fa9ff7546d4dc910c16a3321df0c82e" name="a9fa9ff7546d4dc910c16a3321df0c82e"></a>

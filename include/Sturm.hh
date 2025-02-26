@@ -59,42 +59,28 @@
   }
 #endif
 
+#ifndef STURM_DEFAULT_INTEGER_TYPE
+#define STURM_DEFAULT_INTEGER_TYPE int
+#endif
+
 /**
 * \brief Namespace for the Sturm library.
+*
+* This namespace contains all the classes and functions of the Sturm library for the computation of the
+* Sturm sequences and the greatest common divisor polynomials. Other basic functions to manipulate
+* polynomials and sequences are also included.
 */
-namespace Sturm
-{
-
-  template <typename Real>
-  using Vector = Eigen::Vector<Real, Eigen::Dynamic>; /**< Vector of real numbers. */
-  using Integer = int; /**< Integer number type. */
+namespace Sturm {
 
   /**
-  * Print Sturm library information on a string.
-  * \return A string with the Sturm library information.
+  * \brief The Integer type as used for the API.
+  *
+  * The Integer type, \c \#define the preprocessor symbol \c STURM_DEFAULT_INTEGER_TYPE. The default
+  * value is \c int.
   */
-  inline std::string Info() {
-    std::ostringstream os;
-    os
-      << "* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *" << std::endl
-      << "* Copyright (c) 2025, Davide Stocco and Enrico Bertolazzi.                                      *" << std::endl
-      << "*                                                                                               *" << std::endl
-      << "* The Sturm project is distributed under the BSD 2-Clause License.                              *" << std::endl
-      << "*                                                                                               *" << std::endl
-      << "* Davide Stocco                                                               Enrico Bertolazzi *" << std::endl
-      << "* University of Trento                                                     University of Trento *" << std::endl
-      << "* davide.stocco@unitn.it                                             enrico.bertolazzi@unitn.it *" << std::endl
-      << "* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *" << std::endl;
-    return os.str();
-  }
+  using Integer = STURM_DEFAULT_INTEGER_TYPE;
 
-  /**
-  * Print Sturm library information on a stream.
-  * \param[in] os Output stream.
-  */
-  inline void Info(std::ostream & os) {os << Info();}
-
-} // namespace Sturm
+}
 
 #include "Sturm/Poly.hxx"
 #include "Sturm/Sequence.hxx"

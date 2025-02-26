@@ -2,12 +2,9 @@ var namespace_sturm =
 [
     [ "Poly", "class_sturm_1_1_poly.html", "class_sturm_1_1_poly" ],
     [ "Sequence", "class_sturm_1_1_sequence.html", "class_sturm_1_1_sequence" ],
-    [ "Integer", "namespace_sturm.html#aad1114e76ee0064c465261eb130fb4ab", null ],
-    [ "Vector", "namespace_sturm.html#a296315d41accb3b26d7eb5458fd61732", null ],
+    [ "Integer", "namespace_sturm.html#a493c3484e2c405d35c7b9d2d833a0eb6", null ],
     [ "divide", "namespace_sturm.html#a336183294eb8fba3370fa67617b25fdf", null ],
     [ "GCD", "namespace_sturm.html#a54551ffa365fe15981aeaa792c511f2b", null ],
-    [ "Info", "namespace_sturm.html#aee56f350d689baadf15b0833a4660b38", null ],
-    [ "Info", "namespace_sturm.html#a37538ce05375cedf03562014e802dad8", null ],
     [ "operator*", "namespace_sturm.html#a57a812179645a3d8336f5529571e1201", null ],
     [ "operator*", "namespace_sturm.html#a01b3082f4de836007c17755643fba2d2", null ],
     [ "operator*", "namespace_sturm.html#af92ea699d6bee93085296890cde80721", null ],

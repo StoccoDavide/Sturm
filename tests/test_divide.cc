@@ -25,8 +25,8 @@ TEMPLATE_TEST_CASE("Division", "[template]", float, double) {
 
   SECTION("Test 1") {
     Poly<TestType> q, r; Sturm::divide<TestType>(p1, p2, q, r);
-    Vector<TestType> sol_quot(1); sol_quot << 2.0; // q(x) = 2
-    Vector<TestType> sol_rem(2); sol_rem << 1.0, -5.0; // r(x) = x - 5
+    typename Poly<TestType>::Vector sol_quot(1); sol_quot << 2.0; // q(x) = 2
+    typename Poly<TestType>::Vector sol_rem(2); sol_rem << 1.0, -5.0; // r(x) = x - 5
     REQUIRE(q.coeffs().isApprox(sol_quot));
     REQUIRE(r.coeffs().isApprox(sol_rem));
     REQUIRE(q.degree() == 0);
@@ -35,8 +35,8 @@ TEMPLATE_TEST_CASE("Division", "[template]", float, double) {
 
   SECTION("Test 2") {
     Poly<TestType> q, r; Sturm::divide<TestType>(p2, p1, q, r);
-    Vector<TestType> sol_quot(1); sol_quot << 1.0/2.0; // q(x) = 1/2
-    Vector<TestType> sol_rem(2); sol_rem << -1.0/2.0, 5.0/2.0; // r(x) = -1/2 + 5/2x
+    typename Poly<TestType>::Vector sol_quot(1); sol_quot << 1.0/2.0; // q(x) = 1/2
+    typename Poly<TestType>::Vector sol_rem(2); sol_rem << -1.0/2.0, 5.0/2.0; // r(x) = -1/2 + 5/2x
     REQUIRE(q.coeffs().isApprox(sol_quot));
     REQUIRE(r.coeffs().isApprox(sol_rem));
     REQUIRE(q.degree() == 0);

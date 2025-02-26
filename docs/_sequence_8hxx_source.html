@@ -170,259 +170,279 @@ $(function(){initNavTree('_sequence_8hxx_source.html',''); initResizable(true); 
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="class_sturm_1_1_sequence.html#a9feb1de175d9c4a6be8b9e182dc9ec26">   32</a></span>    <span class="keyword">using </span><a class="code hl_typedef" href="class_sturm_1_1_sequence.html#a9feb1de175d9c4a6be8b9e182dc9ec26">Interval</a> = <span class="keyword">struct </span><a class="code hl_typedef" href="class_sturm_1_1_sequence.html#a9feb1de175d9c4a6be8b9e182dc9ec26">Interval</a> {</div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>      Real    <a class="code hl_function" href="class_sturm_1_1_sequence.html#a90de6168fac7b9b35415cbd520986a11">a</a>; </div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>      Real    <a class="code hl_function" href="class_sturm_1_1_sequence.html#a3a66b3101c2de04ae677be5ae2fc93d4">b</a>; </div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>      <a class="code hl_typedef" href="namespace_sturm.html#aad1114e76ee0064c465261eb130fb4ab">Integer</a> va; </div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>      <a class="code hl_typedef" href="namespace_sturm.html#aad1114e76ee0064c465261eb130fb4ab">Integer</a> vb; </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>      <a class="code hl_typedef" href="namespace_sturm.html#a493c3484e2c405d35c7b9d2d833a0eb6">Integer</a> va; </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>      <a class="code hl_typedef" href="namespace_sturm.html#a493c3484e2c405d35c7b9d2d833a0eb6">Integer</a> vb; </div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>      <span class="keywordtype">bool</span>    a_on_root; </div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>      <span class="keywordtype">bool</span>    b_on_root; </div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    }; </div>
 </div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="class_sturm_1_1_sequence.html#a943f34b08acdaa9c3a3b1473925dc511">   40</a></span>    <span class="keyword">constexpr</span> <span class="keyword">static</span> <span class="keyword">const</span> Real <a class="code hl_variable" href="class_sturm_1_1_sequence.html#a943f34b08acdaa9c3a3b1473925dc511">EPSILON</a>{std::numeric_limits&lt;Real&gt;::epsilon()}; </div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>  <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="class_sturm_1_1_sequence.html#abd558b8a8f70645c99a432f1078f8dc6">   43</a></span>    std::vector&lt;Poly&lt;Real&gt;&gt; <a class="code hl_variable" href="class_sturm_1_1_sequence.html#abd558b8a8f70645c99a432f1078f8dc6">m_sequence</a>;  </div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="class_sturm_1_1_sequence.html#ae17dc054505300f62c75332a88598394">   44</a></span>    std::vector&lt;Interval&gt;   <a class="code hl_variable" href="class_sturm_1_1_sequence.html#ae17dc054505300f62c75332a88598394">m_intervals</a>; </div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="class_sturm_1_1_sequence.html#aee2c59c2189f20e7c6797e2daa5a497a">   45</a></span>    Real                    <a class="code hl_variable" href="class_sturm_1_1_sequence.html#aee2c59c2189f20e7c6797e2daa5a497a">m_a</a>{0.0};    </div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="class_sturm_1_1_sequence.html#a818c88f049dd0d5f7529262808697e82">   46</a></span>    Real                    <a class="code hl_variable" href="class_sturm_1_1_sequence.html#a818c88f049dd0d5f7529262808697e82">m_b</a>{0.0};    </div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>  <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="class_sturm_1_1_sequence.html#aa6119872ff5691cee7561a15560aad89">   52</a></span>    <a class="code hl_function" href="class_sturm_1_1_sequence.html#aa6119872ff5691cee7561a15560aad89">Sequence</a>() {}</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span></div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="class_sturm_1_1_sequence.html#af7d6ec7283b0dfbe07b220361d066b86">   58</a></span>    <a class="code hl_function" href="class_sturm_1_1_sequence.html#af7d6ec7283b0dfbe07b220361d066b86">Sequence</a>(<a class="code hl_class" href="class_sturm_1_1_poly.html">Poly&lt;Real&gt;</a> <span class="keyword">const</span> &amp; p) {this-&gt;<a class="code hl_function" href="class_sturm_1_1_sequence.html#ad43ff0cd141a3b43cd8c98452a1b8598">build</a>(p);}</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span></div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="class_sturm_1_1_sequence.html#a90de6168fac7b9b35415cbd520986a11">   64</a></span>    Real <a class="code hl_function" href="class_sturm_1_1_sequence.html#a90de6168fac7b9b35415cbd520986a11">a</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> this-&gt;<a class="code hl_variable" href="class_sturm_1_1_sequence.html#aee2c59c2189f20e7c6797e2daa5a497a">m_a</a>;}</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span></div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="class_sturm_1_1_sequence.html#a3a66b3101c2de04ae677be5ae2fc93d4">   70</a></span>    Real <a class="code hl_function" href="class_sturm_1_1_sequence.html#a3a66b3101c2de04ae677be5ae2fc93d4">b</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> this-&gt;<a class="code hl_variable" href="class_sturm_1_1_sequence.html#a818c88f049dd0d5f7529262808697e82">m_b</a>;}</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span></div>
-<div class="foldopen" id="foldopen00075" data-start="{" data-end="}">
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="class_sturm_1_1_sequence.html#ad43ff0cd141a3b43cd8c98452a1b8598">   75</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_sturm_1_1_sequence.html#ad43ff0cd141a3b43cd8c98452a1b8598">build</a>(<a class="code hl_class" href="class_sturm_1_1_poly.html">Poly&lt;Real&gt;</a> <span class="keyword">const</span> &amp; p) {</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>      this-&gt;m_intervals.clear();</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>      <a class="code hl_class" href="class_sturm_1_1_poly.html">Poly&lt;Real&gt;</a> dp, q, r;</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>      p.<a class="code hl_function" href="class_sturm_1_1_poly.html#a2faa2f693e4de719f00e3a1602bef3f0">derivative</a>(dp);</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>      this-&gt;m_sequence.clear();</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>      this-&gt;m_sequence.reserve(p.<a class="code hl_function" href="class_sturm_1_1_poly.html#ad755ed4e490a95f465de6d0946153ad9">order</a>());</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>      this-&gt;m_sequence.emplace_back(p);  this-&gt;m_sequence.back().adjust_degree();</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>      this-&gt;m_sequence.emplace_back(dp); this-&gt;m_sequence.back().adjust_degree();</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>      <a class="code hl_typedef" href="namespace_sturm.html#aad1114e76ee0064c465261eb130fb4ab">Integer</a> n_sequence{1};</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>      <span class="keywordflow">while</span> (<span class="keyword">true</span>) {</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        <a class="code hl_function" href="namespace_sturm.html#a336183294eb8fba3370fa67617b25fdf">Sturm::divide&lt;Real&gt;</a>(this-&gt;m_sequence[n_sequence - 1], this-&gt;m_sequence[n_sequence], q, r);</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        <span class="keywordflow">if</span> (r.<a class="code hl_function" href="class_sturm_1_1_poly.html#ad755ed4e490a95f465de6d0946153ad9">order</a>() &lt;= 0) {<span class="keywordflow">break</span>;}</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        this-&gt;m_sequence.emplace_back(-r);</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        ++n_sequence;</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>      }</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>      <span class="comment">// Divide by GCD</span></div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>      <span class="keywordflow">for</span> (<a class="code hl_typedef" href="namespace_sturm.html#aad1114e76ee0064c465261eb130fb4ab">Integer</a> i{0}; i &lt; n_sequence; ++i) {</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        <a class="code hl_function" href="namespace_sturm.html#a336183294eb8fba3370fa67617b25fdf">Sturm::divide&lt;Real&gt;</a>(this-&gt;m_sequence[i], this-&gt;m_sequence.back(), q, r);</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        q.<a class="code hl_function" href="class_sturm_1_1_poly.html#ad09a4fa559931aa825b3233802fb6526">normalize</a>();</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        this-&gt;m_sequence[i] = q;</div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>      }</div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>      this-&gt;m_sequence.back().set_scalar(1);</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    }</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>  <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="class_sturm_1_1_sequence.html#abd558b8a8f70645c99a432f1078f8dc6">   42</a></span>    std::vector&lt;Poly&lt;Real&gt;&gt; <a class="code hl_variable" href="class_sturm_1_1_sequence.html#abd558b8a8f70645c99a432f1078f8dc6">m_sequence</a>;  </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="class_sturm_1_1_sequence.html#ae17dc054505300f62c75332a88598394">   43</a></span>    std::vector&lt;Interval&gt;   <a class="code hl_variable" href="class_sturm_1_1_sequence.html#ae17dc054505300f62c75332a88598394">m_intervals</a>; </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="class_sturm_1_1_sequence.html#aee2c59c2189f20e7c6797e2daa5a497a">   44</a></span>    Real                    <a class="code hl_variable" href="class_sturm_1_1_sequence.html#aee2c59c2189f20e7c6797e2daa5a497a">m_a</a>{0.0};    </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="class_sturm_1_1_sequence.html#a818c88f049dd0d5f7529262808697e82">   45</a></span>    Real                    <a class="code hl_variable" href="class_sturm_1_1_sequence.html#a818c88f049dd0d5f7529262808697e82">m_b</a>{0.0};    </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>  <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="class_sturm_1_1_sequence.html#aa6119872ff5691cee7561a15560aad89">   51</a></span>    <a class="code hl_function" href="class_sturm_1_1_sequence.html#aa6119872ff5691cee7561a15560aad89">Sequence</a>() {}</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="class_sturm_1_1_sequence.html#af7d6ec7283b0dfbe07b220361d066b86">   57</a></span>    <a class="code hl_function" href="class_sturm_1_1_sequence.html#af7d6ec7283b0dfbe07b220361d066b86">Sequence</a>(<a class="code hl_class" href="class_sturm_1_1_poly.html">Poly&lt;Real&gt;</a> <span class="keyword">const</span> &amp; p) {this-&gt;<a class="code hl_function" href="class_sturm_1_1_sequence.html#ad43ff0cd141a3b43cd8c98452a1b8598">build</a>(p);}</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="class_sturm_1_1_sequence.html#a90de6168fac7b9b35415cbd520986a11">   63</a></span>    Real <a class="code hl_function" href="class_sturm_1_1_sequence.html#a90de6168fac7b9b35415cbd520986a11">a</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> this-&gt;<a class="code hl_variable" href="class_sturm_1_1_sequence.html#aee2c59c2189f20e7c6797e2daa5a497a">m_a</a>;}</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="class_sturm_1_1_sequence.html#a3a66b3101c2de04ae677be5ae2fc93d4">   69</a></span>    Real <a class="code hl_function" href="class_sturm_1_1_sequence.html#a3a66b3101c2de04ae677be5ae2fc93d4">b</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> this-&gt;<a class="code hl_variable" href="class_sturm_1_1_sequence.html#a818c88f049dd0d5f7529262808697e82">m_b</a>;}</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span></div>
+<div class="foldopen" id="foldopen00074" data-start="{" data-end="}">
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno"><a class="line" href="class_sturm_1_1_sequence.html#ad43ff0cd141a3b43cd8c98452a1b8598">   74</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_sturm_1_1_sequence.html#ad43ff0cd141a3b43cd8c98452a1b8598">build</a>(<a class="code hl_class" href="class_sturm_1_1_poly.html">Poly&lt;Real&gt;</a> <span class="keyword">const</span> &amp; p) {</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>      this-&gt;m_intervals.clear();</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>      <a class="code hl_class" href="class_sturm_1_1_poly.html">Poly&lt;Real&gt;</a> dp, q, r;</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>      p.<a class="code hl_function" href="class_sturm_1_1_poly.html#a2faa2f693e4de719f00e3a1602bef3f0">derivative</a>(dp);</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>      this-&gt;m_sequence.clear();</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>      this-&gt;m_sequence.reserve(p.<a class="code hl_function" href="class_sturm_1_1_poly.html#ad755ed4e490a95f465de6d0946153ad9">order</a>());</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>      this-&gt;m_sequence.emplace_back(p);  this-&gt;m_sequence.back().adjust_degree();</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>      this-&gt;m_sequence.emplace_back(dp); this-&gt;m_sequence.back().adjust_degree();</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>      <a class="code hl_typedef" href="namespace_sturm.html#a493c3484e2c405d35c7b9d2d833a0eb6">Integer</a> n_sequence{1};</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>      <span class="keywordflow">while</span> (<span class="keyword">true</span>) {</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        <a class="code hl_function" href="namespace_sturm.html#a336183294eb8fba3370fa67617b25fdf">Sturm::divide&lt;Real&gt;</a>(this-&gt;m_sequence[n_sequence - 1], this-&gt;m_sequence[n_sequence], q, r);</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        <span class="keywordflow">if</span> (r.<a class="code hl_function" href="class_sturm_1_1_poly.html#ad755ed4e490a95f465de6d0946153ad9">order</a>() &lt;= 0) {<span class="keywordflow">break</span>;}</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        this-&gt;m_sequence.emplace_back(-r);</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        ++n_sequence;</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>      }</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>      <span class="comment">// Divide by GCD</span></div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>      <span class="keywordflow">for</span> (<a class="code hl_typedef" href="namespace_sturm.html#a493c3484e2c405d35c7b9d2d833a0eb6">Integer</a> i{0}; i &lt; n_sequence; ++i) {</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        <a class="code hl_function" href="namespace_sturm.html#a336183294eb8fba3370fa67617b25fdf">Sturm::divide&lt;Real&gt;</a>(this-&gt;m_sequence[i], this-&gt;m_sequence.back(), q, r);</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        q.<a class="code hl_function" href="class_sturm_1_1_poly.html#ad09a4fa559931aa825b3233802fb6526">normalize</a>();</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        this-&gt;m_sequence[i] = q;</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>      }</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>      this-&gt;m_sequence.back().set_scalar(1);</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    }</div>
 </div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span></div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno"><a class="line" href="class_sturm_1_1_sequence.html#a2f80f50ecc96a2196e3db89465d7ceed">  104</a></span>    <a class="code hl_typedef" href="namespace_sturm.html#aad1114e76ee0064c465261eb130fb4ab">Integer</a> <a class="code hl_function" href="class_sturm_1_1_sequence.html#a2f80f50ecc96a2196e3db89465d7ceed">length</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><a class="code hl_typedef" href="namespace_sturm.html#aad1114e76ee0064c465261eb130fb4ab">Integer</a><span class="keyword">&gt;</span>(this-&gt;m_sequence.size());}</div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span></div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno"><a class="line" href="class_sturm_1_1_sequence.html#ab8d0e215789c1956996fb09a0787c71b">  110</a></span>    <a class="code hl_class" href="class_sturm_1_1_poly.html">Poly&lt;Real&gt;</a> <span class="keyword">const</span> &amp; <a class="code hl_function" href="class_sturm_1_1_sequence.html#ab8d0e215789c1956996fb09a0787c71b">get</a>(<a class="code hl_typedef" href="namespace_sturm.html#aad1114e76ee0064c465261eb130fb4ab">Integer</a> i)<span class="keyword"> const </span>{<span class="keywordflow">return</span> this-&gt;m_sequence[i];}</div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span></div>
-<div class="foldopen" id="foldopen00116" data-start="{" data-end="}">
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno"><a class="line" href="class_sturm_1_1_sequence.html#a7dde2b1f3b9c7ca81fb53fc947a45252">  116</a></span>    <a class="code hl_typedef" href="namespace_sturm.html#aad1114e76ee0064c465261eb130fb4ab">Integer</a> <a class="code hl_function" href="class_sturm_1_1_sequence.html#a7dde2b1f3b9c7ca81fb53fc947a45252">sign_variations</a>(Real x, <span class="keywordtype">bool</span> &amp; on_root )<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>      <a class="code hl_typedef" href="namespace_sturm.html#aad1114e76ee0064c465261eb130fb4ab">Integer</a> sign_var{0};</div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>      <a class="code hl_typedef" href="namespace_sturm.html#aad1114e76ee0064c465261eb130fb4ab">Integer</a> last_sign{0};</div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>      <a class="code hl_typedef" href="namespace_sturm.html#aad1114e76ee0064c465261eb130fb4ab">Integer</a> n_poly{<a class="code hl_typedef" href="namespace_sturm.html#aad1114e76ee0064c465261eb130fb4ab">Integer</a>(this-&gt;m_sequence.size())};</div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>      Real    v{this-&gt;m_sequence[0].evaluate(x)};</div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>      on_root = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>      <span class="keywordflow">if</span> (v &gt; 0) {last_sign = 1;}</div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>      <span class="keywordflow">else</span> <span class="keywordflow">if</span> (v &lt; 0) {last_sign = -1;}</div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>      <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>        on_root   = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>        last_sign = 0;</div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>      }</div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>      <span class="keywordflow">for</span> (<a class="code hl_typedef" href="namespace_sturm.html#aad1114e76ee0064c465261eb130fb4ab">Integer</a> i{1}; i &lt; n_poly; ++i) {</div>
-<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>        v = this-&gt;m_sequence[i].evaluate(x);</div>
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>        <span class="keywordflow">if</span> (v &gt; 0) {</div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>          <span class="keywordflow">if</span> (last_sign == -1) {++sign_var;}</div>
-<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>          last_sign = 1;</div>
-<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (v &lt; 0) {</div>
-<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>          <span class="keywordflow">if</span> (last_sign == 1) {++sign_var;}</div>
-<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>          last_sign = -1;</div>
-<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>        }</div>
-<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>      }</div>
-<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>      <span class="keywordflow">return</span> sign_var;</div>
-<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>    }</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span></div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno"><a class="line" href="class_sturm_1_1_sequence.html#a2f80f50ecc96a2196e3db89465d7ceed">  103</a></span>    <a class="code hl_typedef" href="namespace_sturm.html#a493c3484e2c405d35c7b9d2d833a0eb6">Integer</a> <a class="code hl_function" href="class_sturm_1_1_sequence.html#a2f80f50ecc96a2196e3db89465d7ceed">length</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><a class="code hl_typedef" href="namespace_sturm.html#a493c3484e2c405d35c7b9d2d833a0eb6">Integer</a><span class="keyword">&gt;</span>(this-&gt;m_sequence.size());}</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span></div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno"><a class="line" href="class_sturm_1_1_sequence.html#ab8d0e215789c1956996fb09a0787c71b">  109</a></span>    <a class="code hl_class" href="class_sturm_1_1_poly.html">Poly&lt;Real&gt;</a> <span class="keyword">const</span> &amp; <a class="code hl_function" href="class_sturm_1_1_sequence.html#ab8d0e215789c1956996fb09a0787c71b">get</a>(<a class="code hl_typedef" href="namespace_sturm.html#a493c3484e2c405d35c7b9d2d833a0eb6">Integer</a> i)<span class="keyword"> const </span>{<span class="keywordflow">return</span> this-&gt;m_sequence[i];}</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span></div>
+<div class="foldopen" id="foldopen00115" data-start="{" data-end="}">
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno"><a class="line" href="class_sturm_1_1_sequence.html#a7dde2b1f3b9c7ca81fb53fc947a45252">  115</a></span>    <a class="code hl_typedef" href="namespace_sturm.html#a493c3484e2c405d35c7b9d2d833a0eb6">Integer</a> <a class="code hl_function" href="class_sturm_1_1_sequence.html#a7dde2b1f3b9c7ca81fb53fc947a45252">sign_variations</a>(Real x, <span class="keywordtype">bool</span> &amp; on_root )<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>      <a class="code hl_typedef" href="namespace_sturm.html#a493c3484e2c405d35c7b9d2d833a0eb6">Integer</a> sign_var{0};</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>      <a class="code hl_typedef" href="namespace_sturm.html#a493c3484e2c405d35c7b9d2d833a0eb6">Integer</a> last_sign{0};</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>      <a class="code hl_typedef" href="namespace_sturm.html#a493c3484e2c405d35c7b9d2d833a0eb6">Integer</a> n_poly{<a class="code hl_typedef" href="namespace_sturm.html#a493c3484e2c405d35c7b9d2d833a0eb6">Integer</a>(this-&gt;m_sequence.size())};</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>      Real    v{this-&gt;m_sequence[0].evaluate(x)};</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>      on_root = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>      <span class="keywordflow">if</span> (v &gt; 0) {last_sign = 1;}</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>      <span class="keywordflow">else</span> <span class="keywordflow">if</span> (v &lt; 0) {last_sign = -1;}</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>      <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>        on_root   = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>        last_sign = 0;</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>      }</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>      <span class="keywordflow">for</span> (<a class="code hl_typedef" href="namespace_sturm.html#a493c3484e2c405d35c7b9d2d833a0eb6">Integer</a> i{1}; i &lt; n_poly; ++i) {</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>        v = this-&gt;m_sequence[i].evaluate(x);</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>        <span class="keywordflow">if</span> (v &gt; 0) {</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>          <span class="keywordflow">if</span> (last_sign == -1) {++sign_var;}</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>          last_sign = 1;</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (v &lt; 0) {</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>          <span class="keywordflow">if</span> (last_sign == 1) {++sign_var;}</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>          last_sign = -1;</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>        }</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>      }</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>      <span class="keywordflow">return</span> sign_var;</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>    }</div>
 </div>
-<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span></div>
-<div class="foldopen" id="foldopen00145" data-start="{" data-end="}">
-<div class="line"><a id="l00145" name="l00145"></a><span class="lineno"><a class="line" href="class_sturm_1_1_sequence.html#a8d85cbd513472dba280c66ac2bc8b1be">  145</a></span>    <a class="code hl_typedef" href="namespace_sturm.html#aad1114e76ee0064c465261eb130fb4ab">Integer</a> <a class="code hl_function" href="class_sturm_1_1_sequence.html#a8d85cbd513472dba280c66ac2bc8b1be">separate_roots</a>(Real a_in, Real b_in) {</div>
-<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>      this-&gt;m_intervals.clear();</div>
-<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>      this-&gt;m_intervals.reserve(this-&gt;m_sequence.size());</div>
-<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span> </div>
-<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>      <a class="code hl_typedef" href="class_sturm_1_1_sequence.html#a9feb1de175d9c4a6be8b9e182dc9ec26">Interval</a> I_0, I_1;</div>
-<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>      this-&gt;<a class="code hl_variable" href="class_sturm_1_1_sequence.html#aee2c59c2189f20e7c6797e2daa5a497a">m_a</a> = I_0.a = a_in;</div>
-<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>      this-&gt;<a class="code hl_variable" href="class_sturm_1_1_sequence.html#a818c88f049dd0d5f7529262808697e82">m_b</a> = I_0.b = b_in;</div>
-<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span> </div>
-<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>      I_0.va = this-&gt;<a class="code hl_function" href="class_sturm_1_1_sequence.html#a7dde2b1f3b9c7ca81fb53fc947a45252">sign_variations</a>(I_0.a, I_0.a_on_root);</div>
-<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>      I_0.vb = this-&gt;<a class="code hl_function" href="class_sturm_1_1_sequence.html#a7dde2b1f3b9c7ca81fb53fc947a45252">sign_variations</a>(I_0.b, I_0.b_on_root);</div>
-<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span> </div>
-<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>      <a class="code hl_typedef" href="namespace_sturm.html#aad1114e76ee0064c465261eb130fb4ab">Integer</a> n_roots{std::abs(I_0.va - I_0.vb)};</div>
-<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span> </div>
-<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>      <span class="keywordflow">if</span> (n_roots &lt;= 1) {</div>
-<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>        <span class="keywordflow">if</span> (n_roots == 1 &amp;&amp; !I_0.a_on_root &amp;&amp; !I_0.b_on_root) {</div>
-<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>          this-&gt;m_intervals.push_back(I_0);</div>
-<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>        }</div>
-<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>        <span class="keywordflow">if</span> (I_0.a_on_root) {</div>
-<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>          I_1.a  = I_1.b  = I_0.a;</div>
-<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>          I_1.va = I_1.vb = I_0.va;</div>
-<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>          I_1.a_on_root = I_1.b_on_root = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>          this-&gt;m_intervals.push_back(I_1);</div>
-<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>        }</div>
-<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>        <span class="keywordflow">if</span> (I_0.b_on_root) {</div>
-<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>          I_1.a  = I_1.b  = I_0.b;</div>
-<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>          I_1.va = I_1.vb = I_0.vb;</div>
-<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>          I_1.a_on_root = I_1.b_on_root = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>          this-&gt;m_intervals.push_back(I_1);</div>
-<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>        }</div>
-<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>        <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><a class="code hl_typedef" href="namespace_sturm.html#aad1114e76ee0064c465261eb130fb4ab">Integer</a><span class="keyword">&gt;</span>(<a class="code hl_variable" href="class_sturm_1_1_sequence.html#ae17dc054505300f62c75332a88598394">m_intervals</a>.size());</div>
-<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>      }</div>
-<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span> </div>
-<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>      <span class="comment">// Search intervals</span></div>
-<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>      std::vector&lt;Interval&gt; I_stack; I_stack.clear(); I_stack.reserve(this-&gt;m_sequence.size());</div>
-<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>      I_stack.push_back(I_0);</div>
-<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>      <span class="keywordflow">while</span> (I_stack.size() &gt; 0) {</div>
-<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>        I_0 = I_stack.back(); I_stack.pop_back();</div>
-<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>        <span class="comment">// Check if the interval has a single root</span></div>
-<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>        n_roots = std::abs(I_0.va - I_0.vb);</div>
-<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>        <span class="keywordflow">if</span> (n_roots &lt;= 1) {</div>
-<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>          <span class="keywordflow">if</span> (I_0.a_on_root) {</div>
-<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>            I_0.b         = I_0.a;</div>
-<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>            I_0.vb        = I_0.va;</div>
-<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>            I_0.b_on_root = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>            this-&gt;m_intervals.push_back(I_0);</div>
-<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>          } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (I_0.b_on_root) {</div>
-<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>            I_0.a         = I_0.b;</div>
-<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>            I_0.va        = I_0.vb;</div>
-<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>            I_0.a_on_root = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>            this-&gt;m_intervals.push_back(I_0);</div>
-<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>          } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (n_roots == 1) {</div>
-<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>            this-&gt;m_intervals.push_back(I_0);</div>
-<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>          }</div>
-<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (abs(I_0.b-I_0.a) &lt;= <span class="keyword">static_cast&lt;</span>Real<span class="keyword">&gt;</span>(10.0)*<a class="code hl_variable" href="class_sturm_1_1_sequence.html#a943f34b08acdaa9c3a3b1473925dc511">EPSILON</a>*std::max(<span class="keyword">static_cast&lt;</span>Real<span class="keyword">&gt;</span>(1.0),</div>
-<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>          std::max(abs(I_0.b),abs(I_0.a)))) {</div>
-<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>          I_1.a  = I_1.b  = I_0.a;</div>
-<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>          I_1.va = I_1.vb = 0;</div>
-<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>          I_1.a_on_root = I_1.b_on_root = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>          I_stack.push_back(I_1);</div>
-<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>          Real    c{(I_0.a + I_0.b)/<span class="keyword">static_cast&lt;</span>Real<span class="keyword">&gt;</span>(2.0)};</div>
-<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>          <span class="keywordtype">bool</span>    c_on_root;</div>
-<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>          <a class="code hl_typedef" href="namespace_sturm.html#aad1114e76ee0064c465261eb130fb4ab">Integer</a> vc{this-&gt;<a class="code hl_function" href="class_sturm_1_1_sequence.html#a7dde2b1f3b9c7ca81fb53fc947a45252">sign_variations</a>(c, c_on_root)};</div>
-<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>          <span class="comment">// Check the interval [a, c]</span></div>
-<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>          <span class="keywordflow">if</span> (I_0.va != vc || c_on_root || I_0.a_on_root) {</div>
-<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>            <span class="keywordflow">if</span> (c &lt; I_1.b) { <span class="comment">// Check if it is a true reduction</span></div>
-<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>              I_1.a = I_0.a; I_1.va = I_0.va; I_1.a_on_root = I_0.a_on_root;</div>
-<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>              I_1.b = c;    I_1.vb = vc;    I_1.b_on_root = c_on_root;</div>
-<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>              I_stack.push_back(I_1);</div>
-<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (c_on_root) {</div>
-<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>              I_1.a         = I_1.b         = c;</div>
-<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>              I_1.a_on_root = I_1.b_on_root = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>              I_1.va        = I_1.vb        = 0;</div>
-<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>              I_stack.push_back(I_1);</div>
-<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (I_0.a_on_root) {</div>
-<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>              I_1.a         = I_1.b         = I_0.a;</div>
-<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>              I_1.a_on_root = I_1.b_on_root = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>              I_1.va        = I_1.vb        = 0;</div>
-<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>              I_stack.push_back(I_1);</div>
-<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>            }</div>
-<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>          }</div>
-<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>          <span class="comment">// Check the interval [c, b]</span></div>
-<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>          <span class="keywordflow">if</span> (I_0.vb != vc || I_0.b_on_root) {</div>
-<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>            <span class="keywordflow">if</span> (c &gt; I_0.a) {</div>
-<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>              I_1.a = c;    I_1.va = vc;    I_1.a_on_root = c_on_root;</div>
-<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>              I_1.b = I_0.b; I_1.vb = I_0.vb; I_1.b_on_root = I_0.b_on_root;</div>
-<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>              I_stack.push_back(I_1);</div>
-<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (I_0.b_on_root) {</div>
-<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>              I_1.a         = I_1.b         = I_0.b;</div>
-<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>              I_1.a_on_root = I_1.b_on_root = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>              I_1.va        = I_1.vb        = 0;</div>
-<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>              I_stack.push_back(I_1);</div>
-<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>            }</div>
-<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>          }</div>
-<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>        }</div>
-<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>      }</div>
-<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>      <span class="comment">// Sort intervals</span></div>
-<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>      std::sort(this-&gt;m_intervals.begin(), this-&gt;m_intervals.end(),</div>
-<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>        [](<a class="code hl_typedef" href="class_sturm_1_1_sequence.html#a9feb1de175d9c4a6be8b9e182dc9ec26">Interval</a> <span class="keyword">const</span> &amp; I_a, <a class="code hl_typedef" href="class_sturm_1_1_sequence.html#a9feb1de175d9c4a6be8b9e182dc9ec26">Interval</a> <span class="keyword">const</span> &amp; I_b) {return I_a.a &lt; I_b.a;});</div>
-<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>      <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><a class="code hl_typedef" href="namespace_sturm.html#aad1114e76ee0064c465261eb130fb4ab">Integer</a><span class="keyword">&gt;</span>(<a class="code hl_variable" href="class_sturm_1_1_sequence.html#ae17dc054505300f62c75332a88598394">m_intervals</a>.size());</div>
-<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>    }</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span></div>
+<div class="foldopen" id="foldopen00144" data-start="{" data-end="}">
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno"><a class="line" href="class_sturm_1_1_sequence.html#a8d85cbd513472dba280c66ac2bc8b1be">  144</a></span>    <a class="code hl_typedef" href="namespace_sturm.html#a493c3484e2c405d35c7b9d2d833a0eb6">Integer</a> <a class="code hl_function" href="class_sturm_1_1_sequence.html#a8d85cbd513472dba280c66ac2bc8b1be">separate_roots</a>(Real a_in, Real b_in) {</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>      this-&gt;m_intervals.clear();</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>      this-&gt;m_intervals.reserve(this-&gt;m_sequence.size());</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span> </div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>      <a class="code hl_typedef" href="class_sturm_1_1_sequence.html#a9feb1de175d9c4a6be8b9e182dc9ec26">Interval</a> I_0, I_1;</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>      this-&gt;<a class="code hl_variable" href="class_sturm_1_1_sequence.html#aee2c59c2189f20e7c6797e2daa5a497a">m_a</a> = I_0.a = a_in;</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>      this-&gt;<a class="code hl_variable" href="class_sturm_1_1_sequence.html#a818c88f049dd0d5f7529262808697e82">m_b</a> = I_0.b = b_in;</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span> </div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>      I_0.va = this-&gt;<a class="code hl_function" href="class_sturm_1_1_sequence.html#a7dde2b1f3b9c7ca81fb53fc947a45252">sign_variations</a>(I_0.a, I_0.a_on_root);</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>      I_0.vb = this-&gt;<a class="code hl_function" href="class_sturm_1_1_sequence.html#a7dde2b1f3b9c7ca81fb53fc947a45252">sign_variations</a>(I_0.b, I_0.b_on_root);</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span> </div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>      <a class="code hl_typedef" href="namespace_sturm.html#a493c3484e2c405d35c7b9d2d833a0eb6">Integer</a> n_roots{std::abs(I_0.va - I_0.vb)};</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span> </div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>      <span class="keywordflow">if</span> (n_roots &lt;= 1) {</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>        <span class="keywordflow">if</span> (n_roots == 1 &amp;&amp; !I_0.a_on_root &amp;&amp; !I_0.b_on_root) {</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>          this-&gt;m_intervals.push_back(I_0);</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>        }</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>        <span class="keywordflow">if</span> (I_0.a_on_root) {</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>          I_1.a  = I_1.b  = I_0.a;</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>          I_1.va = I_1.vb = I_0.va;</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>          I_1.a_on_root = I_1.b_on_root = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>          this-&gt;m_intervals.push_back(I_1);</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>        }</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>        <span class="keywordflow">if</span> (I_0.b_on_root) {</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>          I_1.a  = I_1.b  = I_0.b;</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>          I_1.va = I_1.vb = I_0.vb;</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>          I_1.a_on_root = I_1.b_on_root = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>          this-&gt;m_intervals.push_back(I_1);</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>        }</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>        <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><a class="code hl_typedef" href="namespace_sturm.html#a493c3484e2c405d35c7b9d2d833a0eb6">Integer</a><span class="keyword">&gt;</span>(<a class="code hl_variable" href="class_sturm_1_1_sequence.html#ae17dc054505300f62c75332a88598394">m_intervals</a>.size());</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>      }</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span> </div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>      <span class="comment">// Search intervals</span></div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>      std::vector&lt;Interval&gt; I_stack; I_stack.clear(); I_stack.reserve(this-&gt;m_sequence.size());</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>      I_stack.push_back(I_0);</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>      <span class="keywordflow">while</span> (I_stack.size() &gt; 0) {</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>        I_0 = I_stack.back(); I_stack.pop_back();</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>        <span class="comment">// Check if the interval has a single root</span></div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>        n_roots = std::abs(I_0.va - I_0.vb);</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>        <span class="keywordflow">if</span> (n_roots &lt;= 1) {</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>          <span class="keywordflow">if</span> (I_0.a_on_root) {</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>            I_0.b         = I_0.a;</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>            I_0.vb        = I_0.va;</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>            I_0.b_on_root = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>            this-&gt;m_intervals.push_back(I_0);</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>          } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (I_0.b_on_root) {</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>            I_0.a         = I_0.b;</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>            I_0.va        = I_0.vb;</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>            I_0.a_on_root = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>            this-&gt;m_intervals.push_back(I_0);</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>          } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (n_roots == 1) {</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>            this-&gt;m_intervals.push_back(I_0);</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>          }</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (std::abs(I_0.b-I_0.a) &lt;= <span class="keyword">static_cast&lt;</span>Real<span class="keyword">&gt;</span>(10.0)*std::numeric_limits&lt;Real&gt;::epsilon()*std::max(</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>          <span class="keyword">static_cast&lt;</span>Real<span class="keyword">&gt;</span>(1.0), std::max(std::abs(I_0.b), std::abs(I_0.a)))) {</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>          I_1.a  = I_1.b  = I_0.a;</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>          I_1.va = I_1.vb = 0;</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>          I_1.a_on_root = I_1.b_on_root = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>          I_stack.push_back(I_1);</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>          Real    c{(I_0.a + I_0.b)/<span class="keyword">static_cast&lt;</span>Real<span class="keyword">&gt;</span>(2.0)};</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>          <span class="keywordtype">bool</span>    c_on_root;</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>          <a class="code hl_typedef" href="namespace_sturm.html#a493c3484e2c405d35c7b9d2d833a0eb6">Integer</a> vc{this-&gt;<a class="code hl_function" href="class_sturm_1_1_sequence.html#a7dde2b1f3b9c7ca81fb53fc947a45252">sign_variations</a>(c, c_on_root)};</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>          <span class="comment">// Check the interval [a, c]</span></div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>          <span class="keywordflow">if</span> (I_0.va != vc || c_on_root || I_0.a_on_root) {</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>            <span class="keywordflow">if</span> (c &lt; I_1.b) { <span class="comment">// Check if it is a true reduction</span></div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>              I_1.a = I_0.a; I_1.va = I_0.va; I_1.a_on_root = I_0.a_on_root;</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>              I_1.b = c;    I_1.vb = vc;    I_1.b_on_root = c_on_root;</div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>              I_stack.push_back(I_1);</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (c_on_root) {</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>              I_1.a         = I_1.b         = c;</div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>              I_1.a_on_root = I_1.b_on_root = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>              I_1.va        = I_1.vb        = 0;</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>              I_stack.push_back(I_1);</div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (I_0.a_on_root) {</div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>              I_1.a         = I_1.b         = I_0.a;</div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>              I_1.a_on_root = I_1.b_on_root = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>              I_1.va        = I_1.vb        = 0;</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>              I_stack.push_back(I_1);</div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>            }</div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>          }</div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>          <span class="comment">// Check the interval [c, b]</span></div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>          <span class="keywordflow">if</span> (I_0.vb != vc || I_0.b_on_root) {</div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>            <span class="keywordflow">if</span> (c &gt; I_0.a) {</div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>              I_1.a = c;    I_1.va = vc;    I_1.a_on_root = c_on_root;</div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>              I_1.b = I_0.b; I_1.vb = I_0.vb; I_1.b_on_root = I_0.b_on_root;</div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>              I_stack.push_back(I_1);</div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (I_0.b_on_root) {</div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>              I_1.a         = I_1.b         = I_0.b;</div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>              I_1.a_on_root = I_1.b_on_root = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>              I_1.va        = I_1.vb        = 0;</div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>              I_stack.push_back(I_1);</div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>            }</div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>          }</div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>        }</div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>      }</div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>      <span class="comment">// Sort intervals</span></div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>      std::sort(this-&gt;m_intervals.begin(), this-&gt;m_intervals.end(),</div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>        [](<a class="code hl_typedef" href="class_sturm_1_1_sequence.html#a9feb1de175d9c4a6be8b9e182dc9ec26">Interval</a> <span class="keyword">const</span> &amp; I_a, <a class="code hl_typedef" href="class_sturm_1_1_sequence.html#a9feb1de175d9c4a6be8b9e182dc9ec26">Interval</a> <span class="keyword">const</span> &amp; I_b) {return I_a.a &lt; I_b.a;});</div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>      <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><a class="code hl_typedef" href="namespace_sturm.html#a493c3484e2c405d35c7b9d2d833a0eb6">Integer</a><span class="keyword">&gt;</span>(<a class="code hl_variable" href="class_sturm_1_1_sequence.html#ae17dc054505300f62c75332a88598394">m_intervals</a>.size());</div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>    }</div>
 </div>
-<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span></div>
-<div class="foldopen" id="foldopen00252" data-start="{" data-end="}">
-<div class="line"><a id="l00252" name="l00252"></a><span class="lineno"><a class="line" href="class_sturm_1_1_sequence.html#a693e03b84660f5fe5277522c0a8b2a6d">  252</a></span>    <a class="code hl_typedef" href="namespace_sturm.html#aad1114e76ee0064c465261eb130fb4ab">Integer</a> <a class="code hl_function" href="class_sturm_1_1_sequence.html#a693e03b84660f5fe5277522c0a8b2a6d">separate_roots</a>() {</div>
-<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>      <span class="comment">// Cauchy&#39;s bounds for roots</span></div>
-<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>      Real leading_coeff{this-&gt;m_sequence[0].leading_coeff()};</div>
-<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>      Real bound{<span class="keyword">static_cast&lt;</span>Real<span class="keyword">&gt;</span>(1.0) + this-&gt;m_sequence[0].cwiseAbs().maxCoeff() / std::abs(leading_coeff)};</div>
-<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>      <span class="keywordflow">return</span> <a class="code hl_function" href="class_sturm_1_1_sequence.html#a693e03b84660f5fe5277522c0a8b2a6d">separate_roots</a>(-bound, bound);</div>
-<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>    }</div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span></div>
+<div class="foldopen" id="foldopen00251" data-start="{" data-end="}">
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno"><a class="line" href="class_sturm_1_1_sequence.html#a693e03b84660f5fe5277522c0a8b2a6d">  251</a></span>    <a class="code hl_typedef" href="namespace_sturm.html#a493c3484e2c405d35c7b9d2d833a0eb6">Integer</a> <a class="code hl_function" href="class_sturm_1_1_sequence.html#a693e03b84660f5fe5277522c0a8b2a6d">separate_roots</a>() {</div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>      <span class="comment">// Cauchy&#39;s bounds for roots</span></div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>      Real leading_coeff{this-&gt;m_sequence[0].leading_coeff()};</div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>      Real bound{<span class="keyword">static_cast&lt;</span>Real<span class="keyword">&gt;</span>(1.0) + this-&gt;m_sequence[0].cwiseAbs().maxCoeff() / std::abs(leading_coeff)};</div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>      <span class="keywordflow">return</span> <a class="code hl_function" href="class_sturm_1_1_sequence.html#a693e03b84660f5fe5277522c0a8b2a6d">separate_roots</a>(-bound, bound);</div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>    }</div>
 </div>
-<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span></div>
-<div class="line"><a id="l00263" name="l00263"></a><span class="lineno"><a class="line" href="class_sturm_1_1_sequence.html#a07f7ed499009d8ca726087f0c4e7154b">  263</a></span>    <a class="code hl_typedef" href="namespace_sturm.html#aad1114e76ee0064c465261eb130fb4ab">Integer</a> <a class="code hl_function" href="class_sturm_1_1_sequence.html#a07f7ed499009d8ca726087f0c4e7154b">roots_number</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><a class="code hl_typedef" href="namespace_sturm.html#aad1114e76ee0064c465261eb130fb4ab">Integer</a><span class="keyword">&gt;</span>(this-&gt;m_intervals.size());}</div>
-<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span></div>
-<div class="line"><a id="l00269" name="l00269"></a><span class="lineno"><a class="line" href="class_sturm_1_1_sequence.html#a1d620999cfafeb9af3106b91bf358fa6">  269</a></span>    <a class="code hl_typedef" href="class_sturm_1_1_sequence.html#a9feb1de175d9c4a6be8b9e182dc9ec26">Interval</a> <span class="keyword">const</span> &amp; <a class="code hl_function" href="class_sturm_1_1_sequence.html#a1d620999cfafeb9af3106b91bf358fa6">interval</a>(<a class="code hl_typedef" href="namespace_sturm.html#aad1114e76ee0064c465261eb130fb4ab">Integer</a> i)<span class="keyword"> const </span>{<span class="keywordflow">return</span> this-&gt;m_intervals[i];}</div>
-<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span> </div>
-<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>  }; <span class="comment">// class Sequence</span></div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span></div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno"><a class="line" href="class_sturm_1_1_sequence.html#a07f7ed499009d8ca726087f0c4e7154b">  262</a></span>    <a class="code hl_typedef" href="namespace_sturm.html#a493c3484e2c405d35c7b9d2d833a0eb6">Integer</a> <a class="code hl_function" href="class_sturm_1_1_sequence.html#a07f7ed499009d8ca726087f0c4e7154b">roots_number</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><a class="code hl_typedef" href="namespace_sturm.html#a493c3484e2c405d35c7b9d2d833a0eb6">Integer</a><span class="keyword">&gt;</span>(this-&gt;m_intervals.size());}</div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span></div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno"><a class="line" href="class_sturm_1_1_sequence.html#a1d620999cfafeb9af3106b91bf358fa6">  268</a></span>    <a class="code hl_typedef" href="class_sturm_1_1_sequence.html#a9feb1de175d9c4a6be8b9e182dc9ec26">Interval</a> <span class="keyword">const</span> &amp; <a class="code hl_function" href="class_sturm_1_1_sequence.html#a1d620999cfafeb9af3106b91bf358fa6">interval</a>(<a class="code hl_typedef" href="namespace_sturm.html#a493c3484e2c405d35c7b9d2d833a0eb6">Integer</a> i)<span class="keyword"> const </span>{<span class="keywordflow">return</span> this-&gt;m_intervals[i];}</div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span></div>
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> SolveFunction&gt;</div>
+<div class="foldopen" id="foldopen00279" data-start="{" data-end="}">
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno"><a class="line" href="class_sturm_1_1_sequence.html#a01c3c000d5342b6620db10754fdfbddc">  279</a></span>    <a class="code hl_typedef" href="class_sturm_1_1_sequence.html#a23fd189b34a570fe305c8dfc912d2328">Vector</a> <a class="code hl_function" href="class_sturm_1_1_sequence.html#a01c3c000d5342b6620db10754fdfbddc">refine_roots</a>(SolveFunction solve_function, <span class="keywordtype">bool</span> verbose = <span class="keyword">false</span>) {</div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>      <span class="keyword">auto</span> function = std::function&lt;Real(Real x)&gt;([<span class="keyword">this</span>](Real x) {<span class="keywordflow">return</span> this-&gt;m_sequence[0].evaluate(x);});</div>
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>      <a class="code hl_typedef" href="class_sturm_1_1_sequence.html#a23fd189b34a570fe305c8dfc912d2328">Vector</a> roots(this-&gt;m_intervals.size());</div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>      <a class="code hl_typedef" href="namespace_sturm.html#a493c3484e2c405d35c7b9d2d833a0eb6">Integer</a> n{0}; <span class="keywordtype">bool</span> converged{<span class="keyword">false</span>};</div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>      <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp; I : this-&gt;m_intervals) {</div>
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>        Real &amp; r{roots.coeffRef(n++)};</div>
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>        <span class="keywordflow">if</span> (I.a_on_root) {r = I.a;}</div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (I.b_on_root) {r = I.b;}</div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>        <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>          converged = solve_function(I.a, I.b, function, r);</div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>          <a class="code hl_define" href="_sturm_8hh.html#a6f618192f47f7b854b074569c6b8799a">STURM_ASSERT_WARNING</a>(converged || !verbose,</div>
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>            <span class="stringliteral">&quot;Sturm::Sequence::refine_roots(...): failed at interval n = &quot;</span> &lt;&lt; n);</div>
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>        }</div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>      }</div>
+<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>      <span class="keywordflow">return</span> roots;</div>
+<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>    }</div>
 </div>
-<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span></div>
-<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Real&gt;</div>
-<div class="foldopen" id="foldopen00281" data-start="{" data-end="}">
-<div class="line"><a id="l00281" name="l00281"></a><span class="lineno"><a class="line" href="namespace_sturm.html#af4a387e0f5d3b69247309850a423bf90">  281</a></span>  <span class="keyword">inline</span> std::ostream &amp; <a class="code hl_function" href="namespace_sturm.html#a3357f1cd37de5f2b976538bded35295a">operator&lt;&lt; </a>(std::ostream &amp; os, <a class="code hl_class" href="class_sturm_1_1_sequence.html">Sequence&lt;Real&gt;</a> <span class="keyword">const</span> &amp; s) {</div>
-<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>    <span class="comment">// Print the Sturm sequence</span></div>
-<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>    os &lt;&lt; <span class="stringliteral">&quot;Sturm sequence&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>    <span class="keywordflow">for</span> (<a class="code hl_typedef" href="namespace_sturm.html#aad1114e76ee0064c465261eb130fb4ab">Integer</a> i{0}; i &lt; s.<a class="code hl_function" href="class_sturm_1_1_sequence.html#a2f80f50ecc96a2196e3db89465d7ceed">length</a>(); ++i) {</div>
-<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>      os &lt;&lt; <span class="stringliteral">&quot;P_&quot;</span> &lt;&lt; i &lt;&lt; <span class="stringliteral">&quot;(x) = &quot;</span> &lt;&lt; s.<a class="code hl_function" href="class_sturm_1_1_sequence.html#ab8d0e215789c1956996fb09a0787c71b">get</a>(i) &lt;&lt; std::endl;</div>
-<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>    }</div>
-<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>    <span class="comment">// Print the roots</span></div>
-<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>    <a class="code hl_typedef" href="namespace_sturm.html#aad1114e76ee0064c465261eb130fb4ab">Integer</a> n{s.<a class="code hl_function" href="class_sturm_1_1_sequence.html#a07f7ed499009d8ca726087f0c4e7154b">roots_number</a>()};</div>
-<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>    <span class="keywordflow">if</span> (n &gt; 0) {</div>
-<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>      os &lt;&lt; <span class="stringliteral">&quot;roots separation for interval [&quot;</span> &lt;&lt; s.<a class="code hl_function" href="class_sturm_1_1_sequence.html#a90de6168fac7b9b35415cbd520986a11">a</a>() &lt;&lt; <span class="stringliteral">&quot;,&quot;</span> &lt;&lt; s.<a class="code hl_function" href="class_sturm_1_1_sequence.html#a3a66b3101c2de04ae677be5ae2fc93d4">b</a>() &lt;&lt; <span class="stringliteral">&quot;]&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>      <span class="keywordflow">for</span> (<a class="code hl_typedef" href="namespace_sturm.html#aad1114e76ee0064c465261eb130fb4ab">Integer</a> i{0}; i &lt; n; ++i) {</div>
-<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>        <span class="keyword">typename</span> <a class="code hl_typedef" href="class_sturm_1_1_sequence.html#a9feb1de175d9c4a6be8b9e182dc9ec26">Sequence&lt;Real&gt;::Interval</a> <span class="keyword">const</span> &amp; I = s.<a class="code hl_function" href="class_sturm_1_1_sequence.html#a1d620999cfafeb9af3106b91bf358fa6">interval</a>(i);</div>
-<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>        os &lt;&lt; <span class="stringliteral">&quot;I = [&quot;</span> &lt;&lt; I.<a class="code hl_function" href="class_sturm_1_1_sequence.html#a90de6168fac7b9b35415cbd520986a11">a</a> &lt;&lt; <span class="stringliteral">&quot;, &quot;</span> &lt;&lt; I.<a class="code hl_function" href="class_sturm_1_1_sequence.html#a3a66b3101c2de04ae677be5ae2fc93d4">b</a> &lt;&lt; <span class="stringliteral">&quot;], V = [&quot;</span> &lt;&lt; I.va &lt;&lt; <span class="stringliteral">&quot;, &quot;</span> &lt;&lt; I.vb &lt;&lt; <span class="stringliteral">&quot;]&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>      }</div>
-<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>    }</div>
-<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>    <span class="keywordflow">return</span> os;</div>
-<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>  }</div>
+<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span> </div>
+<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>  }; <span class="comment">// class Sequence</span></div>
 </div>
-<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span> </div>
-<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>} <span class="comment">// namespace Sturm</span></div>
-<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span> </div>
-<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span><span class="preprocessor">#endif </span><span class="comment">// INCLUDE_STURM_SEQUENCE_HXX</span></div>
+<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span></div>
+<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Real&gt;</div>
+<div class="foldopen" id="foldopen00306" data-start="{" data-end="}">
+<div class="line"><a id="l00306" name="l00306"></a><span class="lineno"><a class="line" href="namespace_sturm.html#af4a387e0f5d3b69247309850a423bf90">  306</a></span>  <span class="keyword">inline</span> std::ostream &amp; <a class="code hl_function" href="namespace_sturm.html#a3357f1cd37de5f2b976538bded35295a">operator&lt;&lt; </a>(std::ostream &amp; os, <a class="code hl_class" href="class_sturm_1_1_sequence.html">Sequence&lt;Real&gt;</a> <span class="keyword">const</span> &amp; s) {</div>
+<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>    <span class="comment">// Print the Sturm sequence</span></div>
+<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>    os &lt;&lt; <span class="stringliteral">&quot;Sturm sequence&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>    <span class="keywordflow">for</span> (<a class="code hl_typedef" href="namespace_sturm.html#a493c3484e2c405d35c7b9d2d833a0eb6">Integer</a> i{0}; i &lt; s.<a class="code hl_function" href="class_sturm_1_1_sequence.html#a2f80f50ecc96a2196e3db89465d7ceed">length</a>(); ++i) {</div>
+<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>      os &lt;&lt; <span class="stringliteral">&quot;P_&quot;</span> &lt;&lt; i &lt;&lt; <span class="stringliteral">&quot;(x) = &quot;</span> &lt;&lt; s.<a class="code hl_function" href="class_sturm_1_1_sequence.html#ab8d0e215789c1956996fb09a0787c71b">get</a>(i) &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span>    }</div>
+<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>    <span class="comment">// Print the roots</span></div>
+<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>    <a class="code hl_typedef" href="namespace_sturm.html#a493c3484e2c405d35c7b9d2d833a0eb6">Integer</a> n{s.<a class="code hl_function" href="class_sturm_1_1_sequence.html#a07f7ed499009d8ca726087f0c4e7154b">roots_number</a>()};</div>
+<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>    <span class="keywordflow">if</span> (n &gt; 0) {</div>
+<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>      os &lt;&lt; <span class="stringliteral">&quot;roots separation for interval [&quot;</span> &lt;&lt; s.<a class="code hl_function" href="class_sturm_1_1_sequence.html#a90de6168fac7b9b35415cbd520986a11">a</a>() &lt;&lt; <span class="stringliteral">&quot;,&quot;</span> &lt;&lt; s.<a class="code hl_function" href="class_sturm_1_1_sequence.html#a3a66b3101c2de04ae677be5ae2fc93d4">b</a>() &lt;&lt; <span class="stringliteral">&quot;]&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>      <span class="keywordflow">for</span> (<a class="code hl_typedef" href="namespace_sturm.html#a493c3484e2c405d35c7b9d2d833a0eb6">Integer</a> i{0}; i &lt; n; ++i) {</div>
+<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>        <span class="keyword">typename</span> <a class="code hl_typedef" href="class_sturm_1_1_sequence.html#a9feb1de175d9c4a6be8b9e182dc9ec26">Sequence&lt;Real&gt;::Interval</a> <span class="keyword">const</span> &amp; I = s.<a class="code hl_function" href="class_sturm_1_1_sequence.html#a1d620999cfafeb9af3106b91bf358fa6">interval</a>(i);</div>
+<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>        os &lt;&lt; <span class="stringliteral">&quot;I = [&quot;</span> &lt;&lt; I.<a class="code hl_function" href="class_sturm_1_1_sequence.html#a90de6168fac7b9b35415cbd520986a11">a</a> &lt;&lt; <span class="stringliteral">&quot;, &quot;</span> &lt;&lt; I.<a class="code hl_function" href="class_sturm_1_1_sequence.html#a3a66b3101c2de04ae677be5ae2fc93d4">b</a> &lt;&lt; <span class="stringliteral">&quot;], V = [&quot;</span> &lt;&lt; I.va &lt;&lt; <span class="stringliteral">&quot;, &quot;</span> &lt;&lt; I.vb &lt;&lt; <span class="stringliteral">&quot;]&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>      }</div>
+<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>    }</div>
+<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>    <span class="keywordflow">return</span> os;</div>
+<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>  }</div>
+</div>
+<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span> </div>
+<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>} <span class="comment">// namespace Sturm</span></div>
+<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span> </div>
+<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span><span class="preprocessor">#endif </span><span class="comment">// INCLUDE_STURM_SEQUENCE_HXX</span></div>
+<div class="ttc" id="a_sturm_8hh_html_a6f618192f47f7b854b074569c6b8799a"><div class="ttname"><a href="_sturm_8hh.html#a6f618192f47f7b854b074569c6b8799a">STURM_ASSERT_WARNING</a></div><div class="ttdeci">#define STURM_ASSERT_WARNING(COND, MSG)</div><div class="ttdef"><b>Definition</b> Sturm.hh:55</div></div>
 <div class="ttc" id="aclass_sturm_1_1_poly_html"><div class="ttname"><a href="class_sturm_1_1_poly.html">Sturm::Poly</a></div><div class="ttdoc">Polynomial class.</div><div class="ttdef"><b>Definition</b> Poly.hxx:27</div></div>
 <div class="ttc" id="aclass_sturm_1_1_poly_html_a2faa2f693e4de719f00e3a1602bef3f0"><div class="ttname"><a href="class_sturm_1_1_poly.html#a2faa2f693e4de719f00e3a1602bef3f0">Sturm::Poly::derivative</a></div><div class="ttdeci">void derivative(Poly &amp;res) const</div><div class="ttdef"><b>Definition</b> Poly.hxx:256</div></div>
 <div class="ttc" id="aclass_sturm_1_1_poly_html_ad09a4fa559931aa825b3233802fb6526"><div class="ttname"><a href="class_sturm_1_1_poly.html#ad09a4fa559931aa825b3233802fb6526">Sturm::Poly::normalize</a></div><div class="ttdeci">Real normalize()</div><div class="ttdef"><b>Definition</b> Poly.hxx:295</div></div>
 <div class="ttc" id="aclass_sturm_1_1_poly_html_ad755ed4e490a95f465de6d0946153ad9"><div class="ttname"><a href="class_sturm_1_1_poly.html#ad755ed4e490a95f465de6d0946153ad9">Sturm::Poly::order</a></div><div class="ttdeci">Integer order() const</div><div class="ttdef"><b>Definition</b> Poly.hxx:141</div></div>
 <div class="ttc" id="aclass_sturm_1_1_sequence_html"><div class="ttname"><a href="class_sturm_1_1_sequence.html">Sturm::Sequence</a></div><div class="ttdoc">Sturm sequence class.</div><div class="ttdef"><b>Definition</b> Sequence.hxx:29</div></div>
-<div class="ttc" id="aclass_sturm_1_1_sequence_html_a07f7ed499009d8ca726087f0c4e7154b"><div class="ttname"><a href="class_sturm_1_1_sequence.html#a07f7ed499009d8ca726087f0c4e7154b">Sturm::Sequence::roots_number</a></div><div class="ttdeci">Integer roots_number() const</div><div class="ttdef"><b>Definition</b> Sequence.hxx:263</div></div>
-<div class="ttc" id="aclass_sturm_1_1_sequence_html_a1d620999cfafeb9af3106b91bf358fa6"><div class="ttname"><a href="class_sturm_1_1_sequence.html#a1d620999cfafeb9af3106b91bf358fa6">Sturm::Sequence::interval</a></div><div class="ttdeci">Interval const &amp; interval(Integer i) const</div><div class="ttdef"><b>Definition</b> Sequence.hxx:269</div></div>
+<div class="ttc" id="aclass_sturm_1_1_sequence_html_a01c3c000d5342b6620db10754fdfbddc"><div class="ttname"><a href="class_sturm_1_1_sequence.html#a01c3c000d5342b6620db10754fdfbddc">Sturm::Sequence::refine_roots</a></div><div class="ttdeci">Vector refine_roots(SolveFunction solve_function, bool verbose=false)</div><div class="ttdef"><b>Definition</b> Sequence.hxx:279</div></div>
+<div class="ttc" id="aclass_sturm_1_1_sequence_html_a07f7ed499009d8ca726087f0c4e7154b"><div class="ttname"><a href="class_sturm_1_1_sequence.html#a07f7ed499009d8ca726087f0c4e7154b">Sturm::Sequence::roots_number</a></div><div class="ttdeci">Integer roots_number() const</div><div class="ttdef"><b>Definition</b> Sequence.hxx:262</div></div>
+<div class="ttc" id="aclass_sturm_1_1_sequence_html_a1d620999cfafeb9af3106b91bf358fa6"><div class="ttname"><a href="class_sturm_1_1_sequence.html#a1d620999cfafeb9af3106b91bf358fa6">Sturm::Sequence::interval</a></div><div class="ttdeci">Interval const &amp; interval(Integer i) const</div><div class="ttdef"><b>Definition</b> Sequence.hxx:268</div></div>
 <div class="ttc" id="aclass_sturm_1_1_sequence_html_a23fd189b34a570fe305c8dfc912d2328"><div class="ttname"><a href="class_sturm_1_1_sequence.html#a23fd189b34a570fe305c8dfc912d2328">Sturm::Sequence::Vector</a></div><div class="ttdeci">Eigen::Vector&lt; Real, Eigen::Dynamic &gt; Vector</div><div class="ttdef"><b>Definition</b> Sequence.hxx:31</div></div>
-<div class="ttc" id="aclass_sturm_1_1_sequence_html_a2f80f50ecc96a2196e3db89465d7ceed"><div class="ttname"><a href="class_sturm_1_1_sequence.html#a2f80f50ecc96a2196e3db89465d7ceed">Sturm::Sequence::length</a></div><div class="ttdeci">Integer length() const</div><div class="ttdef"><b>Definition</b> Sequence.hxx:104</div></div>
-<div class="ttc" id="aclass_sturm_1_1_sequence_html_a3a66b3101c2de04ae677be5ae2fc93d4"><div class="ttname"><a href="class_sturm_1_1_sequence.html#a3a66b3101c2de04ae677be5ae2fc93d4">Sturm::Sequence::b</a></div><div class="ttdeci">Real b() const</div><div class="ttdef"><b>Definition</b> Sequence.hxx:70</div></div>
-<div class="ttc" id="aclass_sturm_1_1_sequence_html_a693e03b84660f5fe5277522c0a8b2a6d"><div class="ttname"><a href="class_sturm_1_1_sequence.html#a693e03b84660f5fe5277522c0a8b2a6d">Sturm::Sequence::separate_roots</a></div><div class="ttdeci">Integer separate_roots()</div><div class="ttdef"><b>Definition</b> Sequence.hxx:252</div></div>
-<div class="ttc" id="aclass_sturm_1_1_sequence_html_a7dde2b1f3b9c7ca81fb53fc947a45252"><div class="ttname"><a href="class_sturm_1_1_sequence.html#a7dde2b1f3b9c7ca81fb53fc947a45252">Sturm::Sequence::sign_variations</a></div><div class="ttdeci">Integer sign_variations(Real x, bool &amp;on_root) const</div><div class="ttdef"><b>Definition</b> Sequence.hxx:116</div></div>
-<div class="ttc" id="aclass_sturm_1_1_sequence_html_a818c88f049dd0d5f7529262808697e82"><div class="ttname"><a href="class_sturm_1_1_sequence.html#a818c88f049dd0d5f7529262808697e82">Sturm::Sequence::m_b</a></div><div class="ttdeci">Real m_b</div><div class="ttdef"><b>Definition</b> Sequence.hxx:46</div></div>
-<div class="ttc" id="aclass_sturm_1_1_sequence_html_a8d85cbd513472dba280c66ac2bc8b1be"><div class="ttname"><a href="class_sturm_1_1_sequence.html#a8d85cbd513472dba280c66ac2bc8b1be">Sturm::Sequence::separate_roots</a></div><div class="ttdeci">Integer separate_roots(Real a_in, Real b_in)</div><div class="ttdef"><b>Definition</b> Sequence.hxx:145</div></div>
-<div class="ttc" id="aclass_sturm_1_1_sequence_html_a90de6168fac7b9b35415cbd520986a11"><div class="ttname"><a href="class_sturm_1_1_sequence.html#a90de6168fac7b9b35415cbd520986a11">Sturm::Sequence::a</a></div><div class="ttdeci">Real a() const</div><div class="ttdef"><b>Definition</b> Sequence.hxx:64</div></div>
-<div class="ttc" id="aclass_sturm_1_1_sequence_html_a943f34b08acdaa9c3a3b1473925dc511"><div class="ttname"><a href="class_sturm_1_1_sequence.html#a943f34b08acdaa9c3a3b1473925dc511">Sturm::Sequence::EPSILON</a></div><div class="ttdeci">static constexpr const Real EPSILON</div><div class="ttdef"><b>Definition</b> Sequence.hxx:40</div></div>
+<div class="ttc" id="aclass_sturm_1_1_sequence_html_a2f80f50ecc96a2196e3db89465d7ceed"><div class="ttname"><a href="class_sturm_1_1_sequence.html#a2f80f50ecc96a2196e3db89465d7ceed">Sturm::Sequence::length</a></div><div class="ttdeci">Integer length() const</div><div class="ttdef"><b>Definition</b> Sequence.hxx:103</div></div>
+<div class="ttc" id="aclass_sturm_1_1_sequence_html_a3a66b3101c2de04ae677be5ae2fc93d4"><div class="ttname"><a href="class_sturm_1_1_sequence.html#a3a66b3101c2de04ae677be5ae2fc93d4">Sturm::Sequence::b</a></div><div class="ttdeci">Real b() const</div><div class="ttdef"><b>Definition</b> Sequence.hxx:69</div></div>
+<div class="ttc" id="aclass_sturm_1_1_sequence_html_a693e03b84660f5fe5277522c0a8b2a6d"><div class="ttname"><a href="class_sturm_1_1_sequence.html#a693e03b84660f5fe5277522c0a8b2a6d">Sturm::Sequence::separate_roots</a></div><div class="ttdeci">Integer separate_roots()</div><div class="ttdef"><b>Definition</b> Sequence.hxx:251</div></div>
+<div class="ttc" id="aclass_sturm_1_1_sequence_html_a7dde2b1f3b9c7ca81fb53fc947a45252"><div class="ttname"><a href="class_sturm_1_1_sequence.html#a7dde2b1f3b9c7ca81fb53fc947a45252">Sturm::Sequence::sign_variations</a></div><div class="ttdeci">Integer sign_variations(Real x, bool &amp;on_root) const</div><div class="ttdef"><b>Definition</b> Sequence.hxx:115</div></div>
+<div class="ttc" id="aclass_sturm_1_1_sequence_html_a818c88f049dd0d5f7529262808697e82"><div class="ttname"><a href="class_sturm_1_1_sequence.html#a818c88f049dd0d5f7529262808697e82">Sturm::Sequence::m_b</a></div><div class="ttdeci">Real m_b</div><div class="ttdef"><b>Definition</b> Sequence.hxx:45</div></div>
+<div class="ttc" id="aclass_sturm_1_1_sequence_html_a8d85cbd513472dba280c66ac2bc8b1be"><div class="ttname"><a href="class_sturm_1_1_sequence.html#a8d85cbd513472dba280c66ac2bc8b1be">Sturm::Sequence::separate_roots</a></div><div class="ttdeci">Integer separate_roots(Real a_in, Real b_in)</div><div class="ttdef"><b>Definition</b> Sequence.hxx:144</div></div>
+<div class="ttc" id="aclass_sturm_1_1_sequence_html_a90de6168fac7b9b35415cbd520986a11"><div class="ttname"><a href="class_sturm_1_1_sequence.html#a90de6168fac7b9b35415cbd520986a11">Sturm::Sequence::a</a></div><div class="ttdeci">Real a() const</div><div class="ttdef"><b>Definition</b> Sequence.hxx:63</div></div>
 <div class="ttc" id="aclass_sturm_1_1_sequence_html_a9feb1de175d9c4a6be8b9e182dc9ec26"><div class="ttname"><a href="class_sturm_1_1_sequence.html#a9feb1de175d9c4a6be8b9e182dc9ec26">Sturm::Sequence::Interval</a></div><div class="ttdeci">struct Interval { Real a; Real b; Integer va; Integer vb; bool a_on_root; bool b_on_root; } Interval</div><div class="ttdef"><b>Definition</b> Sequence.hxx:32</div></div>
-<div class="ttc" id="aclass_sturm_1_1_sequence_html_aa6119872ff5691cee7561a15560aad89"><div class="ttname"><a href="class_sturm_1_1_sequence.html#aa6119872ff5691cee7561a15560aad89">Sturm::Sequence::Sequence</a></div><div class="ttdeci">Sequence()</div><div class="ttdef"><b>Definition</b> Sequence.hxx:52</div></div>
-<div class="ttc" id="aclass_sturm_1_1_sequence_html_ab8d0e215789c1956996fb09a0787c71b"><div class="ttname"><a href="class_sturm_1_1_sequence.html#ab8d0e215789c1956996fb09a0787c71b">Sturm::Sequence::get</a></div><div class="ttdeci">Poly&lt; Real &gt; const &amp; get(Integer i) const</div><div class="ttdef"><b>Definition</b> Sequence.hxx:110</div></div>
-<div class="ttc" id="aclass_sturm_1_1_sequence_html_abd558b8a8f70645c99a432f1078f8dc6"><div class="ttname"><a href="class_sturm_1_1_sequence.html#abd558b8a8f70645c99a432f1078f8dc6">Sturm::Sequence::m_sequence</a></div><div class="ttdeci">std::vector&lt; Poly&lt; Real &gt; &gt; m_sequence</div><div class="ttdef"><b>Definition</b> Sequence.hxx:43</div></div>
-<div class="ttc" id="aclass_sturm_1_1_sequence_html_ad43ff0cd141a3b43cd8c98452a1b8598"><div class="ttname"><a href="class_sturm_1_1_sequence.html#ad43ff0cd141a3b43cd8c98452a1b8598">Sturm::Sequence::build</a></div><div class="ttdeci">void build(Poly&lt; Real &gt; const &amp;p)</div><div class="ttdef"><b>Definition</b> Sequence.hxx:75</div></div>
-<div class="ttc" id="aclass_sturm_1_1_sequence_html_ae17dc054505300f62c75332a88598394"><div class="ttname"><a href="class_sturm_1_1_sequence.html#ae17dc054505300f62c75332a88598394">Sturm::Sequence::m_intervals</a></div><div class="ttdeci">std::vector&lt; Interval &gt; m_intervals</div><div class="ttdef"><b>Definition</b> Sequence.hxx:44</div></div>
-<div class="ttc" id="aclass_sturm_1_1_sequence_html_aee2c59c2189f20e7c6797e2daa5a497a"><div class="ttname"><a href="class_sturm_1_1_sequence.html#aee2c59c2189f20e7c6797e2daa5a497a">Sturm::Sequence::m_a</a></div><div class="ttdeci">Real m_a</div><div class="ttdef"><b>Definition</b> Sequence.hxx:45</div></div>
-<div class="ttc" id="aclass_sturm_1_1_sequence_html_af7d6ec7283b0dfbe07b220361d066b86"><div class="ttname"><a href="class_sturm_1_1_sequence.html#af7d6ec7283b0dfbe07b220361d066b86">Sturm::Sequence::Sequence</a></div><div class="ttdeci">Sequence(Poly&lt; Real &gt; const &amp;p)</div><div class="ttdef"><b>Definition</b> Sequence.hxx:58</div></div>
-<div class="ttc" id="anamespace_sturm_html"><div class="ttname"><a href="namespace_sturm.html">Sturm</a></div><div class="ttdoc">Namespace for the Sturm library.</div><div class="ttdef"><b>Definition</b> Sturm.hh:66</div></div>
+<div class="ttc" id="aclass_sturm_1_1_sequence_html_aa6119872ff5691cee7561a15560aad89"><div class="ttname"><a href="class_sturm_1_1_sequence.html#aa6119872ff5691cee7561a15560aad89">Sturm::Sequence::Sequence</a></div><div class="ttdeci">Sequence()</div><div class="ttdef"><b>Definition</b> Sequence.hxx:51</div></div>
+<div class="ttc" id="aclass_sturm_1_1_sequence_html_ab8d0e215789c1956996fb09a0787c71b"><div class="ttname"><a href="class_sturm_1_1_sequence.html#ab8d0e215789c1956996fb09a0787c71b">Sturm::Sequence::get</a></div><div class="ttdeci">Poly&lt; Real &gt; const &amp; get(Integer i) const</div><div class="ttdef"><b>Definition</b> Sequence.hxx:109</div></div>
+<div class="ttc" id="aclass_sturm_1_1_sequence_html_abd558b8a8f70645c99a432f1078f8dc6"><div class="ttname"><a href="class_sturm_1_1_sequence.html#abd558b8a8f70645c99a432f1078f8dc6">Sturm::Sequence::m_sequence</a></div><div class="ttdeci">std::vector&lt; Poly&lt; Real &gt; &gt; m_sequence</div><div class="ttdef"><b>Definition</b> Sequence.hxx:42</div></div>
+<div class="ttc" id="aclass_sturm_1_1_sequence_html_ad43ff0cd141a3b43cd8c98452a1b8598"><div class="ttname"><a href="class_sturm_1_1_sequence.html#ad43ff0cd141a3b43cd8c98452a1b8598">Sturm::Sequence::build</a></div><div class="ttdeci">void build(Poly&lt; Real &gt; const &amp;p)</div><div class="ttdef"><b>Definition</b> Sequence.hxx:74</div></div>
+<div class="ttc" id="aclass_sturm_1_1_sequence_html_ae17dc054505300f62c75332a88598394"><div class="ttname"><a href="class_sturm_1_1_sequence.html#ae17dc054505300f62c75332a88598394">Sturm::Sequence::m_intervals</a></div><div class="ttdeci">std::vector&lt; Interval &gt; m_intervals</div><div class="ttdef"><b>Definition</b> Sequence.hxx:43</div></div>
+<div class="ttc" id="aclass_sturm_1_1_sequence_html_aee2c59c2189f20e7c6797e2daa5a497a"><div class="ttname"><a href="class_sturm_1_1_sequence.html#aee2c59c2189f20e7c6797e2daa5a497a">Sturm::Sequence::m_a</a></div><div class="ttdeci">Real m_a</div><div class="ttdef"><b>Definition</b> Sequence.hxx:44</div></div>
+<div class="ttc" id="aclass_sturm_1_1_sequence_html_af7d6ec7283b0dfbe07b220361d066b86"><div class="ttname"><a href="class_sturm_1_1_sequence.html#af7d6ec7283b0dfbe07b220361d066b86">Sturm::Sequence::Sequence</a></div><div class="ttdeci">Sequence(Poly&lt; Real &gt; const &amp;p)</div><div class="ttdef"><b>Definition</b> Sequence.hxx:57</div></div>
+<div class="ttc" id="anamespace_sturm_html"><div class="ttname"><a href="namespace_sturm.html">Sturm</a></div><div class="ttdoc">Namespace for the Sturm library.</div><div class="ttdef"><b>Definition</b> Sturm.hh:73</div></div>
 <div class="ttc" id="anamespace_sturm_html_a3357f1cd37de5f2b976538bded35295a"><div class="ttname"><a href="namespace_sturm.html#a3357f1cd37de5f2b976538bded35295a">Sturm::operator&lt;&lt;</a></div><div class="ttdeci">std::ostream &amp; operator&lt;&lt;(std::ostream &amp;os, Poly&lt; Real &gt; const &amp;p)</div><div class="ttdef"><b>Definition</b> Poly.hxx:718</div></div>
 <div class="ttc" id="anamespace_sturm_html_a336183294eb8fba3370fa67617b25fdf"><div class="ttname"><a href="namespace_sturm.html#a336183294eb8fba3370fa67617b25fdf">Sturm::divide</a></div><div class="ttdeci">void divide(Poly&lt; Real &gt; const &amp;p_1, Poly&lt; Real &gt; const &amp;p_2, Poly&lt; Real &gt; &amp;q, Poly&lt; Real &gt; &amp;r)</div><div class="ttdef"><b>Definition</b> Poly.hxx:643</div></div>
-<div class="ttc" id="anamespace_sturm_html_aad1114e76ee0064c465261eb130fb4ab"><div class="ttname"><a href="namespace_sturm.html#aad1114e76ee0064c465261eb130fb4ab">Sturm::Integer</a></div><div class="ttdeci">int Integer</div><div class="ttdef"><b>Definition</b> Sturm.hh:70</div></div>
+<div class="ttc" id="anamespace_sturm_html_a493c3484e2c405d35c7b9d2d833a0eb6"><div class="ttname"><a href="namespace_sturm.html#a493c3484e2c405d35c7b9d2d833a0eb6">Sturm::Integer</a></div><div class="ttdeci">STURM_DEFAULT_INTEGER_TYPE Integer</div><div class="ttdoc">The Integer type as used for the API.</div><div class="ttdef"><b>Definition</b> Sturm.hh:81</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

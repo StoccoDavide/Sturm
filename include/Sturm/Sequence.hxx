@@ -37,7 +37,6 @@ namespace Sturm
       bool    a_on_root; /**< True if the lower bound is a root. */
       bool    b_on_root; /**< True if the upper bound is a root. */
     }; /**< Interval structure. */
-    constexpr static const Real EPSILON{std::numeric_limits<Real>::epsilon()}; /**< Machine epsilon. */
 
   private:
     std::vector<Poly<Real>> m_sequence;  /**< Sturm sequence. */
@@ -195,8 +194,8 @@ namespace Sturm
           } else if (n_roots == 1) {
             this->m_intervals.push_back(I_0);
           }
-        } else if (abs(I_0.b-I_0.a) <= static_cast<Real>(10.0)*EPSILON*std::max(static_cast<Real>(1.0),
-          std::max(abs(I_0.b),abs(I_0.a)))) {
+        } else if (std::abs(I_0.b-I_0.a) <= static_cast<Real>(10.0)*std::numeric_limits<Real>::epsilon()*std::max(
+          static_cast<Real>(1.0), std::max(std::abs(I_0.b), std::abs(I_0.a)))) {
           I_1.a  = I_1.b  = I_0.a;
           I_1.va = I_1.vb = 0;
           I_1.a_on_root = I_1.b_on_root = true;
@@ -267,6 +266,32 @@ namespace Sturm
     * \return The \f$ i \f$-th interval containing a single root.
     */
     Interval const & interval(Integer i) const {return this->m_intervals[i];}
+
+    /**
+    * Compute the roots in the intervals after the separation.
+    * \param[in] solve_function Lambda function for the root solver.
+    * \param[in] verbose True if the function should print warnings.
+    * \return A vector with the computed roots.
+    * \tparam Solver Lambda function for the root solver with the signature `bool(Real a, Real b,
+    * std::function<Real(Real)> f, Real & x)`.
+    */
+    template <typename SolveFunction>
+    Vector refine_roots(SolveFunction solve_function, bool verbose = false) {
+      auto function = std::function<Real(Real x)>([this](Real x) {return this->m_sequence[0].evaluate(x);});
+      Vector roots(this->m_intervals.size());
+      Integer n{0}; bool converged{false};
+      for (auto & I : this->m_intervals) {
+        Real & r{roots.coeffRef(n++)};
+        if (I.a_on_root) {r = I.a;}
+        else if (I.b_on_root) {r = I.b;}
+        else {
+          converged = solve_function(I.a, I.b, function, r);
+          STURM_ASSERT_WARNING(converged || !verbose,
+            "Sturm::Sequence::refine_roots(...): failed at interval n = " << n);
+        }
+      }
+      return roots;
+    }
 
   }; // class Sequence
 
