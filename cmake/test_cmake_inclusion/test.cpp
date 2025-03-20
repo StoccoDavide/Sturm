@@ -1,4 +1,4 @@
-#include "Sturm.hh"
+#include "Sturm/Sequence.hh"
 #include <iostream>
 
 int main()
