@@ -1,7 +1,7 @@
-var _poly_8hxx =
+var _poly_8hh =
 [
     [ "Sturm::Poly< Real >", "class_sturm_1_1_poly.html", "class_sturm_1_1_poly" ],
-    [ "INCLUDE_STURM_POLY_HXX", "_poly_8hxx.html#ae71daff6b23810d167c1da40aab80097", null ],
+    [ "INCLUDE_STURM_POLY_HH", "_poly_8hh.html#a6749073e6e833bb92da7949bc37e053f", null ],
     [ "Sturm::divide", "namespace_sturm.html#a336183294eb8fba3370fa67617b25fdf", null ],
     [ "Sturm::GCD", "namespace_sturm.html#a54551ffa365fe15981aeaa792c511f2b", null ],
     [ "Sturm::operator*", "namespace_sturm.html#a57a812179645a3d8336f5529571e1201", null ],

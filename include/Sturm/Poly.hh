@@ -10,8 +10,10 @@
 
 #pragma once
 
-#ifndef INCLUDE_STURM_POLY_HXX
-#define INCLUDE_STURM_POLY_HXX
+#ifndef INCLUDE_STURM_POLY_HH
+#define INCLUDE_STURM_POLY_HH
+
+#include "Sturm.hh"
 
 namespace Sturm
 {
@@ -722,4 +724,4 @@ namespace Sturm
 
 } // namespace Sturm
 
-#endif // INCLUDE_STURM_POLY_HXX
+#endif // INCLUDE_STURM_POLY_HH

@@ -9,7 +9,7 @@
 \* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
 // Sturm library
-#include "Sturm.hh"
+#include "Sturm/Poly.hh"
 
 // Catch2 library
 #include <catch2/catch_test_macros.hpp>

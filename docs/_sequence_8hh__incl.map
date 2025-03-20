@@ -1,0 +1,20 @@
+<map id="include/Sturm/Sequence.hh" name="include/Sturm/Sequence.hh">
+<area shape="rect" id="Node000001" title=" " alt="" coords="169,5,350,31"/>
+<area shape="rect" id="Node000002" href="$_sturm_8hh.html" title=" " alt="" coords="222,153,297,178"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="257,32,244,79,244,109,251,137,246,139,239,110,238,79,252,31"/>
+<area shape="rect" id="Node000009" href="$_poly_8hh.html" title=" " alt="" coords="252,79,355,105"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="269,30,290,64,286,67,265,33"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,226,77,252"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="223,181,93,224,91,219,222,176"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="100,226,168,252"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="240,181,170,221,167,216,237,177"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="193,226,246,252"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="255,180,236,214,231,212,251,177"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="271,226,328,252"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="269,177,288,212,283,214,264,180"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="352,226,426,252"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="283,177,355,216,352,221,280,181"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="450,226,546,252"/>
+<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="298,176,444,219,442,224,297,181"/>
+<area shape="poly" id="edge9_Node000009_Node000002" title=" " alt="" coords="299,106,277,141,273,138,294,103"/>
+</map>

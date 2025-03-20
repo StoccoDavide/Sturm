@@ -1,0 +1,17 @@
+<map id="include/Sturm/Poly.hh" name="include/Sturm/Poly.hh">
+<area shape="rect" id="Node000001" title=" " alt="" coords="186,5,333,31"/>
+<area shape="rect" id="Node000002" href="$_sturm_8hh.html" title=" " alt="" coords="222,79,297,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="262,31,262,63,257,63,257,31"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,153,77,178"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="223,108,93,150,91,145,222,103"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="100,153,168,178"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="240,108,170,147,167,142,237,103"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="193,153,246,178"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="255,106,236,140,231,138,251,104"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="271,153,328,178"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="269,104,288,138,283,140,264,106"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="352,153,426,178"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="283,103,355,142,352,147,280,108"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="450,153,546,178"/>
+<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="298,102,444,145,442,150,297,107"/>
+</map>

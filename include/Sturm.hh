@@ -59,6 +59,7 @@
   }
 #endif
 
+// Default integer type
 #ifndef STURM_DEFAULT_INTEGER_TYPE
 #define STURM_DEFAULT_INTEGER_TYPE int
 #endif
@@ -81,8 +82,5 @@ namespace Sturm {
   using Integer = STURM_DEFAULT_INTEGER_TYPE;
 
 }
-
-#include "Sturm/Poly.hxx"
-#include "Sturm/Sequence.hxx"
 
 #endif // INCLUDE_STURM_HH

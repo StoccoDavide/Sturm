@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['poly_2ehxx_0',['Poly.hxx',['../_poly_8hxx.html',1,'']]]
+  ['poly_2ehh_0',['Poly.hh',['../_poly_8hh.html',1,'']]]
 ];

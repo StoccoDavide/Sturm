@@ -1,11 +1,11 @@
 var NAVTREEINDEX0 =
 {
-"_poly_8hxx.html":[5,0,1,0,0],
-"_poly_8hxx.html#ae71daff6b23810d167c1da40aab80097":[5,0,1,0,0,1],
-"_poly_8hxx_source.html":[5,0,1,0,0],
-"_sequence_8hxx.html":[5,0,1,0,1],
-"_sequence_8hxx.html#a1545e8145b863c788cc67c6dcb6c45f7":[5,0,1,0,1,1],
-"_sequence_8hxx_source.html":[5,0,1,0,1],
+"_poly_8hh.html":[5,0,1,0,0],
+"_poly_8hh.html#a6749073e6e833bb92da7949bc37e053f":[5,0,1,0,0,1],
+"_poly_8hh_source.html":[5,0,1,0,0],
+"_sequence_8hh.html":[5,0,1,0,1],
+"_sequence_8hh.html#af8331847220d71f3c8c91b1eb2f1c075":[5,0,1,0,1,1],
+"_sequence_8hh_source.html":[5,0,1,0,1],
 "_sturm_8hh.html":[5,0,1,1],
 "_sturm_8hh.html#a4e8329b39116ecdaebedaaa4fa8a27b1":[5,0,1,1,5],
 "_sturm_8hh.html#a5824c4ee4f14c4b7473c40c0885ab305":[5,0,1,1,3],
