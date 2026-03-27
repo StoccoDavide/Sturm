@@ -1,7 +1,7 @@
 var searchData=
 [
   ['separate_5froots_0',['separate_roots',['../class_sturm_1_1_sequence.html#a8d85cbd513472dba280c66ac2bc8b1be',1,'Sturm::Sequence::separate_roots(Real a_in, Real b_in)'],['../class_sturm_1_1_sequence.html#a693e03b84660f5fe5277522c0a8b2a6d',1,'Sturm::Sequence::separate_roots()']]],
-  ['sequence_1',['Sequence',['../class_sturm_1_1_sequence.html',1,'Sturm::Sequence&lt; Real &gt;'],['../class_sturm_1_1_sequence.html#aa6119872ff5691cee7561a15560aad89',1,'Sturm::Sequence::Sequence()'],['../class_sturm_1_1_sequence.html#af7d6ec7283b0dfbe07b220361d066b86',1,'Sturm::Sequence::Sequence(Poly&lt; Real &gt; const &amp;p)']]],
+  ['sequence_1',['Sequence',['../class_sturm_1_1_sequence.html',1,'Sturm::Sequence&lt; Real &gt;'],['../class_sturm_1_1_sequence.html#aa6119872ff5691cee7561a15560aad89',1,'Sturm::Sequence::Sequence()'],['../class_sturm_1_1_sequence.html#a4b836861f56a960c71aa32d2a8df6640',1,'Sturm::Sequence::Sequence(const Poly&lt; Real &gt; &amp;p)']]],
   ['sequence_2ehh_2',['Sequence.hh',['../_sequence_8hh.html',1,'']]],
   ['set_5fdegree_3',['set_degree',['../class_sturm_1_1_poly.html#a075d5b6ea7f9afffa376533b91ce0d80',1,'Sturm::Poly']]],
   ['set_5fmonomial_4',['set_monomial',['../class_sturm_1_1_poly.html#a9a011733b0bee51db8cf3b15589b6099',1,'Sturm::Poly']]],

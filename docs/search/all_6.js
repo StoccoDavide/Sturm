@@ -6,6 +6,6 @@ var searchData=
   ['installation_3',['Installation',['../index.html#autotoc_md1',1,'']]],
   ['integer_4',['Integer',['../namespace_sturm.html#a493c3484e2c405d35c7b9d2d833a0eb6',1,'Sturm']]],
   ['integral_5',['integral',['../class_sturm_1_1_poly.html#a993ba83ec1c90353d0980e8f561dabd1',1,'Sturm::Poly::integral(Poly &amp;res) const'],['../class_sturm_1_1_poly.html#af29393ab959f419838b5482be709415d',1,'Sturm::Poly::integral(Poly &amp;res, Real c) const']]],
-  ['interval_6',['Interval',['../class_sturm_1_1_sequence.html#a9feb1de175d9c4a6be8b9e182dc9ec26',1,'Sturm::Sequence']]],
-  ['interval_7',['interval',['../class_sturm_1_1_sequence.html#a1d620999cfafeb9af3106b91bf358fa6',1,'Sturm::Sequence']]]
+  ['interval_6',['Interval',['../class_sturm_1_1_sequence.html#a2941ba8b48b5a25f64e1f22adf4cd97c',1,'Sturm::Sequence']]],
+  ['interval_7',['interval',['../class_sturm_1_1_sequence.html#a88b81a524de7c72717a704a845a39053',1,'Sturm::Sequence']]]
 ];

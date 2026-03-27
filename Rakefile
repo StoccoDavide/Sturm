@@ -1,5 +1,5 @@
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
-# Copyright (c) 2025, Davide Stocco and Enrico Bertolazzi.                                        #
+# Copyright (c) 2026, Davide Stocco and Enrico Bertolazzi.                                        #
 #                                                                                                 #
 # The Sturm project is distributed under the BSD 2-Clause License.                                #
 #                                                                                                 #
@@ -18,10 +18,8 @@
 end
 
 # Configuration of the build
-BUILD_DEBUG      = false
-BUILD_TESTS      = true
-BUILD_EXAMPLES   = false
-BUILD_BENCHMARKS = false
+BUILD_DEBUG = false
+BUILD_TESTS = true
 
 case RUBY_PLATFORM
 when /mingw|mswin/
@@ -52,25 +50,15 @@ else
 end
 
 cmd_cmake_build = "-G Ninja "
-if BUILD_TESTS then
-  cmd_cmake_build += "-DBUILD_TESTS:VAR=true "
-else
-  cmd_cmake_build += "-DBUILD_TESTS:VAR=false "
-end
-if BUILD_EXAMPLES then
-  cmd_cmake_build += "-DBUILD_EXAMPLES:VAR=true "
-else
-  cmd_cmake_build += "-DBUILD_EXAMPLES:VAR=false "
-end
-if BUILD_BENCHMARKS then
-  cmd_cmake_build += "-DBUILD_BENCHMARKS:VAR=true "
-else
-  cmd_cmake_build += "-DBUILD_BENCHMARKS:VAR=false "
-end
 if BUILD_DEBUG then
   cmd_cmake_build += "-DCMAKE_BUILD_TYPE:VAR=Debug "
 else
   cmd_cmake_build += "-DCMAKE_BUILD_TYPE:VAR=Release "
+end
+if BUILD_TESTS then
+  cmd_cmake_build += "-DSTURM_BUILD_TESTS:VAR=true "
+else
+  cmd_cmake_build += "-DSTURM_BUILD_TESTS:VAR=false "
 end
 
 task :default => [:build]
@@ -80,7 +68,7 @@ TESTS = []
 desc "Run tests"
 task :run do
   puts "run test".yellow
-  Dir.glob('build/tests/test_*') do |cmd|
+  Dir.glob('build/core/tests/test_*') do |cmd|
     next if cmd =~ /.manifest$|.dSYM$/
     puts "execute: #{cmd}".yellow
     sh cmd
@@ -156,9 +144,7 @@ task :build do
 end
 
 task :clean_gen do
-  FileUtils.rm_rf 'bin'
   FileUtils.rm_rf 'build'
-  FileUtils.rm_rf 'third_party'
 end
 
 desc "Clean for OsX"
